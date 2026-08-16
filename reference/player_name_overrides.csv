@@ -1,0 +1,15 @@
+# Manual player-name overrides for The Odds API -> nflverse gsis_id resolution.
+#
+# Add a row whenever `nfl-props odds resolve` reports an unresolved name. The
+# resolver checks this file BEFORE any fuzzy matching, so an override always
+# wins and is never second-guessed.
+#
+# book_name  exactly as the book writes it (case/punctuation insensitive on
+#            lookup, so you do not need to match spacing precisely)
+# team       nflverse abbreviation, or blank to match the name on any team
+# gsis_id    nflverse player id, e.g. 00-0036322
+# note       why this row exists; helps the next person decide if it is stale
+#
+# Seeded with structural cases only. Real entries accumulate as books post
+# lines -- this file is expected to grow every week early in the season.
+book_name,team,gsis_id,note

@@ -45,6 +45,15 @@ class CreditConfig:
 
 
 @dataclass(frozen=True)
+class SnapshotConfig:
+    """Odds snapshot cadence. See config.toml for the credit budget."""
+
+    close_cutoff_minutes: int = 25
+    horizon_hours: int = 192
+    max_repoll_events: int = 4
+
+
+@dataclass(frozen=True)
 class OddsConfig:
     base_url: str = "https://api.the-odds-api.com/v4"
     sport: str = "americanfootball_nfl"
@@ -54,6 +63,7 @@ class OddsConfig:
     prop_markets: tuple[str, ...] = ("player_receptions", "player_rush_attempts")
     credits: CreditConfig = field(default_factory=CreditConfig)
     retry: RetryConfig = field(default_factory=RetryConfig)
+    snapshots: SnapshotConfig = field(default_factory=SnapshotConfig)
 
 
 @dataclass(frozen=True)
@@ -74,13 +84,66 @@ class StorageConfig:
 
 
 @dataclass(frozen=True)
+class EdgeConfig:
+    devig_method: str = "power"
+    devig_methods_logged: tuple[str, ...] = ("power", "multiplicative", "shin")
+    consensus_book_weights: dict[str, float] = field(default_factory=dict)
+    consensus_default_weight: float = 1.0
+    consensus_min_books: int = 3
+    min_edge: float = 0.03
+    stale_price_confirmations: int = 2
+    extreme_price_threshold: int = -300
+
+    def book_weight(self, book_key: str) -> float:
+        return self.consensus_book_weights.get(book_key, self.consensus_default_weight)
+
+
+@dataclass(frozen=True)
+class RoleTrackerConfig:
+    """State-space role tracker. Replaces fixed exponential decay entirely."""
+
+    process_noise_snap_share: float = 0.045
+    process_noise_carry_share: float = 0.030
+    process_noise_target_share: float = 0.022
+    process_noise_event_multiplier: float = 6.0
+    partial_game_exposure_ratio: float = 0.55
+    changepoint_lookback_games: int = 2
+    changepoint_threshold_sd: float = 2.5
+
+    def process_noise(self, layer: str) -> float:
+        try:
+            return getattr(self, f"process_noise_{layer}")
+        except AttributeError as exc:
+            raise KeyError(
+                f"no process noise configured for layer {layer!r}; "
+                "expected one of snap_share, carry_share, target_share"
+            ) from exc
+
+
+@dataclass(frozen=True)
+class CatchRateConfig:
+    prior_strength_targets: float = 50.0
+
+
+@dataclass(frozen=True)
+class EarlySeasonConfig:
+    prior_season_weight_week1: float = 0.75
+    prior_season_zero_by_week: int = 6
+    context_change_discount: float = 0.35
+    rookie_preseason_weight: float = 0.0
+    suppress_output_before_week: int = 4
+
+
+@dataclass(frozen=True)
 class ModelConfig:
-    share_half_life_games: float = 6.0
     monte_carlo_draws: int = 10000
     random_seed: int = 20240901
     # Weeks to lag the LEGACY (<=2024) depth chart feed. The 2025+ feed has a
     # `dt` timestamp and is filtered exactly instead. 0 accepts the leak.
     depth_chart_lag_weeks: int = 1
+    role_tracker: RoleTrackerConfig = field(default_factory=RoleTrackerConfig)
+    catch_rate: CatchRateConfig = field(default_factory=CatchRateConfig)
+    early_season: EarlySeasonConfig = field(default_factory=EarlySeasonConfig)
 
 
 @dataclass(frozen=True)
@@ -111,9 +174,15 @@ class Config:
     ingest: IngestConfig
     storage: StorageConfig
     odds: OddsConfig
+    edge: EdgeConfig
     model: ModelConfig
     output: OutputConfig
     source_path: Path
+
+    @property
+    def props_dir(self) -> Path:
+        """Parsed prop snapshots. The CLV record — never overwritten."""
+        return self.data_dir / "odds" / "props"
 
     @property
     def raw_dir(self) -> Path:
@@ -180,9 +249,21 @@ def load_config(path: str | Path | None = None, *, load_env: bool = True) -> Con
         prop_markets=tuple(odds_raw.get("prop_markets", ())),
         credits=CreditConfig(**odds_raw.get("credits", {})),
         retry=RetryConfig(**odds_raw.get("retry", {})),
+        snapshots=SnapshotConfig(**odds_raw.get("snapshots", {})),
     )
 
-    model = ModelConfig(**raw.get("model", {}))
+    edge_raw = dict(raw.get("edge", {}))
+    if "devig_methods_logged" in edge_raw:
+        edge_raw["devig_methods_logged"] = tuple(edge_raw["devig_methods_logged"])
+    edge = EdgeConfig(**edge_raw)
+
+    model_raw = dict(raw.get("model", {}))
+    model = ModelConfig(
+        **{k: v for k, v in model_raw.items() if not isinstance(v, dict)},
+        role_tracker=RoleTrackerConfig(**model_raw.get("role_tracker", {})),
+        catch_rate=CatchRateConfig(**model_raw.get("catch_rate", {})),
+        early_season=EarlySeasonConfig(**model_raw.get("early_season", {})),
+    )
     output = OutputConfig(**raw.get("output", {}))
 
     return Config(
@@ -190,6 +271,7 @@ def load_config(path: str | Path | None = None, *, load_env: bool = True) -> Con
         ingest=ingest,
         storage=storage,
         odds=odds,
+        edge=edge,
         model=model,
         output=output,
         source_path=path,

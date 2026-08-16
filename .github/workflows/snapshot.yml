@@ -1,0 +1,108 @@
+name: Prop snapshots
+
+# Closing line value is the only validation signal available on the free tier,
+# and it cannot be reconstructed after the fact -- an unlogged week is gone.
+# So this runs on its own schedule, independent of any model.
+#
+# Cadence and cost (~16-game slate, 2 markets, 1 region, 2 credits per event):
+#
+#   Wed 18:00 UTC   opener, whole week          ~32
+#   Thu 23:00 UTC   TNF close (1 event)           2
+#   Sun 16:00 UTC   close, all Sunday games     ~26
+#   Sun 19:30 UTC   close, late-window games     ~8
+#   Sun 23:30 UTC   SNF close (1 event)           2
+#   Mon 23:00 UTC   MNF close (1 event)           2
+#                                               ----
+#                                            ~72/week, ~310/month
+#
+# The free tier is 500 credits/month, leaving ~190 for retries and re-polls.
+# `events_to_snapshot` only selects games more than `close_cutoff_minutes`
+# away, so a run that fires with nothing in window costs one free /events call
+# and exits -- the later pulls never pay for games already in progress.
+#
+# Times are UTC and assume US Eastern daylight time (kickoffs at 17:00, 20:05
+# and 00:20 UTC). After the November DST shift each kickoff moves an hour later
+# in UTC, which only widens the margin to the cutoff, so the schedule stays
+# valid.
+
+on:
+  schedule:
+    - cron: "0 18 * * 3"    # Wed opener
+    - cron: "0 23 * * 4"    # Thu, TNF close
+    - cron: "0 16 * * 0"    # Sun early close
+    - cron: "30 19 * * 0"   # Sun late-window close
+    - cron: "30 23 * * 0"   # Sun, SNF close
+    - cron: "0 23 * * 1"    # Mon, MNF close
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: "Snapshot kind"
+        required: true
+        default: "close"
+        type: choice
+        options: [open, close, repoll]
+
+# Never let two snapshot runs race: both would write, and one would lose.
+concurrency:
+  group: prop-snapshots
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - run: uv sync
+
+      - name: Decide snapshot kind
+        id: kind
+        run: |
+          if [ -n "${{ inputs.kind }}" ]; then
+            echo "kind=${{ inputs.kind }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 18 * * 3" ]; then
+            echo "kind=open" >> "$GITHUB_OUTPUT"
+          else
+            echo "kind=close" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Take snapshot
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: uv run nfl-props odds snapshot --kind "${{ steps.kind.outputs.kind }}"
+
+      # Resolution is reported, never enforced here. An unmappable name must
+      # not fail the job -- the snapshot is already on disk, and resolution can
+      # be re-run at any time after adding an override.
+      - name: Report unresolved names
+        continue-on-error: true
+        run: uv run nfl-props odds resolve
+
+      - name: Commit snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/odds/props
+          if git diff --staged --quiet; then
+            echo "No new snapshot rows."
+            exit 0
+          fi
+          git commit -m "Prop snapshot: ${{ steps.kind.outputs.kind }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
+            sleep $((2 ** i))
+          done
+          exit 1
+
+      - name: Report credit balance
+        if: always()
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: uv run nfl-props odds credits

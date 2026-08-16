@@ -48,6 +48,12 @@ SCHEDULE_POST_GAME = {
 }
 # Weather is measured at/after kickoff in nflverse, not forecast.
 SCHEDULE_POST_GAME |= {"temp", "wind"}
+# `roof` records the OBSERVED state on the day. For a fixed dome or an open-air
+# stadium that is a constant and knowable in advance -- but for the five
+# retractable stadiums it is a game-time decision, so the column as a whole
+# cannot be treated as pre-kickoff. Use `reference/stadiums.csv` roof_type for
+# the fixed characteristic, and see `reference.is_wind_shielded`.
+SCHEDULE_POST_GAME |= {"roof"}
 
 STATIC_ID_COLUMNS = {
     "gsis_id",
@@ -110,7 +116,26 @@ CURATED_NOTES: dict[tuple[str, str], str] = {
     ("schedules", "total_line"): "Closing game total. Drives Layer 1 (team plays).",
     ("schedules", "away_rest"): "Days of rest — known pre-kickoff.",
     ("schedules", "home_rest"): "Days of rest — known pre-kickoff.",
-    ("schedules", "roof"): "Stadium roof state; pre-kickoff for fixed roofs.",
+    ("schedules", "roof"): (
+        "OBSERVED roof state on the day (dome/outdoors/closed/open). For the five "
+        "retractable stadiums this is a game-time decision and is NOT known before "
+        "kickoff — using it as a forward feature leaks. Use roof_type from "
+        "reference/stadiums.csv for the fixed characteristic instead."
+    ),
+    ("schedules", "wind"): (
+        "OBSERVED wind. The only weather variable that reliably affects volume "
+        "(above ~15mph pass attempts fall, rush attempts rise). Null for domes, "
+        "which is structurally zero rather than missing. Forward projections need a "
+        "forecast, not this column."
+    ),
+    ("schedules", "temp"): (
+        "OBSERVED temperature. Deliberately UNUSED: apparent effects are confounded "
+        "with team quality and game total."
+    ),
+    ("schedules", "stadium_id"): (
+        "Stable stadium key — survives renames (KAN00 is both Arrowhead and GEHA "
+        "Field). Join key for reference/stadiums.csv."
+    ),
     ("pbp", "xpass"): "Model-expected pass probability. `pass_oe` = pass − xpass gives PROE.",
     ("pbp", "pass_oe"): "Pass rate over expected for the play. Aggregate for team PROE (Layer 2).",
     ("pbp", "receiver_player_id"): "Targeted receiver (gsis). Numerator of target share (Layer 3).",

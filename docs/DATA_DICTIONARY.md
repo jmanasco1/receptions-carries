@@ -55,6 +55,7 @@ before building a feature on that column.
 | [`rosters_weekly`](#rosters_weekly) | 46,849 | 2016–2025 | 36 | `before` |
 | [`schedules`](#schedules) | 272 | 2016–2026 | 47 | `before` |
 | [`snap_counts`](#snap_counts) | 26,612 | 2016–2025 | 16 | `after` |
+| [`teams`](#teams) | 36 | n/a (snapshot) | 16 | `before` |
 
 ### `depth_charts`
 
@@ -810,10 +811,10 @@ Game-level schedule with kickoff date/time, closing spread and total, roof/surfa
 | `under_odds` | `Int32` | `before` | all |  |
 | `over_odds` | `Int32` | `before` | all |  |
 | `div_game` | `Int32` | `before` | all |  |
-| `roof` | `String` | `before` | all | Stadium roof state; pre-kickoff for fixed roofs. |
+| `roof` | `String` | `after` | all | OBSERVED roof state on the day (dome/outdoors/closed/open). For the five retractable stadiums this is a game-time decision and is NOT known before kickoff — using it as a forward feature leaks. Use roof_type from reference/stadiums.csv for the fixed characteristic instead. |
 | `surface` | `String` | `before` | all |  |
-| `temp` | `Int32` | `after` | all |  |
-| `wind` | `Int32` | `after` | all |  |
+| `temp` | `Int32` | `after` | all | OBSERVED temperature. Deliberately UNUSED: apparent effects are confounded with team quality and game total. |
+| `wind` | `Int32` | `after` | all | OBSERVED wind. The only weather variable that reliably affects volume (above ~15mph pass attempts fall, rush attempts rise). Null for domes, which is structurally zero rather than missing. Forward projections need a forecast, not this column. |
 | `away_qb_id` | `String` | `after` | all |  |
 | `home_qb_id` | `String` | `after` | all |  |
 | `away_qb_name` | `String` | `after` | all |  |
@@ -821,7 +822,7 @@ Game-level schedule with kickoff date/time, closing spread and total, roof/surfa
 | `away_coach` | `String` | `before` | all |  |
 | `home_coach` | `String` | `before` | all |  |
 | `referee` | `String` | `before` | all |  |
-| `stadium_id` | `String` | `before` | all |  |
+| `stadium_id` | `String` | `before` | all | Stable stadium key — survives renames (KAN00 is both Arrowhead and GEHA Field). Join key for reference/stadiums.csv. |
 | `stadium` | `String` | `before` | all |  |
 | `kickoff_utc` | `Datetime(time_unit='us', time_zone='UTC')` | `before` | all | DERIVED by this repo: gameday + gametime parsed as US/Eastern, converted to UTC. The as-of cutoff for every Stage 2 feature. |
 
@@ -847,3 +848,26 @@ PFR snap counts per player-game (offense/defense/ST, count and pct). Keyed on pf
 | `defense_pct` | `Float64` | `after` | all |  |
 | `st_snaps` | `Float64` | `after` | all |  |
 | `st_pct` | `Float64` | `after` | all |  |
+
+### `teams`
+
+Team abbreviation <-> full name mapping. Needed to join The Odds API, which names teams as 'Philadelphia Eagles' while nflverse keys on 'PHI'.
+
+| column | dtype | timing | seasons | notes |
+| --- | --- | --- | --- | --- |
+| `team_abbr` | `String` | `before` | all |  |
+| `team_name` | `String` | `before` | all |  |
+| `team_id` | `String` | `before` | all |  |
+| `team_nick` | `String` | `before` | all |  |
+| `team_conf` | `String` | `before` | all |  |
+| `team_division` | `String` | `before` | all |  |
+| `team_color` | `String` | `before` | all |  |
+| `team_color2` | `String` | `before` | all |  |
+| `team_color3` | `String` | `before` | all |  |
+| `team_color4` | `String` | `before` | all |  |
+| `team_logo_wikipedia` | `String` | `before` | all |  |
+| `team_logo_espn` | `String` | `before` | all |  |
+| `team_wordmark` | `String` | `before` | all |  |
+| `team_conference_logo` | `String` | `before` | all |  |
+| `team_league_logo` | `String` | `before` | all |  |
+| `team_logo_squared` | `String` | `before` | all |  |

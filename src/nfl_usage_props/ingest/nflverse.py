@@ -74,6 +74,16 @@ TABLES: dict[str, TableSpec] = {
         post_game=False,
         description="Player ID crosswalk (gsis/pfr/pff/espn/ngs) plus biographical fields.",
     ),
+    "teams": TableSpec(
+        name="teams",
+        loader=lambda season: nfl.load_teams(),
+        seasonal=False,
+        post_game=False,
+        description=(
+            "Team abbreviation <-> full name mapping. Needed to join The Odds API, "
+            "which names teams as 'Philadelphia Eagles' while nflverse keys on 'PHI'."
+        ),
+    ),
     "pbp": TableSpec(
         name="pbp",
         loader=_load_seasonal(nfl.load_pbp),

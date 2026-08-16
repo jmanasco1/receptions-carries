@@ -1,0 +1,43 @@
+stadium_id,name,roof_type,latitude,longitude,note
+ATL00,Georgia Dome,dome,33.7576,-84.4009,retired 2016
+ATL97,Mercedes-Benz Stadium,retractable,33.7554,-84.4008,
+BAL00,M&T Bank Stadium,outdoor,39.2780,-76.6227,
+BOS00,Gillette Stadium,outdoor,42.0909,-71.2643,
+BUF00,Highmark Stadium,outdoor,42.7738,-78.7870,
+CAR00,Bank of America Stadium,outdoor,35.2258,-80.8528,
+CHI98,Soldier Field,outdoor,41.8623,-87.6167,
+CIN00,Paycor Stadium,outdoor,39.0955,-84.5160,
+CLE00,Huntington Bank Field,outdoor,41.5061,-81.6995,
+DAL00,AT&T Stadium,retractable,32.7473,-97.0945,
+DEN00,Empower Field at Mile High,outdoor,39.7439,-105.0201,
+DET00,Ford Field,dome,42.3400,-83.0456,
+FRA00,Deutsche Bank Park,outdoor,50.0686,8.6455,international
+GER00,Allianz Arena,outdoor,48.2188,11.6247,international
+GNB00,Lambeau Field,outdoor,44.5013,-88.0622,
+HOU00,NRG Stadium,retractable,29.6847,-95.4107,
+IND00,Lucas Oil Stadium,retractable,39.7601,-86.1639,
+JAX00,EverBank Stadium,outdoor,30.3239,-81.6373,
+KAN00,GEHA Field at Arrowhead Stadium,outdoor,39.0489,-94.4839,
+LAX01,SoFi Stadium,dome,33.9535,-118.3392,fixed translucent roof; open sides but treated as wind-shielded
+LAX97,Dignity Health Sports Park,outdoor,33.8644,-118.2611,retired 2019
+LAX99,Los Angeles Memorial Coliseum,outdoor,34.0141,-118.2879,retired 2019
+LON00,Wembley Stadium,outdoor,51.5560,-0.2795,international
+LON01,Twickenham Stadium,outdoor,51.4560,-0.3418,international
+LON02,Tottenham Hotspur Stadium,outdoor,51.6043,-0.0665,international
+MEX00,Estadio Azteca,outdoor,19.3029,-99.1505,international
+MIA00,Hard Rock Stadium,outdoor,25.9580,-80.2389,canopy over seating; field open
+MIN01,U.S. Bank Stadium,dome,44.9736,-93.2575,
+NAS00,Nissan Stadium,outdoor,36.1665,-86.7713,
+NOR00,Caesars Superdome,dome,29.9511,-90.0812,
+NYC01,MetLife Stadium,outdoor,40.8135,-74.0745,
+OAK00,Oakland Coliseum,outdoor,37.7516,-122.2005,retired 2019
+PHI00,Lincoln Financial Field,outdoor,39.9008,-75.1675,
+PHO00,State Farm Stadium,retractable,33.5276,-112.2626,
+PIT00,Acrisure Stadium,outdoor,40.4468,-80.0158,
+SAO00,Arena Corinthians,outdoor,-23.5453,-46.4742,international
+SDG00,Qualcomm Stadium,outdoor,32.7831,-117.1196,retired 2016
+SEA00,Lumen Field,outdoor,47.5952,-122.3316,partial roof; field open
+SFO01,Levi's Stadium,outdoor,37.4033,-121.9694,
+TAM00,Raymond James Stadium,outdoor,27.9759,-82.5033,
+VEG00,Allegiant Stadium,dome,36.0909,-115.1833,
+WAS00,Northwest Stadium,outdoor,38.9077,-76.8645,

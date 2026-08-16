@@ -26,7 +26,6 @@ from nfl_usage_props.ingest.nflverse import TABLES
         ("schedules", "spread_line", "before"),
         ("schedules", "total_line", "before"),
         ("schedules", "away_rest", "before"),
-        ("schedules", "roof", "before"),
         ("schedules", "kickoff_utc", "before"),
         ("schedules", "result", "after"),
         ("schedules", "home_score", "after"),
@@ -34,6 +33,9 @@ from nfl_usage_props.ingest.nflverse import TABLES
         # weather in nflverse is observed, not forecast
         ("schedules", "temp", "after"),
         ("schedules", "wind", "after"),
+        # roof state is a game-time decision at retractable stadiums
+        ("schedules", "roof", "after"),
+        ("schedules", "stadium_id", "before"),
         # post-game tables
         ("pbp", "receiver_player_id", "after"),
         ("pbp", "pass_oe", "after"),
@@ -66,6 +68,12 @@ def test_every_classification_is_a_known_class():
     for name, spec in TABLES.items():
         for column in ("some_col", "gsis_id", "week"):
             assert classify(name, column, post_game_default=spec.post_game) in TIMING_NOTES
+
+
+def test_observed_roof_is_not_a_pre_kickoff_feature():
+    """Five stadiums decide the roof at game time. Classifying `roof` as
+    pre-kickoff would leak that decision into forward wind projections."""
+    assert classify("schedules", "roof", post_game_default=False) == "after"
 
 
 def test_score_columns_are_never_classified_before():

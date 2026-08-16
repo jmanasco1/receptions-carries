@@ -8,6 +8,7 @@ import pytest
 from nfl_usage_props.config import (
     Config,
     CreditConfig,
+    EdgeConfig,
     IngestConfig,
     ModelConfig,
     OddsConfig,
@@ -54,6 +55,7 @@ def config(tmp_path: Path) -> Config:
                 timeout_seconds=5.0,
             ),
         ),
+        edge=EdgeConfig(),
         model=ModelConfig(),
         output=OutputConfig(),
         source_path=tmp_path / "config.toml",

@@ -17,6 +17,7 @@ first_season = 2016
 tables = [
     "schedules",
     "players",
+    "teams",
     "pbp",
     "player_stats",
     "snap_counts",
@@ -60,13 +61,74 @@ backoff_multiplier = 2.0
 backoff_max_seconds = 32.0
 timeout_seconds = 30.0
 
+[odds.snapshots]
+# Closing-line value is the ONLY validation signal available on the free tier
+# (historical props are paid-tier at 10x credits), and CLV data cannot be
+# reconstructed after the fact. Every unlogged week is permanently lost, so
+# snapshot logging runs whether or not a model exists yet.
+#
+# "Closing" is per GAME DAY, not one Sunday pull: a Thursday game closes
+# Thursday, and a Sunday-morning pull would capture its line after kickoff.
+# Pulling per game day costs about the same in total as one blanket pull,
+# because each pull covers fewer events.
+#
+# Stop pulling an event this many minutes before its kickoff. The last pull
+# inside this window is that event's closing line.
+close_cutoff_minutes = 25
+# Only snapshot events kicking off within this horizon. Keeps a Wednesday
+# opener from paying for next week's games.
+horizon_hours = 192
+
+# Free-tier budget, 500 credits/month:
+#   opener  ~16 events x 2 markets           = 32
+#   closing  split across Thu/Sun/Mon        ~ 32
+#   game odds (spreads+totals) x 2 pulls     =  4
+#   -> ~68/week, ~292/month. Leaves ~200 for retries and re-polls.
+#
+# A blanket third poll would cost another ~138/month and does not fit
+# comfortably. Instead, re-poll ONLY events containing a flagged outlier
+# (see [edge].stale_price_confirmations) -- a handful of events, ~4-8 credits.
+max_repoll_events = 4
+
+[edge]
+# Consumed in Stage 7. Recorded now so the snapshot schema carries what the
+# edge calculation will need.
+#
+# Devig: POWER is the default. Multiplicative and Shin are computed alongside
+# and all three are logged every time. On near-even props (-115/-115) they
+# barely differ; on skewed lines they diverge sharply, and that divergence is
+# itself the warning sign.
+devig_method = "power"
+devig_methods_logged = ["power", "multiplicative", "shin"]
+
+# Edge = best available price at any book vs the CONSENSUS fair line across
+# books. Devigging a single soft book gives that book's opinion minus vig,
+# which is not a fair probability.
+#
+# There is no Pinnacle in this feed. Weights below are a starting guess, NOT
+# fitted -- the right values are empirical and resolve from the snapshot log.
+consensus_book_weights = { circa = 2.0, betonlineag = 1.5 }
+consensus_default_weight = 1.0
+consensus_min_books = 3
+
+# Minimum edge after devig vs consensus. Below this, model error swamps
+# signal. Informed by typical prop hold (6-10% on receptions/rush attempts vs
+# ~4.5% on sides), NOT fitted. Re-derive from realized CLV after ~6 weeks of
+# logging.
+min_edge = 0.03
+
+# A single book far off consensus is usually a stale or about-to-be-pulled
+# number, not edge. Require the outlier to persist across this many
+# consecutive polls before it counts.
+stale_price_confirmations = 2
+
+# Beyond this American price on either side, devig method choice dominates the
+# edge estimate. Flag those; model output alone is not sufficient there.
+extreme_price_threshold = -300
+
 [model]
 # Placeholders consumed in later stages. Recorded here so Stage 1 config
 # loading is exercised against the real shape of the file.
-# Exponential decay half-life (in games) for recency-weighted share estimates.
-# NOT fitted yet -- this is a starting bracket, to be tuned on held-out data
-# in Stage 4. See README.
-share_half_life_games = 6.0
 monte_carlo_draws = 10000
 random_seed = 20240901
 
@@ -82,6 +144,77 @@ random_seed = 20240901
 # Setting this to 0 knowingly accepts the leak. The leakage test is expected to
 # fail at 0 for legacy seasons -- that is the point of the parameter.
 depth_chart_lag_weeks = 1
+
+[model.role_tracker]
+# Consumed in Stage 4. Replaces the deleted fixed-decay half-life entirely.
+#
+# Player roles change DISCONTINUOUSLY -- a WR1 goes on IR and the WR3's target
+# share steps from 11% to 22% in one week. Exponential decay assumes gradual
+# change and would still be projecting ~15% three weeks later, while the book
+# repriced after one game. The model would then read its own staleness as edge,
+# and worst of all it would do so precisely when the situation is most
+# interesting. Divergence from the market is not edge.
+#
+# So: latent role as a random walk, weekly observation with noise scaled by
+# exposure, Kalman-style update. Handles byes and unequal gaps natively and
+# returns uncertainty, which is propagated into the Monte Carlo as PARAMETER
+# uncertainty rather than collapsed to a point estimate.
+#
+# process_noise is the per-layer speed knob. These starting values are chosen
+# so the tracker's effective memory roughly matches the observed stabilisation
+# speed of each quantity (snap share settles fastest, target share slowest).
+# They are priors and sanity bounds, NOT fitted -- Stage 4 fits them on
+# held-out data.
+process_noise_snap_share = 0.045      # settles fastest, ~4 games of memory
+process_noise_carry_share = 0.030     # ~5-6 games
+process_noise_target_share = 0.022    # slowest, ~7-8 games
+
+# Multiply process noise by this on a KNOWN role-change event: teammate to IR,
+# trade, coordinator change, depth-chart promotion, first game back from
+# injury. Fast when reality actually jumped, slow otherwise.
+process_noise_event_multiplier = 6.0
+
+# Observations are weighted by exposure, not recency alone: a 38-route game is
+# stronger evidence than a 12-route game regardless of order. Games below this
+# share of the player's own trailing median exposure are treated as PARTIAL
+# (injury exit, blowout benching, ejection) and downweighted -- a player who
+# left in Q2 produced a usage line that says nothing about his role.
+partial_game_exposure_ratio = 0.55
+
+# Changepoint suppression: if the last N games diverge from the trailing role
+# estimate by more than this many standard deviations, mark the projection
+# low-confidence and suppress it from output. Skipping a bet beats acting on a
+# stale role estimate.
+changepoint_lookback_games = 2
+changepoint_threshold_sd = 2.5
+
+[model.catch_rate]
+# Layer 4 shrinkage. This is a Beta prior STRENGTH, not a decay rate: catch
+# rate needs ~50+ targets before the player's own sample should outweigh the
+# positional prior. Prior comes from the population of same-position,
+# same-depth-rank players.
+prior_strength_targets = 50.0
+
+[model.early_season]
+# Weeks 1-4 are a separate regime. Consumed in Stage 4.
+#
+# Prior-season blend decays from heavy in week 1 to near-zero by ~week 6.
+prior_season_weight_week1 = 0.75
+prior_season_zero_by_week = 6
+
+# Discount the prior season HARD when the player's context changed: new team,
+# new offensive coordinator, new head coach, or a materially different depth
+# chart ahead of him. Multiplier applied to the prior-season weight.
+context_change_discount = 0.35
+
+# Rookies get their prior from draft capital + depth chart position instead of
+# prior-season usage. Preseason usage is noisy; weight it low or not at all.
+rookie_preseason_weight = 0.0
+
+# The model is worst in weeks 1-3. Gate output as actionable behind a
+# current-season calibration check rather than a Sunday-morning judgement call.
+# Set false only after that check passes.
+suppress_output_before_week = 4
 
 [output]
 # Which players appear in the weekly report.

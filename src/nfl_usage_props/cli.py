@@ -218,6 +218,125 @@ def odds_verify_markets(
         raise typer.Exit(code=1)
 
 
+@odds_app.command("snapshot")
+def odds_snapshot(
+    kind: Annotated[str, typer.Option("--kind", help="open | close | repoll")] = "open",
+    dry_run: Annotated[
+        bool, typer.Option("--dry-run", help="Show what would be pulled, spend nothing.")
+    ] = False,
+) -> None:
+    """Log a prop snapshot. This is the CLV record — run it on schedule.
+
+    Costs markets x regions per event (~2 each). "close" only picks up events
+    that have not yet passed the cutoff, so it is safe to run on every game day
+    and will never pay for a game already in progress.
+    """
+    from datetime import UTC, datetime
+
+    from nfl_usage_props.odds.snapshots import events_to_snapshot, take_snapshot
+
+    config = load_config()
+    client = OddsAPIClient(config)
+
+    if dry_run:
+        try:
+            events = client.get_events().data or []
+        except (OddsAPIError, CreditFloorError) as exc:
+            console.print(f"[red]{exc}[/]")
+            raise typer.Exit(code=1) from exc
+        selected = events_to_snapshot(
+            events,
+            now=datetime.now(UTC),
+            horizon_hours=config.odds.snapshots.horizon_hours,
+            close_cutoff_minutes=config.odds.snapshots.close_cutoff_minutes,
+        )
+        cost = len(selected) * len(config.odds.prop_markets)
+        console.print(
+            f"[bold]{len(selected)}[/] of {len(events)} events in window, "
+            f"estimated [bold]{cost}[/] credits"
+        )
+        for event in selected:
+            console.print(
+                f"  {event.get('commence_time')}  "
+                f"{event.get('away_team')} @ {event.get('home_team')}"
+            )
+        return
+
+    try:
+        result = take_snapshot(client, config, kind=kind)
+    except (OddsAPIError, CreditFloorError) as exc:
+        console.print(f"[red]{exc}[/]")
+        raise typer.Exit(code=1) from exc
+
+    console.print(
+        f"[green]{result.snapshot_id}[/] {result.events_fetched}/{result.events_requested} events, "
+        f"{result.rows:,} rows, {result.credits_spent} credits spent, "
+        f"{result.credits_remaining} remaining"
+    )
+    if result.path:
+        console.print(f"  {result.path}")
+    for error in result.errors:
+        console.print(f"  [yellow]{error}[/]")
+    if result.errors and result.events_fetched == 0:
+        raise typer.Exit(code=1)
+
+
+@odds_app.command("resolve")
+def odds_resolve(
+    strict: Annotated[
+        bool,
+        typer.Option("--strict/--report", help="Raise on unresolved names, or just list them."),
+    ] = False,
+) -> None:
+    """Map book player names in logged snapshots to gsis_ids.
+
+    Runs over snapshots already on disk, so it is safe to fail: nothing is lost
+    by raising here, and the pass can be re-run after adding overrides.
+    """
+    import polars as pl
+
+    from nfl_usage_props.identity import PlayerResolver
+    from nfl_usage_props.odds.snapshots import SnapshotStore, resolve_snapshot
+    from nfl_usage_props.reference import load_name_overrides
+    from nfl_usage_props.storage import SEASONLESS_SENTINEL
+
+    config = load_config()
+    store = ParquetStore(config.raw_dir)
+    if not store.exists("players", SEASONLESS_SENTINEL):
+        console.print("[red]No players table. Run `nfl-props ingest run` first.[/]")
+        raise typer.Exit(code=1)
+
+    snapshots = SnapshotStore(config.props_dir).read_all()
+    if snapshots.is_empty():
+        console.print("[yellow]No snapshots logged yet.[/]")
+        raise typer.Exit(code=1)
+
+    players = store.read("players", SEASONLESS_SENTINEL)
+    if "latest_team" in players.columns:
+        players = players.with_columns(pl.col("latest_team").alias("team"))
+
+    team_lookup: dict[str, str] = {}
+    if store.exists("teams", SEASONLESS_SENTINEL):
+        teams = store.read("teams", SEASONLESS_SENTINEL)
+        team_lookup = dict(zip(teams["team_name"], teams["team_abbr"], strict=False))
+
+    resolver = PlayerResolver(players, overrides=load_name_overrides())
+    console.print(f"Resolver universe: {resolver.universe_size:,} skill players")
+
+    resolved, unresolved = resolve_snapshot(
+        snapshots, resolver, team_lookup=team_lookup, strict=False
+    )
+    total = snapshots["player_name_raw"].n_unique()
+    matched = resolved.filter(pl.col("gsis_id").is_not_null())["player_name_raw"].n_unique()
+
+    console.print(f"[green]{matched}[/]/{total} distinct names resolved")
+    for message in unresolved:
+        console.print(f"  [yellow]{message}[/]")
+
+    if unresolved and strict:
+        raise typer.Exit(code=1)
+
+
 @odds_app.command("fetch-game")
 def odds_fetch_game() -> None:
     """Pull spreads and totals for the whole slate (2 credits) and snapshot it."""

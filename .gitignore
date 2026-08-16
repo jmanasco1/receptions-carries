@@ -1,8 +1,16 @@
 # Secrets
 .env
 
-# Data -- everything here is reproducible from `nfl-props ingest run`
-data/
+# Data is reproducible from `nfl-props ingest run` and stays out of git...
+data/*
+!data/odds/
+data/odds/*
+
+# ...with ONE exception. Prop snapshots are the CLV record: they cannot be
+# re-downloaded (historical props are paid-tier) and cannot be reconstructed
+# after the fact. They are small, immutable and append-only, so they are
+# versioned rather than left to die with a container or a laptop.
+!data/odds/props/
 
 # Python
 __pycache__/
