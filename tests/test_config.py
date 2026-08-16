@@ -4,7 +4,12 @@ from datetime import UTC, datetime
 
 import pytest
 
-from nfl_usage_props.config import DEFAULT_CONFIG_PATH, current_nfl_season, load_config
+from nfl_usage_props.config import (
+    DEFAULT_CONFIG_PATH,
+    OutputConfig,
+    current_nfl_season,
+    load_config,
+)
 
 
 @pytest.mark.parametrize(
@@ -73,6 +78,28 @@ def test_blank_api_key_is_none(monkeypatch):
     """.env.example ships `ODDS_API_KEY=` — that must read as unset."""
     monkeypatch.setenv("ODDS_API_KEY", "   ")
     assert load_config(DEFAULT_CONFIG_PATH, load_env=False).odds_api_key() is None
+
+
+def test_depth_chart_lag_defaults_to_one_week():
+    """Decision: lag the legacy (<=2024) feed by one week. 2025+ uses `dt`."""
+    config = load_config(DEFAULT_CONFIG_PATH, load_env=False)
+    assert config.model.depth_chart_lag_weeks == 1
+
+
+def test_output_scope_is_posted_line_only():
+    config = load_config(DEFAULT_CONFIG_PATH, load_env=False)
+    assert config.output.scope == "posted_line_only"
+    assert config.output.posted_line_only is True
+
+
+def test_all_rostered_scope_is_supported():
+    assert OutputConfig(scope="all_rostered").posted_line_only is False
+
+
+def test_invalid_output_scope_rejected():
+    """A typo here would silently change what the report contains."""
+    with pytest.raises(ValueError, match="output.scope must be one of"):
+        OutputConfig(scope="everyone")
 
 
 def test_config_toml_contains_no_secrets():

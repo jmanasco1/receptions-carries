@@ -354,34 +354,42 @@ classification exists. Two things are worth settling first:
 1. **Verify the market keys** (the command above). Building a parser around an
    unverified key is exactly what you warned against, and it is a 2-credit
    question I could not answer from here.
-2. **Decide the `depth_charts` policy**, which is now two decisions rather than
-   one. For 2025+ the `dt` timestamp makes it exact, so there is nothing to
-   decide. For ≤2024 the lag rule is still a judgement call — see
-   [Open questions](#open-questions). You may also reasonably decide to train
-   only on 2025+ depth chart data and skip the legacy feed entirely, at the cost
-   of most of the corpus.
+2. Nothing else. The depth-chart lag and report scope are settled and recorded
+   in `config.toml` — see [Decisions](#decisions).
 
 ---
 
-## Open questions
+## Decisions
 
-Three things where the right call depends on information I do not have. I have
-not buried a default for any of them.
+### Settled
 
-1. **Do you have a paid Odds API plan, or is 500 credits/month the real
-   constraint?** It changes the whole ingestion cadence and decides whether
-   historical prop backtesting is on the table at all. The config assumes free
-   tier.
-2. **`depth_charts` lag rule for ≤2024 only** — accept the leak and use week-N
-   charts, or lag to week N-1 and lose Wednesday role changes? I lean N-1, and
-   would make it a config flag so the leakage test can assert against it either
-   way. 2025+ needs no rule: `dt` makes it exact. A third option is to use only
-   2025+ depth charts and drop the legacy feed, which is clean but throws away
-   nine seasons of depth-chart signal.
-3. **Scope: which players get projected?** Everyone with a prop line posted, or
-   everyone above a usage floor regardless of whether a line exists? The second
-   is more work but is what lets you notice a book has *not* posted a line on
-   someone who should have one.
+**Depth-chart lag: week N-1 for the legacy feed.** `model.depth_chart_lag_weeks
+= 1` in `config.toml`. Applies only to the ≤2024 feed, which is an undated
+weekly snapshot; the 2025+ feed carries `dt` and is filtered exactly against
+`kickoff_utc` instead. Stage 2's leakage test asserts both paths. Setting the
+parameter to 0 knowingly accepts the leak, and the leakage test is expected to
+fail at 0 for legacy seasons — that is what the parameter is for.
+
+**Report scope: players with a posted line.** `output.scope =
+"posted_line_only"`.
+
+One important consequence, because it is easy to get wrong: **this filters the
+report, not the estimation.** Layer 3 is a Dirichlet-Multinomial whose shares
+must sum to one, so every rostered player is projected internally regardless.
+Dropping teammates from the simplex would redistribute their share across the
+remainder and bias every surviving projection upward — the model would think a
+team throws 100% of its targets to the four players a book happened to price.
+Full roster in, filtered list out.
+
+`output.scope = "all_rostered"` additionally reports players with no posted
+line, which is what surfaces a book failing to post a line on someone who should
+have one. Available, not the default.
+
+### Still open
+
+**Do you have a paid Odds API plan, or is 500 credits/month the real
+constraint?** It changes the ingestion cadence and decides whether historical
+prop backtesting is possible at all. The config assumes free tier.
 
 ---
 

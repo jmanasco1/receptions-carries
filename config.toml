@@ -69,3 +69,30 @@ timeout_seconds = 30.0
 share_half_life_games = 6.0
 monte_carlo_draws = 10000
 random_seed = 20240901
+
+# Depth-chart lag, in weeks, for the LEGACY (<=2024) depth chart feed only.
+# That feed is one undated snapshot per week, so a row labelled week N may have
+# been published after the week N game. Lagging by 1 uses week N-1's chart for
+# week N, which is provably pre-kickoff.
+#
+# Does NOT apply to the 2025+ feed: it carries a `dt` UTC timestamp and is
+# filtered exactly against schedules.kickoff_utc instead. Stage 2's leakage test
+# asserts both paths.
+#
+# Setting this to 0 knowingly accepts the leak. The leakage test is expected to
+# fail at 0 for legacy seasons -- that is the point of the parameter.
+depth_chart_lag_weeks = 1
+
+[output]
+# Which players appear in the weekly report.
+#
+# "posted_line_only" restricts the REPORT to players a book has actually priced.
+# It does not restrict estimation: Layer 3 is a Dirichlet-Multinomial over the
+# whole roster and the shares must sum to one, so every rostered player is
+# projected internally regardless. Dropping teammates from the simplex would
+# redistribute their share and bias every remaining player upward.
+#
+# "all_rostered" additionally reports projections for players with no posted
+# line, which is what you would want in order to notice that a book has failed
+# to post a line on someone who should have one.
+scope = "posted_line_only"

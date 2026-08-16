@@ -11,6 +11,7 @@ from nfl_usage_props.config import (
     IngestConfig,
     ModelConfig,
     OddsConfig,
+    OutputConfig,
     RetryConfig,
     StorageConfig,
 )
@@ -54,5 +55,6 @@ def config(tmp_path: Path) -> Config:
             ),
         ),
         model=ModelConfig(),
+        output=OutputConfig(),
         source_path=tmp_path / "config.toml",
     )

@@ -78,6 +78,31 @@ class ModelConfig:
     share_half_life_games: float = 6.0
     monte_carlo_draws: int = 10000
     random_seed: int = 20240901
+    # Weeks to lag the LEGACY (<=2024) depth chart feed. The 2025+ feed has a
+    # `dt` timestamp and is filtered exactly instead. 0 accepts the leak.
+    depth_chart_lag_weeks: int = 1
+
+
+@dataclass(frozen=True)
+class OutputConfig:
+    """What lands in the weekly report.
+
+    `scope` filters the REPORT only. Layer 3 is a Dirichlet-Multinomial over the
+    full roster whose shares must sum to one, so estimation always covers every
+    rostered player regardless of this setting.
+    """
+
+    scope: str = "posted_line_only"
+
+    VALID_SCOPES = ("posted_line_only", "all_rostered")
+
+    def __post_init__(self) -> None:
+        if self.scope not in self.VALID_SCOPES:
+            raise ValueError(f"output.scope must be one of {self.VALID_SCOPES}, got {self.scope!r}")
+
+    @property
+    def posted_line_only(self) -> bool:
+        return self.scope == "posted_line_only"
 
 
 @dataclass(frozen=True)
@@ -87,6 +112,7 @@ class Config:
     storage: StorageConfig
     odds: OddsConfig
     model: ModelConfig
+    output: OutputConfig
     source_path: Path
 
     @property
@@ -157,6 +183,7 @@ def load_config(path: str | Path | None = None, *, load_env: bool = True) -> Con
     )
 
     model = ModelConfig(**raw.get("model", {}))
+    output = OutputConfig(**raw.get("output", {}))
 
     return Config(
         data_dir=data_dir,
@@ -164,5 +191,6 @@ def load_config(path: str | Path | None = None, *, load_env: bool = True) -> Con
         storage=storage,
         odds=odds,
         model=model,
+        output=output,
         source_path=path,
     )
