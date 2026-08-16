@@ -1,0 +1,285 @@
+"""Command line interface."""
+
+from __future__ import annotations
+
+import json
+from typing import Annotated
+
+import typer
+from rich.console import Console
+from rich.table import Table
+
+from nfl_usage_props.config import load_config
+from nfl_usage_props.ingest import TABLES, IngestResult, ingest_all
+from nfl_usage_props.metadata import MetadataStore
+from nfl_usage_props.odds import CreditFloorError, OddsAPIClient, OddsAPIError
+from nfl_usage_props.storage import ParquetStore
+
+app = typer.Typer(help="NFL usage props: receptions and rush attempts.", no_args_is_help=True)
+ingest_app = typer.Typer(help="nflverse data ingestion.", no_args_is_help=True)
+odds_app = typer.Typer(help="The Odds API client.", no_args_is_help=True)
+app.add_typer(ingest_app, name="ingest")
+app.add_typer(odds_app, name="odds")
+
+console = Console()
+
+
+def _parse_seasons(spec: str | None) -> list[int] | None:
+    """Accept '2023', '2020-2024', or '2019,2021,2023'."""
+    if not spec:
+        return None
+    seasons: list[int] = []
+    for chunk in spec.split(","):
+        chunk = chunk.strip()
+        if "-" in chunk:
+            lo, hi = chunk.split("-", 1)
+            seasons.extend(range(int(lo), int(hi) + 1))
+        elif chunk:
+            seasons.append(int(chunk))
+    return sorted(set(seasons))
+
+
+@ingest_app.command("run")
+def ingest_run(
+    tables: Annotated[
+        str | None, typer.Option("--tables", help="Comma-separated table names.")
+    ] = None,
+    seasons: Annotated[
+        str | None, typer.Option("--seasons", help="e.g. 2023 or 2016-2024 or 2019,2023")
+    ] = None,
+    force: Annotated[
+        bool, typer.Option("--force", help="Re-download even completed seasons.")
+    ] = False,
+) -> None:
+    """Pull nflverse tables to parquet. Idempotent -- completed seasons are skipped."""
+    config = load_config()
+    table_list = [t.strip() for t in tables.split(",")] if tables else None
+
+    def report(result: IngestResult) -> None:
+        if result.status == "fetched":
+            console.print(
+                f"[green]fetched[/] {result.table} {result.season} "
+                f"rows={result.rows:,} {result.bytes_written / 1e6:.1f}MB "
+                f"{result.duration_s:.1f}s"
+            )
+        elif result.status == "skipped_complete":
+            console.print(f"[dim]skipped[/] {result.table} {result.season} (complete)")
+        elif result.status == "unavailable":
+            console.print(
+                f"[yellow]pending[/] {result.table} {result.season} (not published upstream yet)"
+            )
+        else:
+            console.print(f"[red]error[/]   {result.table} {result.season}: {result.message}")
+
+    results = ingest_all(
+        config, tables=table_list, seasons=_parse_seasons(seasons), force=force, progress=report
+    )
+
+    fetched = sum(1 for r in results if r.status == "fetched")
+    skipped = sum(1 for r in results if r.status == "skipped_complete")
+    pending = sum(1 for r in results if r.status == "unavailable")
+    errors = [r for r in results if r.status == "error"]
+    console.print(
+        f"\n[bold]{fetched} fetched, {skipped} skipped, {pending} pending, "
+        f"{len(errors)} errors[/] -> {config.raw_dir}"
+    )
+    # `pending` is not a failure: a future season has no game data by definition.
+    if errors:
+        raise typer.Exit(code=1)
+
+
+@ingest_app.command("status")
+def ingest_status() -> None:
+    """Show what is on disk, by table and season."""
+    config = load_config()
+    store = ParquetStore(config.raw_dir, compression=config.storage.compression)
+    meta = MetadataStore(config.metadata_db)
+    states = {(r["table_name"], r["season"]): r for r in meta.ingest_summary()}
+
+    table = Table(title=f"Ingested data — {config.raw_dir}")
+    for col in ("table", "seasons on disk", "complete", "total rows", "size"):
+        table.add_column(col)
+
+    for name in sorted(TABLES):
+        seasons = store.available_seasons(name)
+        if not seasons:
+            table.add_row(name, "[dim]none[/]", "-", "-", "-")
+            continue
+        rows = sum((states.get((name, s), {}).get("rows") or 0) for s in seasons)
+        size = sum(store.size_bytes(name, s) for s in seasons)
+        complete = sum(1 for s in seasons if (states.get((name, s), {}).get("complete")))
+        span = f"{min(seasons)}–{max(seasons)} ({len(seasons)})"
+        table.add_row(name, span, f"{complete}/{len(seasons)}", f"{rows:,}", f"{size / 1e6:.1f}MB")
+
+    console.print(table)
+
+
+@odds_app.command("credits")
+def odds_credits() -> None:
+    """Show the last observed credit balance and recent calls. Makes no API call."""
+    config = load_config()
+    meta = MetadataStore(config.metadata_db)
+    balance = meta.latest_credit_balance()
+    floor = config.odds.credits.floor
+
+    if balance is None:
+        console.print("[yellow]No credit balance recorded yet[/] (no API call has been made).")
+    else:
+        colour = "red" if balance < floor else "green"
+        console.print(f"Last observed balance: [{colour}]{balance}[/] (floor {floor})")
+
+    calls = meta.recent_odds_calls(limit=10)
+    if not calls:
+        console.print("[dim]No recorded API calls.[/]")
+        return
+    table = Table(title="Recent Odds API calls")
+    for col in ("when", "endpoint", "status", "cost", "remaining", "error"):
+        table.add_column(col, overflow="fold")
+    for call in calls:
+        table.add_row(
+            (call["created_at"] or "")[:19],
+            call["endpoint"] or "",
+            str(call["status_code"] or ""),
+            str(call["cost"] if call["cost"] is not None else ""),
+            str(call["requests_remaining"] if call["requests_remaining"] is not None else ""),
+            (call["error"] or "")[:60],
+        )
+    console.print(table)
+
+
+@odds_app.command("verify-markets")
+def odds_verify_markets(
+    save_fixture: Annotated[
+        bool, typer.Option("--save-fixture", help="Write the response to tests/fixtures/.")
+    ] = False,
+) -> None:
+    """Verify the configured prop market keys against the live API.
+
+    Costs credits: one free /events call, then ONE event-odds call
+    (markets x regions credits, ~2 by default). This is the single real call
+    Stage 1 is designed around -- run it once, capture the fixture, and work
+    offline from there.
+    """
+    config = load_config()
+    client = OddsAPIClient(config)
+
+    try:
+        events = client.get_events()
+    except (OddsAPIError, CreditFloorError) as exc:
+        console.print(f"[red]{exc}[/]")
+        raise typer.Exit(code=1) from exc
+
+    event_list = events.data or []
+    console.print(f"{len(event_list)} upcoming events. Remaining: {events.requests_remaining}")
+    if not event_list:
+        console.print("[yellow]No upcoming NFL events — nothing to verify (offseason?).[/]")
+        raise typer.Exit(code=1)
+
+    event = event_list[0]
+    console.print(
+        f"Probing event [bold]{event.get('away_team')} @ {event.get('home_team')}[/] "
+        f"({event.get('id')})"
+    )
+
+    try:
+        resp = client.get_event_odds(event["id"])
+    except (OddsAPIError, CreditFloorError) as exc:
+        console.print(f"[red]{exc}[/]")
+        console.print(
+            "[yellow]A 422 here usually means a market key is wrong. "
+            "Check config.toml [odds].prop_markets.[/]"
+        )
+        raise typer.Exit(code=1) from exc
+
+    found = {
+        m.get("key")
+        for book in (resp.data or {}).get("bookmakers", [])
+        for m in book.get("markets", [])
+    }
+    console.print(f"Cost {resp.cost} credits. Remaining: {resp.requests_remaining}")
+    console.print(f"Bookmakers: {len((resp.data or {}).get('bookmakers', []))}")
+
+    for market in config.odds.prop_markets:
+        mark = "[green]FOUND[/]" if market in found else "[red]MISSING[/]"
+        console.print(f"  {mark} {market}")
+
+    saved = client.save_snapshot(resp, "verify")
+    console.print(f"Snapshot: {saved}")
+
+    if save_fixture:
+        from nfl_usage_props.config import REPO_ROOT
+
+        fixture = REPO_ROOT / "tests" / "fixtures" / "event_odds_live.json"
+        fixture.parent.mkdir(parents=True, exist_ok=True)
+        fixture.write_text(json.dumps(resp.data, indent=2))
+        console.print(f"Fixture: {fixture}")
+
+    if not set(config.odds.prop_markets) <= found:
+        raise typer.Exit(code=1)
+
+
+@odds_app.command("fetch-game")
+def odds_fetch_game() -> None:
+    """Pull spreads and totals for the whole slate (2 credits) and snapshot it."""
+    config = load_config()
+    client = OddsAPIClient(config)
+    try:
+        resp = client.get_game_odds()
+    except (OddsAPIError, CreditFloorError) as exc:
+        console.print(f"[red]{exc}[/]")
+        raise typer.Exit(code=1) from exc
+    path = client.save_snapshot(resp, "game_odds")
+    console.print(
+        f"[green]{len(resp.data)} games[/] cost={resp.cost} "
+        f"remaining={resp.requests_remaining}\n{path}"
+    )
+
+
+docs_app = typer.Typer(help="Generated documentation.", no_args_is_help=True)
+app.add_typer(docs_app, name="docs")
+
+
+@docs_app.command("data-dictionary")
+def docs_data_dictionary(
+    out: Annotated[str, typer.Option("--out", help="Output path.")] = "docs/DATA_DICTIONARY.md",
+) -> None:
+    """Regenerate the data dictionary from the parquet currently on disk."""
+    from pathlib import Path
+
+    from nfl_usage_props.config import REPO_ROOT
+    from nfl_usage_props.datadict import build, render
+
+    config = load_config()
+    docs = build(config)
+    if not docs:
+        console.print("[red]No ingested tables found. Run `nfl-props ingest run` first.[/]")
+        raise typer.Exit(code=1)
+
+    path = Path(out)
+    if not path.is_absolute():
+        path = REPO_ROOT / path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(render(config, docs))
+
+    tables = len({d.table for d in docs})
+    console.print(f"[green]{len(docs)} columns across {tables} tables[/] -> {path}")
+
+
+@app.command("config")
+def show_config() -> None:
+    """Print the resolved configuration."""
+    config = load_config()
+    console.print(f"[bold]config[/]      {config.source_path}")
+    console.print(f"[bold]data_dir[/]    {config.data_dir}")
+    console.print(
+        f"[bold]seasons[/]     {config.ingest.seasons()[0]}–{config.ingest.seasons()[-1]}"
+    )
+    console.print(f"[bold]tables[/]      {', '.join(config.ingest.tables)}")
+    console.print(f"[bold]prop mkts[/]   {', '.join(config.odds.prop_markets)}")
+    console.print(f"[bold]credit floor[/] {config.odds.credits.floor}")
+    key = config.odds_api_key()
+    console.print(f"[bold]ODDS_API_KEY[/] {'set' if key else '[yellow]not set[/]'}")
+
+
+if __name__ == "__main__":
+    app()

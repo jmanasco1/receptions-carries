@@ -1,0 +1,35 @@
+[
+  {
+    "id": "e1a2b3c4d5e6f70819a2b3c4d5e6f708",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2024-09-09T00:20:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "Green Bay Packers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2024-09-08T18:02:11Z",
+        "markets": [
+          {
+            "key": "spreads",
+            "last_update": "2024-09-08T18:02:11Z",
+            "outcomes": [
+              {"name": "Philadelphia Eagles", "price": -110, "point": -2.5},
+              {"name": "Green Bay Packers", "price": -110, "point": 2.5}
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2024-09-08T18:02:11Z",
+            "outcomes": [
+              {"name": "Over", "price": -112, "point": 48.5},
+              {"name": "Under", "price": -108, "point": 48.5}
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

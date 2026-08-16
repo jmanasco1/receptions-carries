@@ -1,0 +1,26 @@
+[
+  {
+    "id": "e1a2b3c4d5e6f70819a2b3c4d5e6f708",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2024-09-09T00:20:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "Green Bay Packers"
+  },
+  {
+    "id": "f2b3c4d5e6f708192a3b4c5d6e7f8091",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2024-09-09T17:00:00Z",
+    "home_team": "Atlanta Falcons",
+    "away_team": "Pittsburgh Steelers"
+  },
+  {
+    "id": "a3c4d5e6f708192b3c4d5e6f708192a3",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2024-09-09T17:00:00Z",
+    "home_team": "Buffalo Bills",
+    "away_team": "Arizona Cardinals"
+  }
+]

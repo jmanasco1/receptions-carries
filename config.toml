@@ -1,0 +1,71 @@
+# nfl-usage-props configuration
+# Everything tunable lives here. No magic numbers in code.
+
+[project]
+# Directory (relative to repo root, or absolute) where all data is written.
+data_dir = "data"
+
+[ingest]
+# nflverse play-by-play and derived tables start in 2016. Participation
+# (our routes proxy) also starts in 2016, so this is the effective floor.
+first_season = 2016
+# Upper bound on seasons to ingest. TOML has no null literal, so leave this
+# key COMMENTED OUT to mean "up to the current NFL season". Set it only to pin
+# ingestion to a fixed range (e.g. for a reproducible backtest).
+# last_season = 2024
+# Tables to pull. Removing one here removes it from `ingest run` entirely.
+tables = [
+    "schedules",
+    "players",
+    "pbp",
+    "player_stats",
+    "snap_counts",
+    "depth_charts",
+    "injuries",
+    "rosters_weekly",
+    "participation",
+]
+
+[storage]
+# Parquet compression for on-disk tables.
+compression = "zstd"
+# A season is treated as immutable ("complete") once every game in its
+# schedule has a result AND this many days have passed since the final game.
+# The lag guards against nflverse back-filling corrections right after a season.
+completion_lag_days = 30
+
+[odds]
+base_url = "https://api.the-odds-api.com/v4"
+sport = "americanfootball_nfl"
+regions = "us"
+odds_format = "american"
+# NOTE: these market keys are documented but UNVERIFIED against the live API
+# in this environment (see README "What could not be verified"). Run
+# `nfl-props odds verify-markets` with a real key before trusting them.
+game_markets = ["spreads", "totals"]
+prop_markets = ["player_receptions", "player_rush_attempts"]
+
+[odds.credits]
+# Hard abort if the API reports fewer remaining credits than this BEFORE a
+# call. A full-slate props pull is ~16 events x 2 markets x 1 region = 32
+# credits, so a floor below ~40 risks aborting mid-slate.
+floor = 50
+# Refuse to start a props pull that we estimate will cost more than this.
+max_spend_per_run = 120
+
+[odds.retry]
+max_attempts = 5
+backoff_initial_seconds = 2.0
+backoff_multiplier = 2.0
+backoff_max_seconds = 32.0
+timeout_seconds = 30.0
+
+[model]
+# Placeholders consumed in later stages. Recorded here so Stage 1 config
+# loading is exercised against the real shape of the file.
+# Exponential decay half-life (in games) for recency-weighted share estimates.
+# NOT fitted yet -- this is a starting bracket, to be tuned on held-out data
+# in Stage 4. See README.
+share_half_life_games = 6.0
+monte_carlo_draws = 10000
+random_seed = 20240901

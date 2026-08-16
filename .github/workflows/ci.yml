@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --extra dev
+
+      - name: Lint
+        run: |
+          uv run ruff check .
+          uv run ruff format --check .
+
+      # Offline only. Tests marked `network` hit live nflverse and are run
+      # separately below so a flaky upstream cannot redden every PR.
+      #
+      # STAGE 2: the as-of leakage test lands here and MUST be part of this
+      # step. A leak that backtests at +8% ROI and loses money live is the
+      # single most expensive failure mode in this project -- it has to break
+      # the build, not warn.
+      - name: Tests (offline)
+        run: uv run pytest -m "not network" -q
+
+  network:
+    runs-on: ubuntu-latest
+    # Upstream nflverse availability is not a reason to block a merge.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --extra dev
+      - name: Tests (live nflverse)
+        run: uv run pytest -m network -q

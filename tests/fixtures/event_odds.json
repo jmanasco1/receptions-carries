@@ -1,0 +1,64 @@
+{
+  "id": "e1a2b3c4d5e6f70819a2b3c4d5e6f708",
+  "sport_key": "americanfootball_nfl",
+  "sport_title": "NFL",
+  "commence_time": "2024-09-09T00:20:00Z",
+  "home_team": "Philadelphia Eagles",
+  "away_team": "Green Bay Packers",
+  "bookmakers": [
+    {
+      "key": "draftkings",
+      "title": "DraftKings",
+      "last_update": "2024-09-08T18:02:11Z",
+      "markets": [
+        {
+          "key": "player_receptions",
+          "last_update": "2024-09-08T18:02:11Z",
+          "outcomes": [
+            {"name": "Over", "description": "A.J. Brown", "price": -125, "point": 5.5},
+            {"name": "Under", "description": "A.J. Brown", "price": 100, "point": 5.5},
+            {"name": "Over", "description": "DeVonta Smith", "price": -110, "point": 4.5},
+            {"name": "Under", "description": "DeVonta Smith", "price": -115, "point": 4.5},
+            {"name": "Over", "description": "Dallas Goedert", "price": 105, "point": 3.5},
+            {"name": "Under", "description": "Dallas Goedert", "price": -135, "point": 3.5}
+          ]
+        },
+        {
+          "key": "player_rush_attempts",
+          "last_update": "2024-09-08T18:02:11Z",
+          "outcomes": [
+            {"name": "Over", "description": "Saquon Barkley", "price": -120, "point": 17.5},
+            {"name": "Under", "description": "Saquon Barkley", "price": -105, "point": 17.5},
+            {"name": "Over", "description": "Josh Jacobs", "price": -115, "point": 15.5},
+            {"name": "Under", "description": "Josh Jacobs", "price": -110, "point": 15.5}
+          ]
+        }
+      ]
+    },
+    {
+      "key": "fanduel",
+      "title": "FanDuel",
+      "last_update": "2024-09-08T18:01:47Z",
+      "markets": [
+        {
+          "key": "player_receptions",
+          "last_update": "2024-09-08T18:01:47Z",
+          "outcomes": [
+            {"name": "Over", "description": "A.J. Brown", "price": -134, "point": 5.5},
+            {"name": "Under", "description": "A.J. Brown", "price": 108, "point": 5.5},
+            {"name": "Over", "description": "DeVonta Smith", "price": -102, "point": 4.5},
+            {"name": "Under", "description": "DeVonta Smith", "price": -122, "point": 4.5}
+          ]
+        },
+        {
+          "key": "player_rush_attempts",
+          "last_update": "2024-09-08T18:01:47Z",
+          "outcomes": [
+            {"name": "Over", "description": "Saquon Barkley", "price": -114, "point": 17.5},
+            {"name": "Under", "description": "Saquon Barkley", "price": -112, "point": 17.5}
+          ]
+        }
+      ]
+    }
+  ]
+}
