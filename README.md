@@ -9,11 +9,14 @@ outcome swings on one broken tackle; a reception outcome swings on whether the
 ball was thrown to the guy. Usage is more predictable than efficiency, and books
 price usage markets less sharply than yardage markets.
 
-> **Status: Stage 1 of 8 complete.** Data ingestion, player identity resolution,
-> prop snapshot logging, the odds client and the data dictionary exist and run.
-> **No model exists yet.** Nothing in this repo currently projects anything or
-> prices a bet. See [Stage 1 status](#stage-1-status) for exactly what runs and
-> what does not.
+> **Status: Stages 1–2 of 8 complete.** Data ingestion, player identity
+> resolution, prop snapshot logging, the odds client, the data dictionary, the
+> player-game panel, the state-space role tracker, the as-of feature matrix and
+> the leakage test exist and run.
+> **No model exists yet.** The features are built and proven leak-free; nothing
+> yet turns them into a projection or prices a bet. See
+> [Stage 1 status](#stage-1-status) and [Stage 2 status](#stage-2-status) for
+> exactly what runs and what does not.
 >
 > **If you do one thing first, start the snapshot logger.** Closing line value
 > is the only validation signal available on the free tier and it cannot be
@@ -73,9 +76,11 @@ Latent role as a random walk, weekly observation with noise scaled by exposure,
 Kalman-style update. This handles byes and unequal gaps natively and returns
 uncertainty rather than a point estimate.
 
-- **Per-layer speed.** Snap share settles fastest (~4 games), carry share ~5–6,
-  target share slowest (~7–8). One global rate is wrong for most of them, so
-  process noise is configured per layer.
+- **Per-layer speed.** Snap share settles fastest (~4 games), carry share ~5.5,
+  target share slowest (~7.5). One global rate is wrong for most of them, so
+  process noise is configured per layer — and *derived* from those target
+  memories rather than eyeballed, via `q = R / (m(m-1))`. See
+  [Stage 2 status](#stage-2-status).
 - **Uncertainty propagates into the Monte Carlo** as parameter uncertainty.
   Collapsing to a point estimate and sampling around it understates variance for
   exactly the players whose roles just changed.
@@ -101,13 +106,16 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 222 tests, offline, ~1s
+uv run pytest -m "not network"         # 314 tests, offline, ~3s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
 uv run nfl-props ingest run            # pull nflverse 2016–present (~56s, 165 MB)
 uv run nfl-props ingest status         # what landed on disk
 uv run nfl-props docs data-dictionary  # regenerate docs/DATA_DICTIONARY.md
+
+uv run nfl-props features build        # panel + as-of feature matrix
+uv run nfl-props features leakage --season 2024 --weeks 1,8,17
 ```
 
 Once you have an API key, the time-critical part:
@@ -399,10 +407,9 @@ joined on time rather than week. Any Stage 2 code touching depth charts has to
 handle both shapes; the dictionary marks every column with the seasons it
 appears in so this cannot be missed.
 
-**The leakage test itself is Stage 2 and does not exist yet.** The timing
-metadata it will consume exists and is unit-tested; the test that samples 200
-historical rows and asserts reproducibility from a truncated dataset has not
-been written. Until it exists, treat any feature-level claim as unverified.
+**The leakage test now exists** (`src/nfl_usage_props/leakage.py`, Stage 2) and
+runs in the blocking CI step. It is described in
+[Stage 2 status](#stage-2-status).
 
 ---
 
@@ -532,23 +539,108 @@ Add `ODDS_API_KEY` as a repository secret to let
 `.github/workflows/snapshot.yml` run the schedule automatically. Every week it
 does not run is a week of closing lines that cannot be recovered later.
 
-### What is blocking Stage 2
+### What is still outstanding from Stage 1
 
-Nothing blocks feature engineering — the full corpus is on disk and the timing
-classification exists. Two things are worth doing first, and one of them is on a
-clock:
+Stage 2 is built (see below). Two Stage 1 items remain, and one is on a clock:
 
 1. **Start the snapshot logger.** Add the `ODDS_API_KEY` secret and let the
-   workflow run. This is the only item here with a deadline: every week before
-   it starts is a week of closing lines that no amount of later work recovers.
-   It does not depend on the model, the resolver, or anything else in Stage 2.
+   workflow run. This is the only item in the whole project with a deadline:
+   every week before it starts is a week of closing lines that no amount of
+   later work recovers. It does not depend on the model or anything else.
 2. **Verify the market keys** (`odds verify-markets`). Building a parser around
-   an unverified key is exactly what you warned against, and it is a 2-credit
-   question I could not answer from here. Doing this before (1) is sensible —
-   a wrong market key would make the first snapshots empty.
+   an unverified key is a risk worth 2 credits to close. Doing this before (1)
+   is sensible — a wrong market key would make the first snapshots empty.
 
 The depth-chart lag and report scope are settled and recorded in `config.toml` —
 see [Decisions](#decisions).
+
+---
+
+## Stage 2 status
+
+Feature engineering. Everything below runs against the full ten-season corpus.
+
+```bash
+uv run nfl-props features build                        # panel + feature matrix
+uv run nfl-props features leakage --season 2024 --weeks 1,8,17
+```
+
+### What runs end to end, verified by running it
+
+| Piece | What it does | Verification |
+|---|---|---|
+| `features/panel.py` | 102,237 player-games, 2016–2025 | targets and receptions match `player_stats` **exactly**; carries differ only by kneels |
+| `model/role_tracker.py` | state-space filter, 3 layers | target share r=0.81, carry share r=0.89 against realised, MAE ~4% |
+| `features/opponent.py` | as-of defensive rates, shrunk | tampering with a game cannot move its own features |
+| `features/build.py` | 32 pre-kickoff features | every row joins; no constant columns |
+| `leakage.py` | same-game + future checks | catches three planted leak classes; clean on real data |
+
+### The panel disagrees with nflverse on purpose
+
+`player_stats.carries` counts quarterback kneels. The panel does not — a kneel
+is a clock play, not an opportunity anyone competes for, and including it would
+put ~400 phantom carries a season into the denominator every back's share is
+measured against. This is the entire QB difference and it is tested, not assumed.
+
+One further divergence exists and is bounded rather than fixed: a penalty
+enforced *after* a play that stood is still tagged `no_play` by nflverse, so a
+carry that counted gets dropped. One non-QB instance across 2023–24. Recovering
+it needs description parsing, which is not worth the fragility.
+
+### Process noise is derived, not guessed
+
+The role tracker's speed knobs used to be eyeballed values (0.022–0.045) with
+comments claiming a memory of "~4 games" and "~7-8 games". They delivered
+roughly **half** that. For a local level model the steady-state gain pins the
+effective memory exactly:
+
+```
+q = R / (m(m - 1))
+```
+
+so each layer's process noise is now that formula evaluated at a stated target
+memory and a typical starter's workload. `calibrated_process_noise()` is the
+source of truth and a test holds `config.toml` to it. The point is not the
+precision — these are still priors, and Stage 4 fits them — it is that a knob
+nobody can interpret is a knob whose drift nobody notices.
+
+### The leakage test, and why half of it tests itself
+
+Two failures, caught two different ways, because they are genuinely different:
+
+- **Same-game** — a feature reads its own game's outcome. Caught by corrupting
+  the target week's outcomes and rebuilding.
+- **Future** — a feature reads games played later. Caught by truncating the
+  corpus and rebuilding.
+
+A `rolling_mean` without a shift leaks same-game but not future. A season-wide
+league average leaks future but not same-game. Running one check catches one
+class and provides false confidence about the other.
+
+Half the tests in `tests/test_leakage.py` plant deliberate leaks — an unshifted
+rolling mean, a season-wide aggregate, a string column, a null-only difference —
+and assert the detector catches each. **A leakage check that cannot detect a
+leak passes forever.** That failure mode is worse than having no check, because
+it is indistinguishable from a clean bill of health.
+
+### Observed wind is not a feature
+
+`schedules.wind` is measured during the game. It is kept in the matrix under
+`FITTING_ONLY_COLUMNS` so the weather coefficient can be fitted on history, and
+excluded from `feature_columns()` so it can never be read at prediction time.
+The stadium's **roof type** is a different thing — a property of the building,
+knowable on Wednesday — and is a real feature. Stage 3 adds `wind_forecast`.
+
+### What Stage 2 does NOT include
+
+- No projection. The features exist; nothing consumes them yet.
+- No prices, no edges, no bet sizing.
+- Injury-driven role events. The tracker's event mechanism works and fires on
+  team changes and returns from absence, both visible in the panel. Wiring the
+  injury report into it needs an as-of join that is not written.
+- Defensive slot-vs-wide splits. Deliberately deferred — the role tracker
+  already carries the player's own slot/wide usage, and the defensive side needs
+  per-position classification that would be fitting noise this early.
 
 ---
 
@@ -629,10 +721,17 @@ src/nfl_usage_props/
   odds/client.py                Odds API client, credit guards, retries
   odds/parse.py                 payload -> rows, implied probability, hold
   odds/snapshots.py             CLV logging, per-game-day close selection
+  features/panel.py             player-game usage panel (post-game truth)
+  features/build.py             as-of feature matrix (pre-kickoff only)
+  features/opponent.py          as-of defensive rates, shrunk to league
+  features/dataset.py           raw parquet -> panel -> features
+  model/role_tracker.py         state-space filter, replaces fixed decay
+  leakage.py                    same-game + future leak detection
 data/odds/props/                prop snapshots — the one versioned data dir
+data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          222 offline tests + 30 network-marked
-.github/workflows/ci.yml        lint + offline tests; Stage 2's leakage test lands here
+tests/                          314 offline tests + 43 network-marked
+.github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```
 
@@ -646,7 +745,7 @@ tests/                          222 offline tests + 30 network-marked
 ## Roadmap
 
 1. ✅ Scaffold, data ingestion, player identity resolution, prop snapshot logging
-2. Feature engineering with as-of joins and the leakage test
+2. ✅ Feature engineering with as-of joins and the leakage test
 3. Team volume model (plays, pass/rush split), opponent pace, wind forecast
 4. Player share models (state-space role tracker, partially pooled
    Dirichlet-Multinomial, Beta-Binomial catch rate)

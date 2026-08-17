@@ -402,3 +402,67 @@ def show_config() -> None:
 
 if __name__ == "__main__":
     app()
+
+
+features_app = typer.Typer(help="Stage 2: the as-of feature matrix.", no_args_is_help=True)
+app.add_typer(features_app, name="features")
+
+
+@features_app.command("build")
+def features_build(
+    seasons: Annotated[
+        str | None, typer.Option("--seasons", help="e.g. 2024 or 2020-2024.")
+    ] = None,
+    write: Annotated[
+        bool, typer.Option("--write/--no-write", help="Persist to data/derived.")
+    ] = True,
+) -> None:
+    """Build the player-game panel and the as-of feature matrix."""
+    from nfl_usage_props.features.build import feature_columns
+    from nfl_usage_props.features.dataset import build_dataset, write_dataset
+
+    config = load_config()
+    panel, features = build_dataset(config, _parse_seasons(seasons))
+
+    console.print(f"[bold]panel[/]     {panel.height:,} player-games")
+    console.print(
+        f"[bold]features[/]  {features.height:,} rows, {len(feature_columns(features))} features"
+    )
+
+    covered = sorted(panel["season"].unique().to_list())
+    console.print(f"[bold]seasons[/]   {covered[0]}–{covered[-1]}")
+
+    if write:
+        written = write_dataset(config, panel, features)
+        console.print(f"[green]wrote {len(written)} partitions[/] -> {config.derived_dir}")
+
+
+@features_app.command("leakage")
+def features_leakage(
+    season: Annotated[int, typer.Option("--season", help="Season to test.")],
+    weeks: Annotated[str, typer.Option("--weeks", help="e.g. 4 or 1,8,14.")] = "4,10",
+) -> None:
+    """Re-derive the feature matrix from a corrupted and a truncated corpus.
+
+    Any feature that moves is reading either its own game's outcome or a game
+    that had not been played yet. Exits non-zero on any finding, so this is
+    usable as a gate rather than as a report nobody reads.
+    """
+    from nfl_usage_props.features.dataset import load_panel, load_schedules
+    from nfl_usage_props.leakage import run_leakage_checks
+
+    config = load_config()
+    panel = load_panel(config)
+    schedules = load_schedules(config)
+
+    findings = []
+    for week in _parse_seasons(weeks) or []:
+        found = run_leakage_checks(panel, schedules, config, season=season, week=week)
+        status = "[green]clean[/]" if not found else f"[red]{len(found)} findings[/]"
+        console.print(f"{season} week {week:>2}: {status}")
+        findings.extend(found)
+
+    if findings:
+        for finding in findings:
+            console.print(f"  [red]{finding}[/]")
+        raise typer.Exit(code=1)

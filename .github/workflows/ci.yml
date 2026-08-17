@@ -27,10 +27,12 @@ jobs:
       # Offline only. Tests marked `network` hit live nflverse and are run
       # separately below so a flaky upstream cannot redden every PR.
       #
-      # STAGE 2: the as-of leakage test lands here and MUST be part of this
-      # step. A leak that backtests at +8% ROI and loses money live is the
-      # single most expensive failure mode in this project -- it has to break
-      # the build, not warn.
+      # The leakage suite (tests/test_leakage.py) runs in THIS step, not the
+      # tolerant one below. A leak that backtests at +8% ROI and loses money
+      # live is the single most expensive failure mode in this project, so it
+      # breaks the build rather than warning. Half those tests check the
+      # detector itself against planted leaks -- a leakage check that cannot
+      # detect a leak passes forever and is worse than having none.
       - name: Tests (offline)
         run: uv run pytest -m "not network" -q
 

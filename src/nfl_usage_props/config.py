@@ -102,9 +102,12 @@ class EdgeConfig:
 class RoleTrackerConfig:
     """State-space role tracker. Replaces fixed exponential decay entirely."""
 
-    process_noise_snap_share: float = 0.045
-    process_noise_carry_share: float = 0.030
-    process_noise_target_share: float = 0.022
+    # Derived, not guessed: q = R / (m(m-1)) at each layer's target effective
+    # memory. See `model.role_tracker.calibrated_process_noise`, which a test
+    # holds these to.
+    process_noise_snap_share: float = 0.00599
+    process_noise_carry_share: float = 0.00625
+    process_noise_target_share: float = 0.00355
     process_noise_event_multiplier: float = 6.0
     partial_game_exposure_ratio: float = 0.55
     changepoint_lookback_games: int = 2

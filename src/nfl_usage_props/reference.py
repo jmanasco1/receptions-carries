@@ -21,6 +21,25 @@ NAME_OVERRIDES_CSV = REFERENCE_DIR / "player_name_overrides.csv"
 # be read from the observed `roof` column and never assumed.
 WIND_SHIELDED_ROOF_TYPES = frozenset({"dome"})
 
+# nflverse is not internally consistent about relocated franchises: `pbp`
+# rewrites history to the current abbreviation (a 2016 Raiders game says LV),
+# while `schedules` preserves what the team was called at the time (OAK). Left
+# alone this silently drops the join for 81 team-games, which does not look
+# like a bug -- it looks like those teams having slightly less history.
+#
+# Everything is normalised TO the current code, matching pbp, because pbp is
+# the larger and more widely joined table.
+TEAM_RELOCATIONS = {
+    "OAK": "LV",  # Oakland -> Las Vegas, 2020
+    "SD": "LAC",  # San Diego -> Los Angeles, 2017
+    "STL": "LA",  # St. Louis -> Los Angeles, 2016
+}
+
+
+def normalize_team(column: str = "team") -> pl.Expr:
+    """Map historical team abbreviations onto their current codes."""
+    return pl.col(column).replace(TEAM_RELOCATIONS)
+
 
 def load_stadiums(path: Path | None = None) -> pl.DataFrame:
     """Stadium coordinates and roof type, keyed on nflverse `stadium_id`.

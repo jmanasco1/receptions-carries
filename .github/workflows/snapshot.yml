@@ -89,6 +89,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # An out-of-season run legitimately writes nothing, and `git add` on a
+          # path that does not exist is a fatal error, not a no-op. Create the
+          # directory so "nothing to commit" stays the quiet path it should be.
+          mkdir -p data/odds/props
           git add -A data/odds/props
           if git diff --staged --quiet; then
             echo "No new snapshot rows."

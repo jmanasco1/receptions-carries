@@ -160,14 +160,22 @@ depth_chart_lag_weeks = 1
 # returns uncertainty, which is propagated into the Monte Carlo as PARAMETER
 # uncertainty rather than collapsed to a point estimate.
 #
-# process_noise is the per-layer speed knob. These starting values are chosen
-# so the tracker's effective memory roughly matches the observed stabilisation
-# speed of each quantity (snap share settles fastest, target share slowest).
-# They are priors and sanity bounds, NOT fitted -- Stage 4 fits them on
-# held-out data.
-process_noise_snap_share = 0.045      # settles fastest, ~4 games of memory
-process_noise_carry_share = 0.030     # ~5-6 games
-process_noise_target_share = 0.022    # slowest, ~7-8 games
+# process_noise is the per-layer speed knob, and it is DERIVED rather than
+# guessed. For a local level model the steady-state gain pins the effective
+# memory m at q = R / (m(m-1)), so each value below is that formula evaluated
+# at the layer's target memory and a typical starter's workload -- see
+# `model.role_tracker.calibrated_process_noise`, which is what a test compares
+# these against. Edit the target memory in that module, not these numbers.
+#
+# (The Stage 1 values here were eyeballed at roughly 0.02-0.045 and delivered
+# about half the memory they claimed. Keeping a knob nobody can interpret is
+# how that goes unnoticed.)
+#
+# They remain priors and sanity bounds, NOT fitted -- Stage 4 fits on held-out
+# data.
+process_noise_snap_share = 0.00599    # settles fastest, ~4 games of memory
+process_noise_carry_share = 0.00625   # ~5.5 games
+process_noise_target_share = 0.00355  # slowest, ~7.5 games
 
 # Multiply process noise by this on a KNOWN role-change event: teammate to IR,
 # trade, coordinator change, depth-chart promotion, first game back from
