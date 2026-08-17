@@ -466,3 +466,69 @@ def features_leakage(
         for finding in findings:
             console.print(f"  [red]{finding}[/]")
         raise typer.Exit(code=1)
+
+
+model_app = typer.Typer(help="Stage 3: the team volume model.", no_args_is_help=True)
+app.add_typer(model_app, name="model")
+
+
+@model_app.command("fit-volume")
+def model_fit_volume(
+    holdout: Annotated[
+        str, typer.Option("--holdout", help="Seasons held out, e.g. 2024,2025.")
+    ] = "2024,2025",
+    draws: Annotated[int, typer.Option("--draws", help="Monte Carlo draws.")] = 4000,
+) -> None:
+    """Fit Layers 1 and 2 and report held-out calibration.
+
+    Calibration, not accuracy, is the number to read. These layers barely beat
+    a constant on accuracy -- team play counts are close to unpredictable at
+    the game level -- and their contribution downstream is the width of the
+    distribution, not the position of its centre.
+    """
+    import polars as pl
+
+    from nfl_usage_props.features.dataset import build_dataset
+    from nfl_usage_props.model.calibration import assess
+    from nfl_usage_props.model.team_volume import (
+        PLAYS_FEATURES,
+        TeamVolumeModel,
+        split_by_season,
+        team_game_frame,
+    )
+
+    config = load_config()
+    _, features = build_dataset(config)
+    team_games = team_game_frame(features).filter(pl.col("season_type") == "REG")
+
+    holdout_seasons = _parse_seasons(holdout) or []
+    train, test = split_by_season(team_games, holdout_seasons)
+    console.print(f"[bold]train[/] {train.height:,} team-games   [bold]test[/] {test.height:,}")
+
+    model = TeamVolumeModel(seed=config.model.random_seed)
+    fit = model.fit(train)
+
+    for name, result in (("plays (NB)", fit.plays), ("pass rate (Beta-Bin)", fit.pass_rate)):
+        table = Table(title=f"Layer: {name}", show_edge=False)
+        table.add_column("term")
+        table.add_column("coefficient", justify="right")
+        for term, coefficient in result.describe():
+            table.add_row(term, f"{coefficient:+.4f}")
+        table.add_row("[dim]dispersion[/]", f"[dim]{result.dispersion:.1f}[/]")
+        console.print(table)
+        if not result.converged:
+            console.print(f"  [yellow]did not converge cleanly: {result.message}[/]")
+
+    if fit.wind_coefficient is not None:
+        console.print(
+            f"\n[dim]wind: {fit.wind_coefficient:+.5f} log-odds of passing per mph "
+            "(fitted only — observed wind is not available pre-kickoff)[/]"
+        )
+
+    usable = model._usable(test, PLAYS_FEATURES)
+    sampled = model.sample(test, draws=draws)
+    console.print()
+    for key, actual in (("plays", "team_plays"), ("dropbacks", "team_dropbacks")):
+        report = assess(sampled[key], usable[actual].to_numpy())
+        colour = "green" if report.well_calibrated else "yellow"
+        console.print(f"[bold]{key:10s}[/] [{colour}]{report.summary()}[/]")

@@ -392,7 +392,11 @@ def game_context_features(schedules: pl.DataFrame) -> pl.DataFrame:
     return (
         long.with_columns(shielded)
         .with_columns(
-            # Spread from THIS team's perspective: negative means favoured.
+            # Spread from THIS team's perspective. nflverse `spread_line` is
+            # POSITIVE when the home team is favoured -- verified rather than
+            # assumed: corr(spread_line, home margin) is +0.44 over 2016-2025.
+            # So a positive `spread` here means this team is favoured, and a
+            # favoured team is expected to outscore its opponent by that much.
             pl.when(pl.col("is_home"))
             .then(pl.col("_spread_home"))
             .otherwise(-pl.col("_spread_home"))
@@ -403,7 +407,11 @@ def game_context_features(schedules: pl.DataFrame) -> pl.DataFrame:
             .alias("wind_observed"),
         )
         .with_columns(
-            (pl.col("total_line") / 2.0 - pl.col("spread") / 2.0).alias("implied_team_total"),
+            # total = A + B and margin = A - B, so this team's implied points
+            # are (total + margin) / 2. The sign here is load-bearing: with
+            # `spread` positive for a favourite, subtracting it would hand the
+            # favourite the LOWER implied total and invert the feature.
+            (pl.col("total_line") / 2.0 + pl.col("spread") / 2.0).alias("implied_team_total"),
         )
         .select(
             "game_id",

@@ -196,3 +196,34 @@ def test_the_feature_matrix_has_no_constant_columns(real_features):
     for column in feature_columns(real_features):
         if real_features[column].dtype.is_numeric():
             assert real_features[column].n_unique() > 1, f"{column} is constant"
+
+
+# ------------------------------------------------------- market conventions
+
+
+def test_positive_spread_really_does_mean_favoured(real_config):
+    """Pins the sign convention against actual results rather than against a
+    memory of what nflverse does. The convention feeds `implied_team_total` and
+    Layer 2's game-script coefficient, and getting it backwards inverts both
+    while leaving every unit test green -- which is exactly what happened."""
+    schedules = load_schedules(real_config, SEASONS).filter(pl.col("result").is_not_null())
+    correlation = schedules.select(pl.corr("spread_line", "result")).item()
+    assert correlation > 0.3, "spread_line should rise with the home team's margin"
+
+
+def test_the_favourite_gets_the_higher_implied_total(real_features):
+    favourites = real_features.filter(pl.col("spread") > 0)["implied_team_total"].mean()
+    underdogs = real_features.filter(pl.col("spread") < 0)["implied_team_total"].mean()
+    assert favourites > underdogs
+
+
+def test_implied_totals_reconstruct_the_game_total(real_features):
+    per_game = (
+        real_features.unique(subset=["game_id", "team"])
+        .group_by("game_id")
+        .agg(
+            pl.col("implied_team_total").sum().alias("both"),
+            pl.col("total_line").first(),
+        )
+    )
+    assert per_game["both"].to_numpy() == pytest.approx(per_game["total_line"].to_numpy())

@@ -9,14 +9,15 @@ outcome swings on one broken tackle; a reception outcome swings on whether the
 ball was thrown to the guy. Usage is more predictable than efficiency, and books
 price usage markets less sharply than yardage markets.
 
-> **Status: Stages 1–2 of 8 complete.** Data ingestion, player identity
-> resolution, prop snapshot logging, the odds client, the data dictionary, the
-> player-game panel, the state-space role tracker, the as-of feature matrix and
-> the leakage test exist and run.
-> **No model exists yet.** The features are built and proven leak-free; nothing
-> yet turns them into a projection or prices a bet. See
-> [Stage 1 status](#stage-1-status) and [Stage 2 status](#stage-2-status) for
-> exactly what runs and what does not.
+> **Status: Stages 1–3 of 8 complete.** Data ingestion, identity resolution,
+> prop snapshot logging, the odds client, the data dictionary, the player-game
+> panel, the state-space role tracker, the as-of feature matrix, the leakage
+> test, and Layers 1–2 of the model (team plays and the pass/rush split).
+> **No player projection exists yet.** Team volume is modelled and calibrated
+> out of sample; the player share and catch-rate layers that turn it into a
+> reception number are Stage 4. Nothing prices a bet. See
+> [Stage 1](#stage-1-status), [Stage 2](#stage-2-status) and
+> [Stage 3](#stage-3-status) for exactly what runs.
 >
 > **If you do one thing first, start the snapshot logger.** Closing line value
 > is the only validation signal available on the free tier and it cannot be
@@ -106,7 +107,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 314 tests, offline, ~3s
+uv run pytest -m "not network"         # 363 tests, offline, ~11s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -644,6 +645,94 @@ knowable on Wednesday — and is a real feature. Stage 3 adds `wind_forecast`.
 
 ---
 
+## Stage 3 status
+
+Layers 1 and 2: how many plays a team runs, and how many are passes.
+
+```bash
+uv run nfl-props model fit-volume --holdout 2024,2025
+```
+
+### These layers barely beat a constant, and that is the headline
+
+Held out on 2024–25:
+
+| | model | naive baseline | gain |
+|---|---|---|---|
+| team plays (MAE) | 6.70 | 6.83 (league mean) | 2% |
+| pass rate (MAE) | 0.0784 | 0.0838 (constant rate) | 7% |
+
+Team play counts are close to unpredictable at the game level. Anyone tempted
+to spend a week on pace features should read that table first — the edge in
+this project lives at Layer 3, where the role tracker predicts target share at
+r=0.81.
+
+That is not an argument for deleting these layers. Both are **well calibrated
+out of sample** — 50/80/95 intervals covering 0.51/0.81/0.95 — and a calibrated
+distribution centred near the mean is exactly what the Monte Carlo needs. Their
+contribution is the *width*, not the centre.
+
+### Calibration is the metric, not accuracy
+
+A model that is accurate on average and wrong about its own uncertainty is
+worse than useless here, because the product is a probability either side of a
+half-point. `model/calibration.py` reports PIT, coverage and log score
+together: coverage alone can be gamed by widening intervals, and log score is
+proper, so it cannot.
+
+One subtlety worth knowing before reading the numbers: **discrete predictive
+distributions over-cover by construction.** A central interval on counts runs
+between two integers and includes both, so there is no way to carve exactly 50%
+out of a lattice. A correctly specified model lands near 0.57 at the nominal
+50% level. The tolerances account for this rather than pretending otherwise.
+
+### Dispersion is profiled out, not jointly optimised
+
+The obvious approach — throw coefficients and dispersion at one optimiser —
+fails silently here. Team plays are only mildly overdispersed (mean 62.2, sd
+8.36, against 7.88 for Poisson), so the likelihood is nearly flat in log φ and
+the finite-difference gradient is mostly rounding error. The joint fit returned
+**φ = 19,000 when the true MLE is near 800**, understating predictive variance
+by ~12%, and reported `converged=True` throughout.
+
+The fitters now run a 1-D search over log φ with coefficients refitted at each
+candidate, and report `converged=False` when φ hits a search bound — because a
+dispersion pinned to a bound is an optimiser running out of room, not an
+estimate. Features are standardised for the same conditioning reason.
+
+### A sign error the unit tests could not catch
+
+`implied_team_total` had its spread term inverted, handing favourites the
+*lower* implied total. It survived because the test asserting "the favourite
+gets the higher total" encoded the same wrong assumption about which sign means
+favoured — a test written from the same misunderstanding as the code cannot
+catch it.
+
+Fixed by verifying the convention against outcomes rather than memory:
+`corr(spread_line, home margin) = +0.44` over 2016–2025, so **positive means
+the home team is favoured**. There are now two tests that cannot both pass if
+the sign flips again: one checks the correlation against real results, the
+other checks that the two implied team totals sum to the game total.
+
+### Wind is fitted but not used
+
+The wind coefficient is −0.0099 log-odds of passing per mph — real, and in the
+expected direction. It is deliberately excluded from the production
+specification, because `schedules.wind` is measured during the game. Fitting a
+coefficient you cannot feed at prediction time is not a model, it is a number
+that improves the backtest. Stage 3's forecast pull was deferred; when it
+lands, `wind_forecast` becomes a genuine feature and this coefficient has
+somewhere to go.
+
+### What Stage 3 does NOT include
+
+- No player-level projection. Layers 1–2 produce team opportunities; turning
+  those into a player's receptions is Layer 3–4, Stage 4.
+- No wind forecast (Open-Meteo). Deferred, as above.
+- No prices, no edges, no sizing.
+
+---
+
 ## Decisions
 
 ### Settled
@@ -726,11 +815,14 @@ src/nfl_usage_props/
   features/opponent.py          as-of defensive rates, shrunk to league
   features/dataset.py           raw parquet -> panel -> features
   model/role_tracker.py         state-space filter, replaces fixed decay
+  model/glm.py                  Negative Binomial + Beta-Binomial fitters
+  model/team_volume.py          Layers 1-2: plays and the pass/rush split
+  model/calibration.py          PIT, coverage, log score
   leakage.py                    same-game + future leak detection
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          314 offline tests + 43 network-marked
+tests/                          363 offline tests + 54 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```
@@ -746,7 +838,7 @@ tests/                          314 offline tests + 43 network-marked
 
 1. ✅ Scaffold, data ingestion, player identity resolution, prop snapshot logging
 2. ✅ Feature engineering with as-of joins and the leakage test
-3. Team volume model (plays, pass/rush split), opponent pace, wind forecast
+3. ✅ Team volume model (plays, pass/rush split), opponent pace — wind forecast deferred
 4. Player share models (state-space role tracker, partially pooled
    Dirichlet-Multinomial, Beta-Binomial catch rate)
 5. Monte Carlo composition → PMFs, with role uncertainty propagated

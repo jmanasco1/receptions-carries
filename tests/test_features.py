@@ -201,10 +201,25 @@ def test_spread_is_flipped_for_the_away_team(synthetic_schedules):
 
 
 def test_implied_team_total_is_higher_for_the_favourite(synthetic_schedules):
+    """nflverse `spread_line` is positive when the home team is favoured, so a
+    positive `spread` here means favoured. This test and the formula it checks
+    both had the sign backwards at one point -- a test that encodes the same
+    misunderstanding as the code cannot catch it, which is why
+    `test_features_real.py` pins the convention against actual results."""
     context = game_context_features(synthetic_schedules)
-    favourite = context.filter(pl.col("spread") < 0)["implied_team_total"][0]
-    underdog = context.filter(pl.col("spread") > 0)["implied_team_total"][0]
+    favourite = context.filter(pl.col("spread") > 0)["implied_team_total"][0]
+    underdog = context.filter(pl.col("spread") < 0)["implied_team_total"][0]
     assert favourite > underdog
+
+
+def test_implied_totals_sum_to_the_game_total(synthetic_schedules):
+    """The arithmetic identity that makes the sign error impossible to hide."""
+    context = game_context_features(synthetic_schedules)
+    per_game = context.group_by("game_id").agg(
+        pl.col("implied_team_total").sum().alias("both"),
+        pl.col("total_line").first(),
+    )
+    assert per_game["both"].to_list() == pytest.approx(per_game["total_line"].to_list())
 
 
 def test_a_dome_zeroes_wind_and_open_air_does_not(synthetic_schedules):
