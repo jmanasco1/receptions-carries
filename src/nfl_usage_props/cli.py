@@ -616,3 +616,119 @@ def model_project(
         path.parent.mkdir(parents=True, exist_ok=True)
         result.pmf_table("receptions").write_parquet(path)
         console.print(f"\n[green]wrote receptions PMF[/] -> {path}")
+
+
+report_app = typer.Typer(help="Stage 8: the weekly report.", no_args_is_help=True)
+app.add_typer(report_app, name="report")
+
+
+@report_app.command("weekly")
+def report_weekly(
+    season: Annotated[int | None, typer.Option("--season", help="Season.")] = None,
+    week: Annotated[int | None, typer.Option("--week", help="Week number.")] = None,
+    draws: Annotated[int, typer.Option("--draws", help="Monte Carlo draws.")] = 10000,
+    out: Annotated[str, typer.Option("--out", help="Markdown output path.")] = "reports/latest.md",
+    show_all: Annotated[
+        bool, typer.Option("--all", help="Include suppressed rows in the table.")
+    ] = False,
+) -> None:
+    """Project the slate, price it against the logged snapshots, write a report.
+
+    Requires prop snapshots on disk. Without them there is nothing to compare a
+    projection to -- which is the whole reason the snapshot logger is the one
+    time-critical piece of this project.
+    """
+    from pathlib import Path
+
+    import polars as pl
+
+    from nfl_usage_props.config import current_nfl_season
+    from nfl_usage_props.edge.clv import score_flagged_bets, summarise
+    from nfl_usage_props.edge.edges import compute_edges
+    from nfl_usage_props.features.dataset import build_dataset
+    from nfl_usage_props.model.player_share import PlayerShareModel, fit_catch_rate_dispersion
+    from nfl_usage_props.model.projection import project_week
+    from nfl_usage_props.model.team_volume import TeamVolumeModel, team_game_frame
+    from nfl_usage_props.odds.snapshots import SnapshotStore
+    from nfl_usage_props.report import render_markdown
+
+    config = load_config()
+    season = season or current_nfl_season()
+
+    store = SnapshotStore(config.props_dir)
+    snapshots = store.read_all()
+    if snapshots.is_empty():
+        console.print(
+            "[red]No prop snapshots on disk.[/] There is nothing to price a projection "
+            "against.\nRun `nfl-props odds snapshot --kind open` — and note that every "
+            "week it does not run is closing-line data that cannot be recovered."
+        )
+        raise typer.Exit(code=1)
+
+    _, features = build_dataset(config)
+    features = features.filter(pl.col("season_type") == "REG")
+    team_games = team_game_frame(features).filter(pl.col("season_type") == "REG")
+
+    # Fit on everything strictly before the slate being projected.
+    history = features.filter(pl.col("season") < season)
+    if week:
+        history = pl.concat(
+            [history, features.filter((pl.col("season") == season) & (pl.col("week") < week))],
+            how="diagonal_relaxed",
+        )
+    if history.is_empty():
+        console.print("[red]No history to fit on.[/] Run `nfl-props ingest run` first.")
+        raise typer.Exit(code=1)
+
+    history_teams = team_game_frame(history)
+    volume = TeamVolumeModel(seed=config.model.random_seed)
+    volume.fit(history_teams)
+    targets = PlayerShareModel("targets", seed=config.model.random_seed)
+    targets.fit(history)
+    carries = PlayerShareModel("carries", seed=config.model.random_seed)
+    carries.fit(history)
+    catch = fit_catch_rate_dispersion(history)
+
+    slate = features.filter(pl.col("season") == season)
+    slate_teams = team_games.filter(pl.col("season") == season)
+    if week:
+        slate = slate.filter(pl.col("week") == week)
+        slate_teams = slate_teams.filter(pl.col("week") == week)
+    if slate.is_empty():
+        console.print(f"[yellow]No feature rows for {season} week {week}.[/]")
+        raise typer.Exit(code=1)
+
+    projection = project_week(
+        slate,
+        slate_teams,
+        volume,
+        targets,
+        carries,
+        catch.concentration,
+        draws=draws,
+        seed=config.model.random_seed,
+    )
+    edges = compute_edges(projection, snapshots, config, week=week)
+    if edges.is_empty():
+        console.print("[yellow]No snapshot rows matched the projected slate.[/]")
+
+    scored = score_flagged_bets(edges, snapshots)
+    clv = summarise(scored)
+
+    if not edges.is_empty():
+        actionable = int(edges["actionable"].sum())
+        console.print(f"[bold]priced[/] {edges.height}   [bold]actionable[/] {actionable}")
+        table = Table(title="Suppressed", show_edge=False)
+        table.add_column("reason")
+        table.add_column("rows", justify="right")
+        from nfl_usage_props.edge.edges import suppression_reasons
+
+        for row in suppression_reasons(edges).to_dicts():
+            table.add_row(row["reason"].replace("_", " "), str(row["rows"]))
+        console.print(table)
+
+    markdown = render_markdown(edges if not show_all else edges, week=week, season=season, clv=clv)
+    path = Path(out)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(markdown)
+    console.print(f"[green]wrote report[/] -> {path}")

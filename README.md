@@ -9,14 +9,15 @@ outcome swings on one broken tackle; a reception outcome swings on whether the
 ball was thrown to the guy. Usage is more predictable than efficiency, and books
 price usage markets less sharply than yardage markets.
 
-> **Status: Stages 1–5 of 8 complete.** The model produces per-player
-> probability distributions for receptions and rush attempts, and they are
-> calibrated on held-out seasons.
-> **Nothing prices a bet yet.** Turning a PMF into an edge needs the devig and
-> consensus work in Stage 7, and validating that an edge is real needs closing
-> lines this repo has not yet logged. See
+> **Status: all 8 stages built.** The pipeline runs end to end — nflverse in,
+> a weekly markdown report of priced disagreements out.
+> **It has never seen a real prop price.** Every stage is tested, and the
+> market side has only ever been exercised against synthesised prices, because
+> historical props are paid-tier and none have been logged yet. Nothing here
+> has an edge until closing lines say so. See
 > [Stage 1](#stage-1-status), [Stage 2](#stage-2-status),
-> [Stage 3](#stage-3-status) and [Stages 4–5](#stages-45-status).
+> [Stage 3](#stage-3-status), [Stages 4–5](#stages-45-status) and
+> [Stages 6–8](#stages-68-status).
 >
 > **If you do one thing first, start the snapshot logger.** Closing line value
 > is the only validation signal available on the free tier and it cannot be
@@ -106,7 +107,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 393 tests, offline, ~21s
+uv run pytest -m "not network"         # 457 tests, offline, ~29s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -119,6 +120,7 @@ uv run nfl-props features leakage --season 2024 --weeks 1,8,17
 
 uv run nfl-props model fit-volume      # Layers 1-2, held-out calibration
 uv run nfl-props model project         # all four layers -> per-player PMFs
+uv run nfl-props report weekly         # needs logged snapshots; refuses without
 ```
 
 Once you have an API key, the time-critical part:
@@ -832,6 +834,77 @@ only what is left after role uncertainty, which is what it is supposed to mean.
 
 ---
 
+## Stages 6–8 status
+
+Devig, edge, CLV scoring, and the weekly report.
+
+```bash
+uv run nfl-props report weekly --season 2026 --week 5
+```
+
+It refuses to run without logged snapshots, which is the honest behaviour: with
+no prices there is nothing to compare a projection against.
+
+### The filters are the substance
+
+An edge is `model probability − consensus fair probability`. That subtraction
+is trivial; everything that matters is what gets refused. The model disagreeing
+with the market is the normal state of affairs and most of that disagreement is
+the model being wrong. Five filters, each removing a class where "the model is
+wrong" beats "the book is wrong":
+
+| filter | why |
+|---|---|
+| below min edge (3%) | small disagreement is indistinguishable from calibration error |
+| extreme price (≤ −300) | devig is unstable there and limits are tiny |
+| devig disagreement (> 1pp) | the three methods disagreeing means the price is odd |
+| thin market (< 3 books) | two books is not a consensus |
+| before week 4 | role estimates are still mostly prior |
+
+The report prints the suppression counts **above** the flagged table, because a
+week where everything is held back for one reason is a broken pipeline rather
+than a quiet slate, and a report showing only survivors cannot tell you which.
+
+### Three devig methods, and the disagreement is the signal
+
+Multiplicative divides by the overround, which moves favourite and longshot by
+the same factor — real books load more margin onto longshots. Power raises both
+to a common exponent, shifting more correction onto the longer side. Shin models
+the hold as protection against informed money.
+
+On a symmetric −110/−110 they agree exactly. On −300/240 they spread 1.5
+points. That spread is a better staleness warning than any single fair value,
+so all three are computed and the disagreement is itself a filter.
+
+### CLV is the only validation, and it does not exist yet
+
+Historical props are paid-tier. Closing line value cannot be backfilled at any
+price on the free tier — it accumulates from the first logged snapshot forward
+and not one week earlier. `edge/clv.py` pairs opening to closing prices,
+measures the move in **probability points** (twenty cents at −110 and twenty at
+−300 are very different amounts of edge), and refuses to summarise below 30
+scored bets.
+
+It deliberately reports no win rate and no ROI. With no historical prices there
+is no backtest, and presenting a handful of live bets as a track record would
+be the most misleading thing this project could produce.
+
+### Still no sizing
+
+Reported: probability, price, edge. Not reported: a stake. Sizing depends on
+bankroll and risk tolerance, and a Kelly fraction computed from an unvalidated
+edge is a precise-looking number resting on an unverified one. A test asserts
+the rendered report contains no sizing language.
+
+### What is untested against reality
+
+The market side has only ever run against synthesised prices. The end-to-end
+test proves the joins line up — the model keys on `gsis_id`, a book posts a
+name — and that the arithmetic flows. It proves nothing about whether any
+flagged edge is real. Only logged closing lines can do that.
+
+---
+
 ## Decisions
 
 ### Settled
@@ -919,11 +992,15 @@ src/nfl_usage_props/
   model/player_share.py         Layer 3-4: Dirichlet shares, catch rate
   model/projection.py           Monte Carlo composition -> PMF
   model/calibration.py          PIT, coverage, log score
+  edge/devig.py                 power / multiplicative / Shin, consensus
+  edge/edges.py                 model vs market, and the suppression filters
+  edge/clv.py                   closing line value scoring
+  report.py                     the weekly markdown report
   leakage.py                    same-game + future leak detection
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          393 offline tests + 61 network-marked
+tests/                          457 offline tests + 67 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```
