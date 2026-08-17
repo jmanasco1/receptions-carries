@@ -532,3 +532,87 @@ def model_fit_volume(
         report = assess(sampled[key], usable[actual].to_numpy())
         colour = "green" if report.well_calibrated else "yellow"
         console.print(f"[bold]{key:10s}[/] [{colour}]{report.summary()}[/]")
+
+
+@model_app.command("project")
+def model_project(
+    holdout: Annotated[
+        str, typer.Option("--holdout", help="Seasons held out and projected.")
+    ] = "2024,2025",
+    draws: Annotated[int, typer.Option("--draws", help="Monte Carlo draws.")] = 4000,
+    out: Annotated[str | None, typer.Option("--out", help="Write the PMF table here.")] = None,
+) -> None:
+    """Fit every layer, project the held-out seasons and report calibration.
+
+    Read the PIT deviation first. Accuracy on these markets is limited by how
+    unpredictable football is; whether the distribution is honest about its own
+    uncertainty is the part that decides whether an edge is real.
+    """
+    import polars as pl
+
+    from nfl_usage_props.features.dataset import build_dataset
+    from nfl_usage_props.model.calibration import assess
+    from nfl_usage_props.model.player_share import (
+        PlayerShareModel,
+        fit_catch_rate_dispersion,
+    )
+    from nfl_usage_props.model.projection import project_week
+    from nfl_usage_props.model.team_volume import (
+        TeamVolumeModel,
+        split_by_season,
+        team_game_frame,
+    )
+
+    config = load_config()
+    _, features = build_dataset(config)
+    features = features.filter(pl.col("season_type") == "REG")
+    team_games = team_game_frame(features).filter(pl.col("season_type") == "REG")
+
+    holdout_seasons = _parse_seasons(holdout) or []
+    train_features, test_features = split_by_season(features, holdout_seasons)
+    train_teams, test_teams = split_by_season(team_games, holdout_seasons)
+
+    volume = TeamVolumeModel(seed=config.model.random_seed)
+    volume.fit(train_teams)
+    targets = PlayerShareModel("targets", seed=config.model.random_seed)
+    carries = PlayerShareModel("carries", seed=config.model.random_seed)
+    target_fit = targets.fit(train_features)
+    carry_fit = carries.fit(train_features)
+    catch_fit = fit_catch_rate_dispersion(train_features)
+
+    console.print(f"[bold]Layer 3[/] {target_fit.summary()}")
+    console.print(f"[bold]Layer 3[/] {carry_fit.summary()}")
+    console.print(f"[bold]Layer 4[/] {catch_fit.summary()}")
+
+    result = project_week(
+        test_features,
+        test_teams,
+        volume,
+        targets,
+        carries,
+        catch_fit.concentration,
+        draws=draws,
+        seed=config.model.random_seed,
+    )
+    console.print(f"\nprojected [bold]{result.keys.height:,}[/] player-games\n")
+
+    actual = test_features.select("game_id", "team", "gsis_id", "receptions", "carries")
+    joined = result.keys.with_row_index("_i").join(
+        actual, on=["game_id", "team", "gsis_id"], how="inner"
+    )
+    index = joined["_i"].to_numpy()
+    for market, draws_array in (
+        ("receptions", result.receptions),
+        ("carries", result.carries),
+    ):
+        report = assess(draws_array[index], joined[market].to_numpy())
+        colour = "green" if report.well_calibrated else "yellow"
+        console.print(f"[bold]{market:11s}[/] [{colour}]{report.summary()}[/]")
+
+    if out:
+        from pathlib import Path
+
+        path = Path(out)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        result.pmf_table("receptions").write_parquet(path)
+        console.print(f"\n[green]wrote receptions PMF[/] -> {path}")

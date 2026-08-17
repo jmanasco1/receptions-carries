@@ -9,15 +9,14 @@ outcome swings on one broken tackle; a reception outcome swings on whether the
 ball was thrown to the guy. Usage is more predictable than efficiency, and books
 price usage markets less sharply than yardage markets.
 
-> **Status: Stages 1–3 of 8 complete.** Data ingestion, identity resolution,
-> prop snapshot logging, the odds client, the data dictionary, the player-game
-> panel, the state-space role tracker, the as-of feature matrix, the leakage
-> test, and Layers 1–2 of the model (team plays and the pass/rush split).
-> **No player projection exists yet.** Team volume is modelled and calibrated
-> out of sample; the player share and catch-rate layers that turn it into a
-> reception number are Stage 4. Nothing prices a bet. See
-> [Stage 1](#stage-1-status), [Stage 2](#stage-2-status) and
-> [Stage 3](#stage-3-status) for exactly what runs.
+> **Status: Stages 1–5 of 8 complete.** The model produces per-player
+> probability distributions for receptions and rush attempts, and they are
+> calibrated on held-out seasons.
+> **Nothing prices a bet yet.** Turning a PMF into an edge needs the devig and
+> consensus work in Stage 7, and validating that an edge is real needs closing
+> lines this repo has not yet logged. See
+> [Stage 1](#stage-1-status), [Stage 2](#stage-2-status),
+> [Stage 3](#stage-3-status) and [Stages 4–5](#stages-45-status).
 >
 > **If you do one thing first, start the snapshot logger.** Closing line value
 > is the only validation signal available on the free tier and it cannot be
@@ -107,7 +106,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 363 tests, offline, ~11s
+uv run pytest -m "not network"         # 393 tests, offline, ~21s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -117,6 +116,9 @@ uv run nfl-props docs data-dictionary  # regenerate docs/DATA_DICTIONARY.md
 
 uv run nfl-props features build        # panel + as-of feature matrix
 uv run nfl-props features leakage --season 2024 --weeks 1,8,17
+
+uv run nfl-props model fit-volume      # Layers 1-2, held-out calibration
+uv run nfl-props model project         # all four layers -> per-player PMFs
 ```
 
 Once you have an API key, the time-critical part:
@@ -733,6 +735,103 @@ somewhere to go.
 
 ---
 
+## Stages 4–5 status
+
+Layers 3 and 4, and the Monte Carlo that composes all four into a PMF.
+
+```bash
+uv run nfl-props model project --holdout 2024,2025 --draws 4000
+```
+
+### Held-out results
+
+Fitted on 2016–2023, projected onto 2024–25, 13,026 player-games:
+
+| | PIT dev | coverage vs achievable | corr | MAE |
+|---|---|---|---|---|
+| receptions | 0.048 | 0.79/0.94/0.99 vs 0.76/0.92/0.98 | 0.69 | 1.15 |
+| carries | 0.052 | 0.85/0.95/0.99 vs 0.84/0.94/0.98 | 0.87 | 1.12 |
+| receptions, line-worthy | 0.038 | 0.69/0.92/0.99 vs 0.67/0.91/0.98 | — | 1.55 |
+
+Both markets are calibrated. Read PIT first — it is the diagnostic that
+survives discreteness.
+
+### "Coverage" needs a baseline, not a nominal level
+
+A nominal 50% interval **cannot** hold 50% of a count distribution: it runs
+between two integers and includes both. How much it over-covers depends on the
+counts — a point or two for team plays near 62, but a nominal 50% interval on
+receptions near 3 genuinely contains about 80% of the mass.
+
+So coverage is compared against `expected_coverage()` — what a perfectly
+calibrated model would show *on these same predictives* — rather than against
+the nominal level. Judging player projections against 0.50 would reject a
+perfect model; judging them against a loosened constant would accept a bad one.
+
+### The bug that a single prior per layer caused
+
+The role tracker started every player at one prior share per layer, ignoring
+position. That interacts badly with the continuity correction, which has to
+stand in for a raw 0/26 that has no logit. The conventional Jeffreys choice
+adds half a success and half a failure — exactly a uniform prior on the share,
+and a fine default when nothing is known.
+
+It is not fine here. It floored **every zero-carry tight end at a 1.9% carry
+share, every week, forever.** Because Layer 3 normalises across the roster,
+a dozen such players between them held a sixth of the simplex, and the backs
+it was stolen from were under-projected by the same amount:
+
+| position | modelled carry mass | actual |
+|---|---|---|
+| RB | 68.4% | **82.7%** |
+| WR | 11.8% | 3.0% |
+| TE | 5.4% | 0.4% |
+
+The RB PIT histogram was monotonically increasing (0.46 → 1.43) — a bias, not a
+width problem, and invisible to coverage, which read fine throughout.
+
+Fixed by giving each position its own prior (league averages over 2016–2023)
+and anchoring the continuity correction on that prior instead of on a coin
+flip. Carries PIT went 0.182 → 0.052; the RB histogram is now flat. A test
+asserts every position's modelled carry mass sits within 7 points of its real
+share.
+
+### Fitting K without counting variance twice
+
+Layer 3 has two sources of spread: role uncertainty (the tracker's per-player
+logit-normal) and genuine game-to-game variation (the Dirichlet's K). Fitting K
+against the tracker's *mean* share makes K absorb both — and then the sampler
+draws role uncertainty again on top.
+
+K is therefore fitted by maximum **marginal** likelihood: role is drawn from
+the tracker's posterior, the Dirichlet sits on top, and the likelihood is
+averaged over those draws inside each team-game before summing. K then measures
+only what is left after role uncertainty, which is what it is supposed to mean.
+
+### Design details worth knowing
+
+- **Linemen are off the simplex.** `participation` lists all eleven players, so
+  an unfiltered roster puts five linemen on it with a receiver's prior each.
+  They account for 0.075% of targets — the documented cost of excluding them.
+- **Teammates share one simulation.** In the draw where a team threw 42 times,
+  every one of its receivers is dividing those same 42 targets. That is what
+  makes shares compete, and why a WR1's absence mechanically lifts everyone
+  else rather than needing a "teammate out" feature.
+- **Whole-number lines are refused.** They push rather than resolving, and
+  silently treating a push as a loss would misprice every one of them.
+- **Layer 2 emits targets and carries, not dropbacks.** A dropback ending in a
+  sack produces neither; handing dropbacks to the share layer would inflate
+  every receiver by the sack rate.
+
+### What Stages 4–5 do NOT include
+
+- No prices, no devig, no edges, no sizing.
+- No injury-driven role events (the mechanism works; the as-of injury join is
+  not written).
+- No wind forecast.
+
+---
+
 ## Decisions
 
 ### Settled
@@ -817,12 +916,14 @@ src/nfl_usage_props/
   model/role_tracker.py         state-space filter, replaces fixed decay
   model/glm.py                  Negative Binomial + Beta-Binomial fitters
   model/team_volume.py          Layers 1-2: plays and the pass/rush split
+  model/player_share.py         Layer 3-4: Dirichlet shares, catch rate
+  model/projection.py           Monte Carlo composition -> PMF
   model/calibration.py          PIT, coverage, log score
   leakage.py                    same-game + future leak detection
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          363 offline tests + 54 network-marked
+tests/                          393 offline tests + 61 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```
@@ -839,9 +940,9 @@ tests/                          363 offline tests + 54 network-marked
 1. ✅ Scaffold, data ingestion, player identity resolution, prop snapshot logging
 2. ✅ Feature engineering with as-of joins and the leakage test
 3. ✅ Team volume model (plays, pass/rush split), opponent pace — wind forecast deferred
-4. Player share models (state-space role tracker, partially pooled
+4. ✅ Player share models (state-space role tracker, partially pooled
    Dirichlet-Multinomial, Beta-Binomial catch rate)
-5. Monte Carlo composition → PMFs, with role uncertainty propagated
+5. ✅ Monte Carlo composition → PMFs, with role uncertainty propagated
 6. Calibration harness (reliability diagrams, log loss by decile)
 7. Devig (power / multiplicative / Shin), consensus fair line, edge calculation
 8. Weekly report output

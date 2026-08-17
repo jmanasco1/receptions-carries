@@ -52,6 +52,10 @@ def synthetic_team_games(
                         "opponent": "ZZZ",
                         "team_plays": plays,
                         "team_dropbacks": dropbacks,
+                        # Layer 3 divides these, not dropbacks: a sack or a
+                        # scramble is a dropback that produces neither.
+                        "team_targets": max(int(dropbacks * 0.88), 1),
+                        "team_carries": max(plays - dropbacks, 1),
                         "trailing_team_plays": float(pace),
                         "def_plays_per_game_allowed": 62.0,
                         "total_line": total,

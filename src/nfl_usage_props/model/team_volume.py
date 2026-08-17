@@ -41,7 +41,7 @@ a number that makes the backtest look better.
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import numpy as np
 import polars as pl
@@ -73,12 +73,24 @@ PASS_RATE_FEATURES: tuple[str, ...] = (
 # Fitted for its coefficient, not used in production until a forecast exists.
 WIND_FEATURE = "wind_observed"
 
+# Layer 3 divides *targets* and *carries*, not dropbacks. A dropback that ends
+# in a sack or a scramble produces neither, so handing dropbacks to the share
+# model would inflate every receiver's projection by the sack rate. These two
+# rates are modelled directly out of plays, on the same game-script features,
+# and deliberately do not sum to one -- the gap is exactly the sacks and
+# scrambles.
+OPPORTUNITY_LAYERS: dict[str, str] = {
+    "team_targets": "targets",
+    "team_carries": "carries",
+}
+
 
 @dataclass
 class TeamVolumeFit:
     plays: FitResult
     pass_rate: FitResult
     wind_pass_rate: FitResult | None = None
+    opportunity: dict[str, FitResult] = field(default_factory=dict)
 
     @property
     def wind_coefficient(self) -> float | None:
@@ -101,6 +113,7 @@ def team_game_frame(features: pl.DataFrame) -> pl.DataFrame:
         "kickoff_utc",
         "team_plays",
         "team_dropbacks",
+        *OPPORTUNITY_LAYERS,
         *PLAYS_FEATURES[:-2],
         *[c for c in PASS_RATE_FEATURES if c not in PLAYS_FEATURES],
         "rest",
@@ -135,6 +148,7 @@ class TeamVolumeModel:
         # reconstructing one without that silently predicts on raw inputs.
         self._plays_model: NegativeBinomialGLM | None = None
         self._rate_model: BetaBinomialGLM | None = None
+        self._opportunity_models: dict[str, BetaBinomialGLM] = {}
 
     # ------------------------------------------------------------------ fit
 
@@ -164,18 +178,39 @@ class TeamVolumeModel:
                     usable_wind["team_plays"].to_numpy(),
                 )
 
-        self.fit_result = TeamVolumeFit(plays=plays, pass_rate=pass_rate, wind_pass_rate=wind_fit)
+        opportunity: dict[str, FitResult] = {}
+        self._opportunity_models = {}
+        for column in OPPORTUNITY_LAYERS:
+            if column not in team_games.columns:
+                continue
+            usable_opportunity = self._usable(team_games, PASS_RATE_FEATURES, extra=(column,))
+            model = BetaBinomialGLM(PASS_RATE_FEATURES)
+            opportunity[column] = model.fit(
+                _matrix(usable_opportunity, PASS_RATE_FEATURES),
+                usable_opportunity[column].to_numpy(),
+                usable_opportunity["team_plays"].to_numpy(),
+            )
+            self._opportunity_models[column] = model
+
+        self.fit_result = TeamVolumeFit(
+            plays=plays,
+            pass_rate=pass_rate,
+            wind_pass_rate=wind_fit,
+            opportunity=opportunity,
+        )
         return self.fit_result
 
     @staticmethod
-    def _usable(frame: pl.DataFrame, features: tuple[str, ...]) -> pl.DataFrame:
+    def _usable(
+        frame: pl.DataFrame, features: tuple[str, ...], extra: tuple[str, ...] = ()
+    ) -> pl.DataFrame:
         """Rows with every feature and both outcomes present.
 
         Week 1 of the very first season has no trailing history and is dropped
         rather than imputed: one game-week of missing pace is not worth an
         imputation rule that would then apply silently everywhere else.
         """
-        needed = [*features, "team_plays", "team_dropbacks"]
+        needed = [*features, *extra, "team_plays", "team_dropbacks"]
         return frame.drop_nulls([c for c in needed if c in frame.columns])
 
     # -------------------------------------------------------------- predict
@@ -207,13 +242,22 @@ class TeamVolumeModel:
         plays = self._plays_model.sample(_matrix(frame, PLAYS_FEATURES), draws, rng)
         rate = self._rate_model.sample_rate(_matrix(frame, PASS_RATE_FEATURES), draws, rng)
         dropbacks = rng.binomial(plays, rate)
-        return {
+        sampled = {
             "game_id": frame["game_id"].to_numpy(),
             "team": frame["team"].to_numpy(),
             "plays": plays,
             "dropbacks": dropbacks,
             "rush_attempts": plays - dropbacks,
         }
+        # The opportunity counts Layer 3 divides. Drawn from `plays` rather
+        # than from `dropbacks`, so a sack does not silently become a target.
+        for column, name in OPPORTUNITY_LAYERS.items():
+            model = self._opportunity_models.get(column)
+            if model is None:
+                continue
+            opportunity_rate = model.sample_rate(_matrix(frame, PASS_RATE_FEATURES), draws, rng)
+            sampled[name] = rng.binomial(plays, opportunity_rate)
+        return sampled
 
     def _require_fit(self) -> None:
         if self.fit_result is None or self._plays_model is None or self._rate_model is None:

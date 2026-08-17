@@ -24,12 +24,12 @@ from dataclasses import dataclass
 
 import numpy as np
 
-# Per-level coverage tolerances. See `CalibrationReport.well_calibrated` --
-# these are not arbitrary slack, they absorb the over-coverage that discrete
-# predictive distributions produce by construction.
-TOLERANCE_50 = 0.09
-TOLERANCE_80 = 0.05
-TOLERANCE_95 = 0.04
+# How far observed coverage may sit from what a perfectly calibrated model
+# would achieve ON THE SAME PREDICTIVES. Because the target is now the
+# achievable coverage rather than the nominal level, these are genuine
+# tolerances rather than an allowance for the lattice -- see
+# `expected_coverage`.
+COVERAGE_TOLERANCE = 0.05
 
 
 @dataclass(frozen=True)
@@ -38,6 +38,9 @@ class CalibrationReport:
     coverage_50: float
     coverage_80: float
     coverage_95: float
+    expected_50: float
+    expected_80: float
+    expected_95: float
     mean_log_score: float
     mean_absolute_error: float
     n: int
@@ -45,28 +48,28 @@ class CalibrationReport:
     def summary(self) -> str:
         return (
             f"n={self.n}  PIT dev={self.pit_uniformity:.3f}  "
-            f"cover 50/80/95={self.coverage_50:.2f}/{self.coverage_80:.2f}/"
-            f"{self.coverage_95:.2f}  logscore={self.mean_log_score:.3f}  "
+            f"cover {self.coverage_50:.2f}/{self.coverage_80:.2f}/{self.coverage_95:.2f} "
+            f"vs achievable {self.expected_50:.2f}/{self.expected_80:.2f}/"
+            f"{self.expected_95:.2f}  logscore={self.mean_log_score:.3f}  "
             f"MAE={self.mean_absolute_error:.2f}"
         )
 
     @property
     def well_calibrated(self) -> bool:
-        """Every nominal interval within tolerance of its target.
+        """Observed coverage close to what these predictives can achieve.
 
-        The tolerances differ by level, and the 50% one is widest, which looks
-        backwards until you account for discreteness. A central interval on a
-        count distribution runs between two integers and includes both, so it
-        covers strictly MORE than its nominal level -- there is no way to carve
-        exactly 50% out of a lattice. The narrower the interval, the larger
-        that excess is in relative terms, so the 50% band over-covers most.
-        A correctly specified Poisson predictive with these means lands near
-        0.57 at the 50% level, and demanding 0.50 would reject a perfect model.
+        Compared against `expected_*`, not against the nominal level. On a
+        lattice the nominal level is unreachable, and how far short it falls
+        depends on the counts: for team plays near 62 the gap is a point or
+        two, for receptions near 3 a nominal 50% interval genuinely holds about
+        80% of the mass. Judging player-level projections against 0.50 would
+        reject a perfect model, and judging them against a loosened constant
+        would accept a bad one.
         """
         return (
-            abs(self.coverage_50 - 0.50) < TOLERANCE_50
-            and abs(self.coverage_80 - 0.80) < TOLERANCE_80
-            and abs(self.coverage_95 - 0.95) < TOLERANCE_95
+            abs(self.coverage_50 - self.expected_50) < COVERAGE_TOLERANCE
+            and abs(self.coverage_80 - self.expected_80) < COVERAGE_TOLERANCE
+            and abs(self.coverage_95 - self.expected_95) < COVERAGE_TOLERANCE
         )
 
 
@@ -104,6 +107,26 @@ def coverage(samples: np.ndarray, actual: np.ndarray, level: float) -> float:
     return float(np.mean((actual >= lower) & (actual <= upper)))
 
 
+def expected_coverage(samples: np.ndarray, level: float) -> float:
+    """Coverage a PERFECTLY calibrated model would show on these predictives.
+
+    The nominal level is not achievable on a lattice: an interval between two
+    integers includes both endpoints, so it holds strictly more than `level` of
+    the mass. How much more depends entirely on how spread out the distribution
+    is -- negligible for team plays around 62, enormous for receptions around
+    3, where a nominal 50% interval really does contain about 80% of the mass.
+
+    Comparing observed coverage against the nominal level therefore measures
+    the lattice, not the model. Comparing it against this instead measures the
+    model. Computed from the model's own draws, so it needs no assumption about
+    the distribution's family.
+    """
+    lower = np.quantile(samples, (1 - level) / 2, axis=1)
+    upper = np.quantile(samples, 1 - (1 - level) / 2, axis=1)
+    inside = (samples >= lower[:, None]) & (samples <= upper[:, None])
+    return float(np.mean(inside))
+
+
 def log_score(samples: np.ndarray, actual: np.ndarray) -> np.ndarray:
     """Negative log predictive probability, estimated from draws.
 
@@ -133,6 +156,9 @@ def assess(samples: np.ndarray, actual: np.ndarray) -> CalibrationReport:
         coverage_50=coverage(samples, actual, 0.50),
         coverage_80=coverage(samples, actual, 0.80),
         coverage_95=coverage(samples, actual, 0.95),
+        expected_50=expected_coverage(samples, 0.50),
+        expected_80=expected_coverage(samples, 0.80),
+        expected_95=expected_coverage(samples, 0.95),
         mean_log_score=float(np.mean(log_score(samples, actual))),
         mean_absolute_error=float(np.mean(np.abs(np.mean(samples, axis=1) - actual))),
         n=len(actual),

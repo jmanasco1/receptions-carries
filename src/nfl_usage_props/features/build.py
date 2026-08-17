@@ -117,9 +117,11 @@ def role_features(panel: pl.DataFrame, config: Config) -> pl.DataFrame:
         "season",
         "week",
         "team",
+        "position",
         *{c for pair in ROLE_LAYERS.values() for c in pair},
     ]
-    ordered = panel.select(sorted(set(needed))).sort("gsis_id", "kickoff_utc", "game_id")
+    available = sorted({c for c in set(needed) if c in panel.columns})
+    ordered = panel.select(available).sort("gsis_id", "kickoff_utc", "game_id")
 
     columns = {name: ordered[name].to_list() for name in ordered.columns}
     n = ordered.height
@@ -146,6 +148,9 @@ def role_features(panel: pl.DataFrame, config: Config) -> pl.DataFrame:
         seasons = [columns["season"][i] for i in idx]
         teams = [columns["team"][i] for i in idx]
         weeks = [columns["week"][i] for i in idx]
+        # A player's position does not change within the panel, so one lookup
+        # per player is enough to pick his position's priors.
+        position = columns.get("position", [None] * n)[start]
 
         # A player's role changes for reasons we can see coming. Two of them are
         # visible in the panel itself and need no extra feed: he changed teams,
@@ -179,7 +184,7 @@ def role_features(panel: pl.DataFrame, config: Config) -> pl.DataFrame:
             estimates = filter_series(
                 observations,
                 process_noise=tracker.process_noise(layer),
-                prior_mean_logit=_layer_prior_logit(layer),
+                prior_mean_logit=_layer_prior_logit(layer, position),
                 prior_var_logit=_PRIOR_VAR_LOGIT,
                 event_multiplier=tracker.process_noise_event_multiplier,
                 season_break_weight=early.prior_season_weight_week1,
@@ -199,16 +204,41 @@ def role_features(panel: pl.DataFrame, config: Config) -> pl.DataFrame:
 
 
 _PRIOR_VAR_LOGIT = 4.0
-# Diffuse but not absurd starting points, on the logit scale. A player with no
-# history is not assumed to be a starter or a ghost; the first real game moves
-# him a long way, which is correct.
-_LAYER_PRIOR_SHARE = {"snap_share": 0.35, "carry_share": 0.12, "target_share": 0.09}
+
+# Starting points on the share scale, BY POSITION. A player with no history is
+# assumed to look like the average player at his position, which is what the
+# design has always called for ("empirical-Bayes priors from the population of
+# same-position players") and what a single per-layer number cannot express.
+#
+# It matters more than a starting value usually would, because the prior also
+# anchors the continuity correction -- see `role_tracker.corrected_share`. With
+# one number per layer, every zero-carry tight end was floored near a 1.9%
+# carry share every week forever, and since Layer 3 normalises across the
+# roster, backs lost that mass: 68% of the modelled carries against 83% of the
+# real ones.
+#
+# Values are league averages over 2016-2023 (per player at that position, per
+# team-game), computed from the panel and rounded. They are priors for players
+# with no history, not fitted parameters.
+_POSITION_PRIOR_SHARE: dict[str, dict[str, float]] = {
+    "target_share": {"WR": 0.026, "TE": 0.025, "RB": 0.025, "FB": 0.018, "QB": 0.0005},
+    "carry_share": {"RB": 0.107, "QB": 0.081, "FB": 0.014, "WR": 0.0013, "TE": 0.0006},
+    "snap_share": {"QB": 0.71, "FB": 0.20, "TE": 0.15, "RB": 0.13, "WR": 0.11},
+}
+
+# Fallback for a position not listed above -- linemen, defenders on a goal-line
+# package, anyone the crosswalk cannot place.
+_LAYER_PRIOR_SHARE = {"snap_share": 0.35, "carry_share": 0.005, "target_share": 0.005}
 
 
-def _layer_prior_logit(layer: str) -> float:
+def _layer_prior_share(layer: str, position: str | None) -> float:
+    return _POSITION_PRIOR_SHARE[layer].get(position or "", _LAYER_PRIOR_SHARE[layer])
+
+
+def _layer_prior_logit(layer: str, position: str | None = None) -> float:
     from nfl_usage_props.model.role_tracker import logit
 
-    return logit(_LAYER_PRIOR_SHARE[layer])
+    return logit(_layer_prior_share(layer, position))
 
 
 def _exposure(snaps: list, team_plays: list, *, threshold: float) -> list[float]:

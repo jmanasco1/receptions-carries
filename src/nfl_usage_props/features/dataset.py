@@ -13,7 +13,7 @@ from nfl_usage_props.config import Config
 from nfl_usage_props.features.build import build_features
 from nfl_usage_props.features.panel import PBP_COLUMNS, build_panel
 from nfl_usage_props.reference import normalize_team
-from nfl_usage_props.storage import ParquetStore
+from nfl_usage_props.storage import SEASONLESS_SENTINEL, ParquetStore
 
 PANEL_TABLE = "panel"
 FEATURES_TABLE = "features"
@@ -30,19 +30,46 @@ def load_panel(config: Config, seasons: list[int] | None = None) -> pl.DataFrame
     participation = _read(store, "participation", seasons)
     schedules = load_schedules(config, seasons)
 
-    positions = None
+    panel = build_panel(pbp, participation, positions=_positions(store, seasons))
+    # Kickoff time is what orders the tracker. Week numbers do not: a Thursday
+    # game in week 5 precedes the Monday game of week 4.
+    return panel.join(schedules.select("game_id", "kickoff_utc"), on="game_id", how="left")
+
+
+def _positions(store: ParquetStore, seasons: list[int]) -> pl.DataFrame | None:
+    """Position per player, from `player_stats` with the crosswalk as fallback.
+
+    `player_stats` is preferred because it records what someone actually played
+    in a season, but it only covers players who accumulated a stat line, and it
+    leaves ~1.4% of panel rows without a position. Those nulls are not
+    harmless: Layer 3's Dirichlet is defined over eligible receivers, so a
+    player with no position either gets excluded (losing a real receiver) or
+    included (diluting the simplex with a lineman). The `players` crosswalk
+    covers every one of them.
+    """
+    frames = []
     if store.available_seasons("player_stats"):
-        positions = (
+        frames.append(
             _read(store, "player_stats", seasons, columns=("player_id", "position", "season"))
             .sort("season", descending=True)
             .unique(subset="player_id", keep="first")
             .select(pl.col("player_id").alias("gsis_id"), "position")
         )
+    if store.exists("players", SEASONLESS_SENTINEL):
+        frames.append(
+            store.read("players", SEASONLESS_SENTINEL)
+            .select("gsis_id", "position")
+            .drop_nulls("gsis_id")
+        )
+    if not frames:
+        return None
 
-    panel = build_panel(pbp, participation, positions=positions)
-    # Kickoff time is what orders the tracker. Week numbers do not: a Thursday
-    # game in week 5 precedes the Monday game of week 4.
-    return panel.join(schedules.select("game_id", "kickoff_utc"), on="game_id", how="left")
+    primary = frames[0]
+    for fallback in frames[1:]:
+        primary = primary.join(fallback, on="gsis_id", how="full", coalesce=True).select(
+            "gsis_id", pl.coalesce("position", "position_right").alias("position")
+        )
+    return primary.unique(subset="gsis_id")
 
 
 def load_schedules(config: Config, seasons: list[int] | None = None) -> pl.DataFrame:

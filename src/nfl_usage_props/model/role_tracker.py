@@ -188,12 +188,45 @@ class RoleEstimate:
         return math.sqrt(self.var_logit)
 
 
+def corrected_share(
+    successes: float,
+    trials: float,
+    *,
+    prior_share: float = 0.5,
+    prior_strength: float = 2.0 * JEFFREYS,
+) -> float:
+    """Continuity-corrected share, anchored on a prior rather than on 1/2.
+
+    A raw 0/26 cannot be put on the logit scale, so something has to stand in.
+    The conventional Jeffreys choice adds half a success and half a failure,
+    which is exactly a uniform prior on the share -- a perfectly good default
+    when nothing is known, and a badly wrong one here.
+
+    Concretely: it floors every zero-carry tight end at (0+0.5)/(26+1) = 1.9%
+    of his team's carries, every week, no matter how many weeks he goes
+    without one. Since Layer 3 normalises across the roster, a dozen such
+    players between them soak up a sixth of the simplex, and the backs it is
+    stolen from are under-projected by the same amount. Measured on 2024: RBs
+    received 68% of the modelled carry mass against 83% of the actual carries,
+    while tight ends got 5.4% against 0.4%.
+
+    Anchoring the pseudo-count on the position's own prior fixes the floor at
+    something defensible -- a tight end starts near his position's real carry
+    share, not near a coin flip. `prior_share=0.5` recovers Jeffreys exactly,
+    so this is a generalisation rather than a change of default.
+    """
+    a = prior_share * prior_strength
+    return (successes + a) / (trials + prior_strength)
+
+
 def observation_variance(
     successes: float,
     trials: float,
     exposure: float = 1.0,
     *,
     jeffreys: float = JEFFREYS,
+    prior_share: float = 0.5,
+    prior_strength: float | None = None,
 ) -> float:
     """Variance of the observed logit share, by the delta method.
 
@@ -205,16 +238,26 @@ def observation_variance(
     """
     if trials <= 0:
         return math.inf
-    p = (successes + jeffreys) / (trials + 2.0 * jeffreys)
+    strength = prior_strength if prior_strength is not None else 2.0 * jeffreys
+    p = corrected_share(successes, trials, prior_share=prior_share, prior_strength=strength)
     variance = 1.0 / (trials * p * (1.0 - p))
     variance /= max(exposure, MIN_EXPOSURE)
     return min(variance, MAX_OBSERVATION_VARIANCE)
 
 
-def observed_logit(successes: float, trials: float, *, jeffreys: float = JEFFREYS) -> float:
-    """The observation, Jeffreys-corrected so 0 and 1 are representable."""
-    p = (successes + jeffreys) / (trials + 2.0 * jeffreys)
-    return logit(p)
+def observed_logit(
+    successes: float,
+    trials: float,
+    *,
+    jeffreys: float = JEFFREYS,
+    prior_share: float = 0.5,
+    prior_strength: float | None = None,
+) -> float:
+    """The observation, continuity-corrected so 0 and 1 are representable."""
+    strength = prior_strength if prior_strength is not None else 2.0 * jeffreys
+    return logit(
+        corrected_share(successes, trials, prior_share=prior_share, prior_strength=strength)
+    )
 
 
 def filter_series(
@@ -225,6 +268,7 @@ def filter_series(
     prior_var_logit: float,
     event_multiplier: float = 1.0,
     season_break_weight: float = 1.0,
+    prior_share: float | None = None,
     changepoint_lookback: int = 2,
     changepoint_threshold_sd: float = 2.5,
 ) -> list[RoleEstimate]:
@@ -292,8 +336,12 @@ def filter_series(
             continue
 
         # --- update ---
-        z = observed_logit(obs.successes, obs.trials)
-        r = observation_variance(obs.successes, obs.trials, obs.exposure)
+        # The continuity correction is anchored on the same prior the filter
+        # starts from, so a player who never touches the ball converges toward
+        # his position's real share instead of toward a coin flip.
+        anchor = expit(prior_mean_logit) if prior_share is None else prior_share
+        z = observed_logit(obs.successes, obs.trials, prior_share=anchor)
+        r = observation_variance(obs.successes, obs.trials, obs.exposure, prior_share=anchor)
         innovation = z - prior_mean
         innovation_var = prior_var + r
 
