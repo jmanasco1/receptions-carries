@@ -219,10 +219,32 @@ context_change_discount = 0.35
 # prior-season usage. Preseason usage is noisy; weight it low or not at all.
 rookie_preseason_weight = 0.0
 
-# The model is worst in weeks 1-3. Gate output as actionable behind a
-# current-season calibration check rather than a Sunday-morning judgement call.
-# Set false only after that check passes.
-suppress_output_before_week = 4
+# Suppress output before this week. MEASURED, not guessed -- an earlier value
+# of 4 threw away a quarter of the season out of caution, and the caution was
+# not supported.
+#
+# Held out on 2024, restricted to players a book would price:
+#
+#   week    n     corr    MAE    PIT dev   calibrated
+#   1       225   0.516   1.43   0.302     NO
+#   2       221   0.452   1.69   0.149     yes
+#   3       227   0.523   1.59   0.231     yes
+#   4-6     593   0.587   1.57   0.097     yes
+#   7-18   2490   0.590   1.60   0.064     yes
+#
+# Weeks 2 and 3 are calibrated and no less accurate than mid-season -- MAE is
+# flat all year. The tracker is not starting from nothing in September: 87% of
+# week 1 players carry prior-season history, a median of 41 games of it, and
+# `prior_season_weight_week1` discounts the confidence rather than the level.
+#
+# Week 1 is the real exception. Offseason moves, new schemes and changed roles
+# have not been observed even once, so the carried-over level can be flatly
+# wrong for anyone whose situation changed -- and the miscalibration shows it
+# (PIT 0.302 against 0.064 late). A single game of evidence fixes it.
+#
+# Set to 1 to include week 1 anyway; the numbers above are what you are
+# accepting if you do.
+suppress_output_before_week = 2
 
 [output]
 # Which players appear in the weekly report.

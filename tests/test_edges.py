@@ -129,15 +129,21 @@ def test_a_thin_market_is_suppressed(config):
     assert not edges["actionable"][0]
 
 
-def test_early_weeks_are_suppressed(config):
-    """Before week 4 a role estimate is mostly prior. The model will produce
-    confident numbers anyway; they should not be bet."""
-    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=2)
+def test_week_one_is_suppressed(config):
+    """Offseason moves have not been observed even once, so a carried-over
+    role level can be flatly wrong for anyone whose situation changed. Weeks
+    2+ measured as calibrated, so only week 1 is held back."""
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=1)
     assert edges["early_season"][0]
     assert not edges["actionable"][0]
 
-    later = compute_edges(make_projection(0.70), make_snapshot(), config, week=9)
-    assert not later["early_season"][0]
+
+def test_week_two_is_not_suppressed(config):
+    """The change this replaced a guess with: weeks 2-3 are calibrated on
+    held-out data, and suppressing them discarded a sixth of the season."""
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=2)
+    assert not edges["early_season"][0]
+    assert edges["actionable"][0]
 
 
 def test_a_clean_market_survives_every_filter(config):
@@ -147,7 +153,7 @@ def test_a_clean_market_survives_every_filter(config):
 
 
 def test_suppression_reasons_are_counted(config):
-    edges = compute_edges(make_projection(0.51), make_snapshot(), config, week=2)
+    edges = compute_edges(make_projection(0.51), make_snapshot(), config, week=1)
     reasons = suppression_reasons(edges)
     counted = dict(zip(reasons["reason"], reasons["rows"], strict=True))
     assert counted["below_threshold"] == 1
@@ -273,8 +279,8 @@ def test_the_report_hides_suppressed_rows_by_default(config):
 def test_markdown_leads_with_what_was_held_back(config):
     """A week where everything is suppressed for one reason is a broken
     pipeline, not a quiet slate, and the report has to be able to show that."""
-    edges = compute_edges(make_projection(0.51), make_snapshot(), config, week=2)
-    rendered = render_markdown(edges, week=2, season=2024)
+    edges = compute_edges(make_projection(0.51), make_snapshot(), config, week=1)
+    rendered = render_markdown(edges, week=1, season=2024)
     assert rendered.index("What was held back") < rendered.index("## Flagged")
     assert "below threshold" in rendered
 

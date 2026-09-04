@@ -107,7 +107,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 457 tests, offline, ~29s
+uv run pytest -m "not network"         # 458 tests, offline, ~27s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -859,11 +859,40 @@ wrong" beats "the book is wrong":
 | extreme price (≤ −300) | devig is unstable there and limits are tiny |
 | devig disagreement (> 1pp) | the three methods disagreeing means the price is odd |
 | thin market (< 3 books) | two books is not a consensus |
-| before week 4 | role estimates are still mostly prior |
+| week 1 only | offseason role changes have not been observed even once |
 
 The report prints the suppression counts **above** the flagged table, because a
 week where everything is held back for one reason is a broken pipeline rather
 than a quiet slate, and a report showing only survivors cannot tell you which.
+
+#### The early-season window was wrong, and measuring fixed it
+
+It was set to week 4 out of caution — a quarter of the season discarded on the
+assumption that early role estimates are worthless. Held out on 2024,
+restricted to players a book would price:
+
+| week | n | corr | MAE | PIT dev | calibrated |
+|---|---:|---:|---:|---:|---|
+| 1 | 225 | 0.516 | 1.43 | 0.302 | **no** |
+| 2 | 221 | 0.452 | 1.69 | 0.149 | yes |
+| 3 | 227 | 0.523 | 1.59 | 0.231 | yes |
+| 4–6 | 593 | 0.587 | 1.57 | 0.097 | yes |
+| 7–18 | 2490 | 0.590 | 1.60 | 0.064 | yes |
+
+**MAE is flat all season.** Weeks 2–3 are calibrated and no less accurate than
+week 12. The tracker does not start from nothing in September: 87% of week 1
+players carry prior-season history, a median of 41 games of it, and the
+offseason discounts *confidence* rather than the level.
+
+Week 1 is the real exception, and it fails on shape rather than accuracy — its
+MAE is the best of the season while its PIT deviation is five times the
+settled-season figure. Offseason moves have not been observed even once, so a
+carried-over level can be flatly wrong for anyone whose situation changed. One
+game of evidence fixes it. An accuracy-only check would have passed week 1 and
+failed to notice.
+
+The window is now 2, and three tests hold it there with numbers rather than
+caution.
 
 ### Three devig methods, and the disagreement is the signal
 
@@ -1000,7 +1029,7 @@ src/nfl_usage_props/
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          457 offline tests + 67 network-marked
+tests/                          458 offline tests + 70 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```

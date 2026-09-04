@@ -63,7 +63,15 @@ def stack():
         seed=7,
     )
     joined = result.keys.with_row_index("_i").join(
-        test_features.select("game_id", "team", "gsis_id", "receptions", "carries", "targets"),
+        test_features.select(
+            "game_id",
+            "team",
+            "gsis_id",
+            "receptions",
+            "carries",
+            "targets",
+            "games_of_history",
+        ),
         on=["game_id", "team", "gsis_id"],
         how="inner",
     )
@@ -140,3 +148,57 @@ def test_receptions_are_calibrated_where_a_line_would_exist(stack):
     )
     assert report.well_calibrated, report.summary()
     assert report.pit_uniformity < 0.10, report.summary()
+
+
+# ------------------------------------------------- when output is trustworthy
+
+
+def test_weeks_two_and_three_are_calibrated_enough_to_report(stack):
+    """The evidence behind `suppress_output_before_week = 2`.
+
+    Suppressing through week 3 threw away a quarter of the season on the
+    assumption that early role estimates are worthless. They are not: the
+    tracker carries prior-season history across the offseason, most players
+    have plenty of it, and MAE in weeks 2-3 matches mid-season. If this ever
+    fails, raise the config value -- but raise it with a number attached.
+    """
+    result, joined, *_ = stack
+    index = joined["_i"].to_numpy()
+    line_worthy = result.targets[index].mean(axis=1) >= 2.0
+    early = ((joined["week"] >= 2) & (joined["week"] <= 3)).to_numpy() & line_worthy
+
+    report = assess(result.receptions[index][early], joined["receptions"].to_numpy()[early])
+    assert report.well_calibrated, report.summary()
+
+
+def test_week_one_is_the_one_that_is_not(stack):
+    """Complement of the above, and the reason week 1 stays suppressed.
+
+    Offseason moves have not been observed even once, so a carried-over role
+    level can be flatly wrong for anyone whose situation changed. The failure
+    is in the distribution's shape, not its accuracy -- week 1 MAE is fine,
+    which is exactly why an accuracy-only check would have missed this.
+    """
+    result, joined, *_ = stack
+    index = joined["_i"].to_numpy()
+    line_worthy = result.targets[index].mean(axis=1) >= 2.0
+    week_one = (joined["week"] == 1).to_numpy() & line_worthy
+
+    week_one_pit = assess(
+        result.receptions[index][week_one], joined["receptions"].to_numpy()[week_one]
+    ).pit_uniformity
+    settled = (joined["week"] >= 7).to_numpy() & line_worthy
+    settled_pit = assess(
+        result.receptions[index][settled], joined["receptions"].to_numpy()[settled]
+    ).pit_uniformity
+    assert week_one_pit > settled_pit * 2
+
+
+def test_most_week_one_players_are_not_starting_from_nothing(stack):
+    """The premise the suppression window rests on. If prior-season history
+    stopped carrying across the offseason, week 1 really would be a blank
+    slate and a longer window would be justified."""
+    _, joined, *_ = stack
+    week_one = joined.filter(pl.col("week") == 1)
+    assert (week_one["games_of_history"] > 0).mean() > 0.75
+    assert week_one["games_of_history"].median() > 10

@@ -134,7 +134,9 @@ class EarlySeasonConfig:
     prior_season_zero_by_week: int = 6
     context_change_discount: float = 0.35
     rookie_preseason_weight: float = 0.0
-    suppress_output_before_week: int = 4
+    # Week 1 only. Weeks 2-3 measured as calibrated on held-out data and no
+    # less accurate than mid-season; see the table in config.toml.
+    suppress_output_before_week: int = 2
 
 
 @dataclass(frozen=True)
