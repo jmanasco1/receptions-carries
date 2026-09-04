@@ -85,6 +85,18 @@ jobs:
         continue-on-error: true
         run: uv run nfl-props odds resolve
 
+      # The report is what a human actually reads, so it is generated here
+      # rather than left as a command someone has to remember to run. Needs the
+      # nflverse corpus, which is why ingestion happens first; both steps are
+      # tolerant because a missing report must never cost a logged snapshot.
+      - name: Refresh nflverse data
+        continue-on-error: true
+        run: uv run nfl-props ingest run
+
+      - name: Build the weekly report
+        continue-on-error: true
+        run: uv run nfl-props report weekly --draws 4000 --out reports/latest.md
+
       - name: Commit snapshot
         run: |
           git config user.name "github-actions[bot]"
@@ -92,13 +104,13 @@ jobs:
           # An out-of-season run legitimately writes nothing, and `git add` on a
           # path that does not exist is a fatal error, not a no-op. Create the
           # directory so "nothing to commit" stays the quiet path it should be.
-          mkdir -p data/odds/props
-          git add -A data/odds/props
+          mkdir -p data/odds/props reports
+          git add -A data/odds/props reports
           if git diff --staged --quiet; then
             echo "No new snapshot rows."
             exit 0
           fi
-          git commit -m "Prop snapshot: ${{ steps.kind.outputs.kind }} $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -m "Prop snapshot + report: ${{ steps.kind.outputs.kind }} $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3 4; do
             git pull --rebase origin "${GITHUB_REF_NAME}" && git push && exit 0
             sleep $((2 ** i))

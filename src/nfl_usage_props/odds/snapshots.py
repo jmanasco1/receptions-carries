@@ -282,3 +282,46 @@ def resolve_snapshot(
         .alias("gsis_id")
     )
     return resolved, unresolved
+
+
+def load_resolved_snapshots(config: Any) -> tuple[pl.DataFrame, list[str]]:
+    """Every logged snapshot, with `gsis_id` filled in at read time.
+
+    Resolution happens on read rather than being written back into the
+    parquet, for two reasons. The price data is the CLV record and is
+    deliberately immutable -- the store refuses to overwrite a snapshot at
+    all. And resolution is a function of the resolver plus
+    `reference/player_name_overrides.csv`, both of which change: adding an
+    override should fix every snapshot ever logged, retroactively, without
+    rewriting history.
+
+    It is cheap. There are a few hundred distinct names in a season.
+
+    (`nfl-props odds resolve` computes exactly this and prints a count, which
+    is all it was ever meant to do. It used to be the only resolution step,
+    which meant nothing downstream ever saw a gsis_id -- every consumer read
+    the raw parquet, where the column is null by construction.)
+    """
+    from nfl_usage_props.identity import PlayerResolver
+    from nfl_usage_props.reference import load_name_overrides
+    from nfl_usage_props.storage import SEASONLESS_SENTINEL, ParquetStore
+
+    snapshots = SnapshotStore(config.props_dir).read_all()
+    if snapshots.is_empty():
+        return snapshots, []
+
+    store = ParquetStore(config.raw_dir)
+    if not store.exists("players", SEASONLESS_SENTINEL):
+        raise FileNotFoundError("no players table; run `nfl-props ingest run` first")
+
+    players = store.read("players", SEASONLESS_SENTINEL)
+    if "latest_team" in players.columns:
+        players = players.with_columns(pl.col("latest_team").alias("team"))
+
+    team_lookup: dict[str, str] = {}
+    if store.exists("teams", SEASONLESS_SENTINEL):
+        teams = store.read("teams", SEASONLESS_SENTINEL)
+        team_lookup = dict(zip(teams["team_name"], teams["team_abbr"], strict=False))
+
+    resolver = PlayerResolver(players, overrides=load_name_overrides())
+    return resolve_snapshot(snapshots, resolver, team_lookup=team_lookup, strict=False)

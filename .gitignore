@@ -24,3 +24,9 @@ htmlcov/
 
 # nflreadpy's own on-disk cache
 .nflreadpy_cache/
+
+# Generated weekly reports. Reproducible from `nfl-props report weekly`, and
+# the scheduled workflow regenerates and commits `reports/latest.md` itself --
+# a hand-run copy would be stale the moment the next snapshot lands.
+reports/*
+!reports/latest.md

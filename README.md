@@ -107,7 +107,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 458 tests, offline, ~27s
+uv run pytest -m "not network"         # 469 tests, offline, ~26s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -934,6 +934,68 @@ flagged edge is real. Only logged closing lines can do that.
 
 ---
 
+## Projecting a slate that has not been played
+
+The panel is built from play-by-play, so until recently the pipeline could only
+project the *past*. An unplayed game has no plays, therefore no panel rows,
+therefore no features — `report weekly` reported "no feature rows" and the
+whole model was a backtesting instrument. Everything validated in Stages 2–5
+was measured against completed games.
+
+`features/upcoming.py` closes that. It emits pseudo panel rows for the slate —
+one per (game, expected player), every outcome column null — and runs them
+through the *same* feature code as every fitted row. Null outcomes are not a
+placeholder: the role tracker already reads a game with no opportunities as
+"no information this week", which is exactly what an unplayed game is, and the
+same path a bye takes.
+
+### The depth cap is load-bearing
+
+Who is expected to play comes from `depth_charts`, which from 2025 carries a
+real UTC timestamp and is filterable as-of kickoff. The raw feed lists ~29
+eligible players a team. Real offences use **12.8** (WR 4.9, TE 3.0, RB 2.7,
+QB 1.2, FB 1.0, measured over 2023–25).
+
+Capping at 16 rather than 13 sounds harmlessly generous. It is not. Layer 3
+normalises across whoever is on the simplex, so three players who will never
+see the field take share from the ones who will — a **22% systematic
+under-projection** on exactly the featured players books post lines for. The
+only symptom was that all 20 flagged markets came back *Under*, which reads
+like a hot model rather than a broken one.
+
+Caps now match the measured rotation, `upcoming_panel_rows` raises if a roster
+lands outside 10–15 per team, and a test runs the forward path on a week that
+was actually played and checks the projections against what happened:
+
+| | forward path vs actual, 2025 wk 10 |
+|---|---|
+| line-worthy ratio | **0.974** (2.6% low) |
+| correlation | 0.678 |
+
+That test is the one that would have caught the cap bug on the day. Everything
+else stayed green through it.
+
+### `odds resolve` never persisted anything
+
+It computed the name → `gsis_id` mapping, printed a count, and discarded it.
+The workflow had been running it weekly to no effect, and every consumer read
+the raw parquet where `gsis_id` is null by construction.
+
+Resolution now happens at **read** time (`load_resolved_snapshots`) rather than
+being written back. The price data is the CLV record and the store refuses to
+overwrite it at all — and resolution is a function of the resolver plus the
+overrides file, so doing it on read means adding an override retroactively
+fixes every snapshot ever logged without rewriting history.
+
+### What is still missing
+
+**Inactives.** The depth chart is a roster guess, not an inactives list. Those
+post 90 minutes before kickoff and are not in this feed, so a player ruled out
+still appears with his usual role — and, worse, holds his share of the simplex.
+Wiring the injury report in is the clear next improvement.
+
+---
+
 ## Decisions
 
 ### Settled
@@ -1021,6 +1083,7 @@ src/nfl_usage_props/
   model/player_share.py         Layer 3-4: Dirichlet shares, catch rate
   model/projection.py           Monte Carlo composition -> PMF
   model/calibration.py          PIT, coverage, log score
+  features/upcoming.py          rosters for slates not yet played
   edge/devig.py                 power / multiplicative / Shin, consensus
   edge/edges.py                 model vs market, and the suppression filters
   edge/clv.py                   closing line value scoring
@@ -1029,7 +1092,7 @@ src/nfl_usage_props/
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          458 offline tests + 70 network-marked
+tests/                          469 offline tests + 73 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```

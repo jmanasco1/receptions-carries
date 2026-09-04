@@ -202,3 +202,88 @@ def test_most_week_one_players_are_not_starting_from_nothing(stack):
     week_one = joined.filter(pl.col("week") == 1)
     assert (week_one["games_of_history"] > 0).mean() > 0.75
     assert week_one["games_of_history"].median() > 10
+
+
+# --------------------------------------------- projecting a slate not yet played
+
+
+@pytest.fixture(scope="module")
+def forward_vs_actual():
+    """Run the FORWARD path on a week that was played, then compare to truth.
+
+    The forward path builds its roster from depth charts rather than from
+    play-by-play, because an unplayed game has no plays. That makes it a
+    genuinely different input to everything the backtest exercised, and the way
+    it fails is silent: too many names on Layer 3's simplex deflates every real
+    player's projection and the only symptom is that every flagged market says
+    Under.
+    """
+    from nfl_usage_props.features.upcoming import panel_with_upcoming
+    from nfl_usage_props.model.player_share import eligible
+
+    # 2025, not 2024: the timestamped depth chart feed starts in 2025, and the
+    # legacy one is undated and cannot be filtered to a kickoff.
+    season, week = 2025, 10
+    seasons = [*SEASONS, season]
+    config = load_config(load_env=False)
+    store = ParquetStore(config.raw_dir)
+    for table in ("pbp", "participation", "schedules", "depth_charts"):
+        if not store.exists(table, season):
+            pytest.skip(f"{table} not ingested for {season}")
+
+    panel = load_panel(config, seasons)
+    schedules = load_schedules(config, seasons)
+    depth = store.read("depth_charts", season)
+    if "dt" not in depth.columns:
+        pytest.skip(f"{season} depth charts use the undated legacy feed")
+
+    forward = panel_with_upcoming(panel, schedules, depth, season=season, week=week)
+    features = build_features(forward, schedules, config).filter(pl.col("season_type") == "REG")
+    history = features.filter(pl.col("team_plays").is_not_null())
+
+    volume = TeamVolumeModel(seed=11)
+    volume.fit(team_game_frame(history), fit_wind=False)
+    targets = PlayerShareModel("targets", seed=11)
+    targets.fit(history)
+    carries = PlayerShareModel("carries", seed=11)
+    carries.fit(history)
+    catch = fit_catch_rate_dispersion(history)
+
+    slate = features.filter((pl.col("season") == season) & (pl.col("week") == week))
+    slate_teams = team_game_frame(features).filter(
+        (pl.col("season") == season) & (pl.col("week") == week)
+    )
+    projection = project_week(
+        slate, slate_teams, volume, targets, carries, catch.concentration, draws=2000, seed=11
+    )
+    projected = projection.keys.with_columns(
+        pl.Series("projected", projection.receptions.mean(axis=1))
+    ).select("game_id", "team", "gsis_id", "projected")
+
+    truth = eligible(panel.filter((pl.col("season") == season) & (pl.col("week") == week))).select(
+        "game_id", "team", "gsis_id", "receptions"
+    )
+    return projected.join(truth, on=["game_id", "team", "gsis_id"], how="inner")
+
+
+def test_forward_projections_are_unbiased_against_what_happened(forward_vs_actual):
+    """The check that would have caught the depth-cap bug immediately. Caps
+    summing to 16 instead of 13 put this ratio at roughly 0.8 while every other
+    test stayed green."""
+    priced = forward_vs_actual.filter(pl.col("projected") >= 2.0)
+    assert priced.height > 50
+    ratio = priced["projected"].mean() / priced["receptions"].mean()
+    assert 0.88 < ratio < 1.12, f"forward projections biased: ratio {ratio:.3f}"
+
+
+def test_forward_projections_still_track_usage(forward_vs_actual):
+    """Unbiased on the mean is not enough -- a constant would manage that."""
+    correlation = np.corrcoef(forward_vs_actual["projected"], forward_vs_actual["receptions"])[0, 1]
+    assert correlation > 0.55
+
+
+def test_the_forward_roster_is_the_right_size(forward_vs_actual):
+    """Layer 3 normalises across this set, so its size scales every
+    projection directly."""
+    per_team = forward_vs_actual.group_by("game_id", "team").len()["len"]
+    assert 8 <= per_team.median() <= 15

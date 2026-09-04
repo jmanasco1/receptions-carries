@@ -118,3 +118,23 @@ def _read(
     if not frames:
         return pl.DataFrame()
     return pl.concat(frames, how="diagonal_relaxed")
+
+
+def upcoming_week(schedules: pl.DataFrame, season: int, now=None) -> int | None:
+    """The week whose games have not all kicked off yet.
+
+    The scheduled workflow runs with no week argument, so it has to work this
+    out. Returns the earliest week with a game still to come; None once the
+    season is over.
+    """
+    from datetime import UTC, datetime
+
+    now = now or datetime.now(UTC)
+    ahead = schedules.filter(
+        (pl.col("season") == season)
+        & (pl.col("game_type") == "REG")
+        & (pl.col("kickoff_utc") > now)
+    )
+    if ahead.is_empty():
+        return None
+    return int(ahead["week"].min())

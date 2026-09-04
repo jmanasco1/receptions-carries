@@ -645,18 +645,24 @@ def report_weekly(
     from nfl_usage_props.config import current_nfl_season
     from nfl_usage_props.edge.clv import score_flagged_bets, summarise
     from nfl_usage_props.edge.edges import compute_edges
-    from nfl_usage_props.features.dataset import build_dataset
+    from nfl_usage_props.features.build import build_features
+    from nfl_usage_props.features.dataset import load_panel, load_schedules, upcoming_week
+    from nfl_usage_props.features.upcoming import panel_with_upcoming
     from nfl_usage_props.model.player_share import PlayerShareModel, fit_catch_rate_dispersion
     from nfl_usage_props.model.projection import project_week
     from nfl_usage_props.model.team_volume import TeamVolumeModel, team_game_frame
-    from nfl_usage_props.odds.snapshots import SnapshotStore
+    from nfl_usage_props.odds.snapshots import load_resolved_snapshots
     from nfl_usage_props.report import render_markdown
+    from nfl_usage_props.storage import ParquetStore
 
     config = load_config()
     season = season or current_nfl_season()
 
-    store = SnapshotStore(config.props_dir)
-    snapshots = store.read_all()
+    snapshots, unresolved = load_resolved_snapshots(config)
+    if unresolved:
+        console.print(f"[yellow]{len(unresolved)} book names could not be resolved:[/]")
+        for message in unresolved[:10]:
+            console.print(f"  [yellow]{message}[/]")
     if snapshots.is_empty():
         console.print(
             "[red]No prop snapshots on disk.[/] There is nothing to price a projection "
@@ -665,17 +671,45 @@ def report_weekly(
         )
         raise typer.Exit(code=1)
 
-    _, features = build_dataset(config)
-    features = features.filter(pl.col("season_type") == "REG")
+    raw = ParquetStore(config.raw_dir)
+    schedules = load_schedules(config)
+    panel = load_panel(config)
+
+    # Default to the slate that has not kicked off. The scheduled workflow runs
+    # with no week argument, and "project the whole season" is never what
+    # anyone means on a Wednesday.
+    if week is None:
+        week = upcoming_week(schedules, season)
+        if week is None:
+            console.print(f"[yellow]No {season} games remaining.[/]")
+            raise typer.Exit(code=1)
+        console.print(f"[dim]No --week given; using the next slate: week {week}.[/]")
+
+    # A slate that has not kicked off has no play-by-play, so it has no panel
+    # rows and cannot be projected. Synthesise them from the schedule and the
+    # depth chart; without this the report is empty for a reason that looks
+    # exactly like a quiet week.
+    if week and panel.filter((pl.col("season") == season) & (pl.col("week") == week)).is_empty():
+        if not raw.exists("depth_charts", season):
+            console.print(f"[red]No depth charts for {season}[/] — cannot guess who plays.")
+            raise typer.Exit(code=1)
+        panel = panel_with_upcoming(
+            panel, schedules, raw.read("depth_charts", season), season=season, week=week
+        )
+        console.print(f"[dim]{season} week {week} unplayed — projecting from depth charts.[/]")
+
+    features = build_features(panel, schedules, config).filter(pl.col("season_type") == "REG")
     team_games = team_game_frame(features).filter(pl.col("season_type") == "REG")
 
-    # Fit on everything strictly before the slate being projected.
-    history = features.filter(pl.col("season") < season)
-    if week:
-        history = pl.concat(
-            [history, features.filter((pl.col("season") == season) & (pl.col("week") < week))],
-            how="diagonal_relaxed",
+    # Fit on played games strictly before the slate. The upcoming rows carry
+    # null outcomes by design and must never reach a fitter.
+    history = features.filter(
+        pl.col("team_plays").is_not_null()
+        & (
+            (pl.col("season") < season)
+            | ((pl.col("season") == season) & (pl.col("week") < (week or 99)))
         )
+    )
     if history.is_empty():
         console.print("[red]No history to fit on.[/] Run `nfl-props ingest run` first.")
         raise typer.Exit(code=1)
@@ -727,7 +761,9 @@ def report_weekly(
             table.add_row(row["reason"].replace("_", " "), str(row["rows"]))
         console.print(table)
 
-    markdown = render_markdown(edges if not show_all else edges, week=week, season=season, clv=clv)
+    markdown = render_markdown(
+        edges, week=week, season=season, clv=clv, actionable_only=not show_all
+    )
     path = Path(out)
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(markdown)

@@ -202,15 +202,26 @@ class TeamVolumeModel:
 
     @staticmethod
     def _usable(
-        frame: pl.DataFrame, features: tuple[str, ...], extra: tuple[str, ...] = ()
+        frame: pl.DataFrame,
+        features: tuple[str, ...],
+        extra: tuple[str, ...] = (),
+        *,
+        require_outcomes: bool = True,
     ) -> pl.DataFrame:
-        """Rows with every feature and both outcomes present.
+        """Rows with every feature present, and -- when fitting -- the outcomes.
 
         Week 1 of the very first season has no trailing history and is dropped
         rather than imputed: one game-week of missing pace is not worth an
         imputation rule that would then apply silently everywhere else.
+
+        `require_outcomes` is False at prediction time. An upcoming game has no
+        `team_plays` by definition, and requiring it here silently dropped every
+        future row -- which is not an error, just an empty projection that looks
+        like a quiet slate.
         """
-        needed = [*features, *extra, "team_plays", "team_dropbacks"]
+        needed = [*features, *extra]
+        if require_outcomes:
+            needed += ["team_plays", "team_dropbacks"]
         return frame.drop_nulls([c for c in needed if c in frame.columns])
 
     # -------------------------------------------------------------- predict
@@ -218,7 +229,7 @@ class TeamVolumeModel:
     def predict(self, team_games: pl.DataFrame) -> pl.DataFrame:
         """Expected plays, dropbacks and pass rate per team-game."""
         self._require_fit()
-        frame = self._usable(team_games, PLAYS_FEATURES)
+        frame = self._usable(team_games, PLAYS_FEATURES, require_outcomes=False)
         plays = self._plays_model.predict_mean(_matrix(frame, PLAYS_FEATURES))
         rate = self._rate_model.predict_rate(_matrix(frame, PASS_RATE_FEATURES))
         return frame.select("game_id", "team").with_columns(
@@ -237,7 +248,7 @@ class TeamVolumeModel:
         """
         self._require_fit()
         rng = np.random.default_rng(self.seed)
-        frame = self._usable(team_games, PLAYS_FEATURES)
+        frame = self._usable(team_games, PLAYS_FEATURES, require_outcomes=False)
 
         plays = self._plays_model.sample(_matrix(frame, PLAYS_FEATURES), draws, rng)
         rate = self._rate_model.sample_rate(_matrix(frame, PASS_RATE_FEATURES), draws, rng)
