@@ -1,6 +1,6 @@
 # Usage props — 2026 week 1
 
-_Generated 2026-09-04 18:29 UTC._
+_Generated 2026-09-06 17:57 UTC._
 
 ## What was held back
 
@@ -9,13 +9,13 @@ pipeline is more likely at fault than the slate.
 
 | reason | rows |
 | --- | ---: |
-| early season | 20 |
-| devig disagreement | 3 |
-| thin market | 3 |
-| below threshold | 2 |
+| early season | 179 |
+| thin market | 87 |
+| devig disagreement | 15 |
+| below threshold | 12 |
 | extreme price | 0 |
 
-Priced markets: 20. Actionable: 0.
+Priced markets: 179. Actionable: 0.
 
 ## Flagged
 
