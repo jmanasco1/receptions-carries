@@ -1,0 +1,449 @@
+{
+  "fetched_at": "2026-09-07T01:09:15.700124+00:00",
+  "status_code": 200,
+  "requests_remaining": 397,
+  "requests_used": 103,
+  "cost": 2,
+  "data": {
+    "id": "1edfa5ceaa1ad2cb57df1c1b908731f6",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T20:25:00Z",
+    "home_team": "Los Angeles Chargers",
+    "away_team": "Arizona Cardinals",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 107,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -137,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -158,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Quentin Johnston",
+                "price": 106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Quentin Johnston",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Harris",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Harris",
+                "price": -128,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Omarion Hampton",
+                "price": 103,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Omarion Hampton",
+                "price": -131,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Herbert",
+                "price": 116,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Herbert",
+                "price": -148,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -128,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -101,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Quentin Johnston",
+                "price": 113,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Quentin Johnston",
+                "price": -147,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -143,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Harris",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Harris",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -145,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Omarion Hampton",
+                "price": 103,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Omarion Hampton",
+                "price": -133,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:44Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -121,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Harris",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -109,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Quentin Johnston",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -162,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 110,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Quentin Johnston",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Quentin Johnston",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Harris",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Harris",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 116,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -154,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Quentin Johnston",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Quentin Johnston",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Harris",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Harris",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 105,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -135,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "fetched_at": "2026-09-07T01:09:16.383708+00:00",
+  "status_code": 200,
+  "requests_remaining": 391,
+  "requests_used": 109,
+  "cost": 2,
+  "data": {
+    "id": "17885cb8dcade8f6c3bce14b2de805e8",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T20:25:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "Washington Commanders",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:45Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": -147,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Terry McLaurin",
+                "price": 129,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Terry McLaurin",
+                "price": -165,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 119,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -101,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": -127,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": -171,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": 134,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": 101,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -129,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:45Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -116,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -110,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Jacory Croskey-Merritt",
+                "price": -132,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jacory Croskey-Merritt",
+                "price": 103,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Jayden Daniels",
+                "price": -134,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jayden Daniels",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Hurts",
+                "price": -136,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Hurts",
+                "price": 106,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": -101,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -126,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Terry McLaurin",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Terry McLaurin",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": -140,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -103,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -134,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Terry McLaurin",
+                "price": -155,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": -143,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -143,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -103,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": -132,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Terry McLaurin",
+                "price": -169,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Terry McLaurin",
+                "price": 129,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jayden Daniels",
+                "price": -132,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jayden Daniels",
+                "price": 102,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -116,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -111,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": -102,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -127,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Hurts",
+                "price": -125,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Hurts",
+                "price": -103,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jacory Croskey-Merritt",
+                "price": -133,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jacory Croskey-Merritt",
+                "price": 103,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Terry McLaurin",
+                "price": 130,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Terry McLaurin",
+                "price": -170,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

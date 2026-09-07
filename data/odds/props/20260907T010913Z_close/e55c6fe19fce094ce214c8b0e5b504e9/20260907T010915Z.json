@@ -1,0 +1,665 @@
+{
+  "fetched_at": "2026-09-07T01:09:15.062974+00:00",
+  "status_code": 200,
+  "requests_remaining": 403,
+  "requests_used": 97,
+  "cost": 2,
+  "data": {
+    "id": "e55c6fe19fce094ce214c8b0e5b504e9",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T17:00:00Z",
+    "home_team": "Jacksonville Jaguars",
+    "away_team": "Cleveland Browns",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:09:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": 125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 128,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -163,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -116,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 101,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": -133,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 119,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jerry Jeudy",
+                "price": 117,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 121,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Bhayshul Tuten",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Bhayshul Tuten",
+                "price": 129,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": -136,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": 106,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:09:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": 104,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": -133,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Bhayshul Tuten",
+                "price": -125,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Bhayshul Tuten",
+                "price": -102,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Rodriguez Jr.",
+                "price": -142,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Rodriguez Jr.",
+                "price": 111,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Trevor Lawrence",
+                "price": -121,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Trevor Lawrence",
+                "price": -105,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:07:47Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Bhayshul Tuten",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Bhayshul Tuten",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -172,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -174,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jerry Jeudy",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -166,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": -182,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": 136,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -136,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:44Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": 123,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -177,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -127,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 123,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": 100,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:09:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 126,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -164,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -112,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -167,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -149,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": -101,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": -128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -169,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jerry Jeudy",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": -152,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:09:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bhayshul Tuten",
+                "price": -120,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Bhayshul Tuten",
+                "price": -108,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Trevor Lawrence",
+                "price": -127,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Trevor Lawrence",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Rodriguez Jr.",
+                "price": -145,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Rodriguez Jr.",
+                "price": 111,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": 103,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": -133,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -165,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jerry Jeudy",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": 125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": -165,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

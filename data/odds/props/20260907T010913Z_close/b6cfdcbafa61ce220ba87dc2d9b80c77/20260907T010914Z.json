@@ -1,0 +1,401 @@
+{
+  "fetched_at": "2026-09-07T01:09:14.194627+00:00",
+  "status_code": 200,
+  "requests_remaining": 411,
+  "requests_used": 89,
+  "cost": 2,
+  "data": {
+    "id": "b6cfdcbafa61ce220ba87dc2d9b80c77",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T17:00:00Z",
+    "home_team": "Indianapolis Colts",
+    "away_team": "Baltimore Ravens",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:34Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Zay Flowers",
+                "price": -152,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Zay Flowers",
+                "price": 119,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -149,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 129,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": -166,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Alec Pierce",
+                "price": -111,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Alec Pierce",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mark Andrews",
+                "price": 127,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Mark Andrews",
+                "price": -162,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -129,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": 101,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashod Bateman",
+                "price": -195,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashod Bateman",
+                "price": 152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": 182,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -236,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:34Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -108,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -118,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -104,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Lamar Jackson",
+                "price": -121,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Lamar Jackson",
+                "price": -105,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:09:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mark Andrews",
+                "price": 114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Zay Flowers",
+                "price": -130,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mark Andrews",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Mark Andrews",
+                "price": -156,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Zay Flowers",
+                "price": -154,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Zay Flowers",
+                "price": 118,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Lamar Jackson",
+                "price": -123,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Lamar Jackson",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -110,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -118,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -104,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rashod Bateman",
+                "price": -205,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashod Bateman",
+                "price": 152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": 172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -235,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Zay Flowers",
+                "price": -172,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Zay Flowers",
+                "price": 128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mark Andrews",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Mark Andrews",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": -154,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Alec Pierce",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Alec Pierce",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -102,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:07:42Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mark Andrews",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Mark Andrews",
+                "price": -165,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Zay Flowers",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Zay Flowers",
+                "price": 120,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

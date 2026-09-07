@@ -1,0 +1,437 @@
+{
+  "fetched_at": "2026-09-07T01:09:15.434826+00:00",
+  "status_code": 200,
+  "requests_remaining": 399,
+  "requests_used": 101,
+  "cost": 2,
+  "data": {
+    "id": "7dddb296a42e7a41a774b24bd1709ce1",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T17:00:00Z",
+    "home_team": "Tennessee Titans",
+    "away_team": "New York Jets",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -115,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -127,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -142,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 111,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": 103,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -132,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": -191,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": 149,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -101,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -126,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": 101,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -128,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -114,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -158,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -188,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -138,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 104,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 103,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -133,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -101,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -128,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -112,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 108,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-07T01:08:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -112,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -115,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -108,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -120,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:44Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -110,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-07T01:08:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -130,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
