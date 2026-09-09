@@ -1,0 +1,779 @@
+{
+  "fetched_at": "2026-09-09T20:20:02.764711+00:00",
+  "status_code": 200,
+  "requests_remaining": 197,
+  "requests_used": 303,
+  "cost": 2,
+  "data": {
+    "id": "3e646c7479c57f5d9752d8c7dfe7059b",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-14T00:20:00Z",
+    "home_team": "New York Giants",
+    "away_team": "Dallas Cowboys",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:18:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 117,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": 119,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -151,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -153,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -107,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jake Ferguson",
+                "price": -119,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 103,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -131,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 101,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -129,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 149,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -191,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 148,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Odell Beckham Jr.",
+                "price": 107,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Odell Beckham Jr.",
+                "price": -136,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:18:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -106,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -120,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 102,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -130,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxson Dart",
+                "price": -111,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxson Dart",
+                "price": -114,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jake Ferguson",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 134,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 116,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -154,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -160,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 154,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -210,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 124,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -166,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 118,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -154,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": 132,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -172,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -167,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 127,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -109,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jake Ferguson",
+                "price": -119,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 107,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -139,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -143,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 158,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -208,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Odell Beckham Jr.",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Odell Beckham Jr.",
+                "price": -149,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 100,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -130,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxson Dart",
+                "price": 104,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxson Dart",
+                "price": -135,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": -135,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": 105,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jake Ferguson",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 100,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -135,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -155,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaxson Dart",
+                "price": 100,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxson Dart",
+                "price": -135,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": -110,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -120,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -120,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -195,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 123,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 112,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Odell Beckham Jr.",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -165,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 112,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:40Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jake Ferguson",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jake Ferguson",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -200,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Odell Beckham Jr.",
+                "price": 105,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Odell Beckham Jr.",
+                "price": -135,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

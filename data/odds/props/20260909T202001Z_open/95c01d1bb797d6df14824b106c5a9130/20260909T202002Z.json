@@ -1,0 +1,863 @@
+{
+  "fetched_at": "2026-09-09T20:20:02.031812+00:00",
+  "status_code": 200,
+  "requests_remaining": 221,
+  "requests_used": 279,
+  "cost": 2,
+  "data": {
+    "id": "95c01d1bb797d6df14824b106c5a9130",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T17:00:00Z",
+    "home_team": "Pittsburgh Steelers",
+    "away_team": "Atlanta Falcons",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -115,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -133,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -134,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Pittman Jr.",
+                "price": -147,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -117,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -109,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -117,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -109,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 117,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -135,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 106,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -104,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -123,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -112,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": -114,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -135,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 106,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -134,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -167,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -134,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:54Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -116,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -111,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -137,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -139,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 107,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -133,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": 103,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -152,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 117,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": 134,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": -156,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Pittman Jr.",
+                "price": 120,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:54Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -114,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": -114,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -137,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 106,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:41Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -125,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -106,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": -188,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Pittman Jr.",
+                "price": 140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -148,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -148,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 112,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -138,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": 104,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -155,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": -165,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Pittman Jr.",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 125,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -125,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -140,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 105,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Pittman Jr.",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Pittman Jr.",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -135,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 105,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

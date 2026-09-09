@@ -1,0 +1,431 @@
+{
+  "fetched_at": "2026-09-09T20:20:02.653940+00:00",
+  "status_code": 200,
+  "requests_remaining": 201,
+  "requests_used": 299,
+  "cost": 2,
+  "data": {
+    "id": "c5d95f48a16849ab6bebc68fbbfcb74a",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T20:25:00Z",
+    "home_team": "Las Vegas Raiders",
+    "away_team": "Miami Dolphins",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": 122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -156,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 109,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": -139,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": -107,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -120,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -104,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -123,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -121,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": 123,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jack Bech",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jack Bech",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -158,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": 118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": 122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -162,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -114,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -156,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 113,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": -147,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -161,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -108,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": -110,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -118,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -123,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": 115,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "De'Von Achane",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "De'Von Achane",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -125,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

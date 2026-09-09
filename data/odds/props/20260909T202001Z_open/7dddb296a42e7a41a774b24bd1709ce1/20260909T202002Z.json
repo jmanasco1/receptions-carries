@@ -1,0 +1,839 @@
+{
+  "fetched_at": "2026-09-09T20:20:02.489985+00:00",
+  "status_code": 200,
+  "requests_remaining": 207,
+  "requests_used": 293,
+  "cost": 2,
+  "data": {
+    "id": "7dddb296a42e7a41a774b24bd1709ce1",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-09-13T17:00:00Z",
+    "home_team": "Tennessee Titans",
+    "away_team": "New York Jets",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:18:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -107,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -119,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": -101,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -126,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 113,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyjae Spears",
+                "price": 107,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": 104,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -133,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -191,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -106,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:18:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -101,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -126,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -127,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -101,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyjae Spears",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -114,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -188,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -138,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 104,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -149,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -109,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -119,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -119,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -109,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 104,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 146,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -192,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyjae Spears",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -132,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": 100,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -130,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -127,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -102,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": 106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -143,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -113,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -162,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyjae Spears",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -190,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 110,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-09-09T20:19:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Adonai Mitchell",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Adonai Mitchell",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Calvin Ridley",
+                "price": 145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Calvin Ridley",
+                "price": -190,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyjae Spears",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyjae Spears",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -130,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-09-09T20:19:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Breece Hall",
+                "price": -135,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Breece Hall",
+                "price": 105,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -110,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -120,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
