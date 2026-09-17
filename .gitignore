@@ -30,3 +30,4 @@ htmlcov/
 # a hand-run copy would be stale the moment the next snapshot lands.
 reports/*
 !reports/latest.md
+!reports/latest.html

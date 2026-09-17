@@ -49,8 +49,22 @@ class SnapshotConfig:
     """Odds snapshot cadence. See config.toml for the credit budget."""
 
     close_cutoff_minutes: int = 25
-    horizon_hours: int = 192
+    # How far ahead each pull kind looks. These are NOT the same number, and
+    # using one for both is expensive: every closing pull then re-buys the
+    # entire week's slate instead of the games about to kick off.
+    #
+    # Measured, after it happened: with a single 192-hour horizon, six of the
+    # first nine logged snapshots pulled 15-16 events each, and the free tier's
+    # 500 monthly credits were gone in two weeks.
+    horizon_hours: int = 192  # opener: the whole week ahead
+    close_horizon_hours: int = 3  # closer: only what is about to start
     max_repoll_events: int = 4
+
+    def horizon_for(self, kind: str) -> int:
+        """Look-ahead for a snapshot kind. An opener sees the week; a closer
+        sees the next few hours, which is the only window where a closing line
+        is actually closing."""
+        return self.horizon_hours if kind == "open" else self.close_horizon_hours
 
 
 @dataclass(frozen=True)

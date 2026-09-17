@@ -301,3 +301,148 @@ def test_markdown_says_clv_is_unavailable_when_it_is(config):
 def test_markdown_handles_an_empty_slate():
     rendered = render_markdown(pl.DataFrame(), week=10, season=2024)
     assert "Nothing to report" in rendered
+
+
+# --------------------------------------------------------------- HTML report
+
+
+def test_html_report_is_a_standalone_page(config):
+    """Opened straight from disk, no server and no assets -- which means every
+    style has to be inline."""
+    from nfl_usage_props.report import render_html
+
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=10)
+    page = render_html(edges, week=10, season=2026)
+    assert page.startswith("<!doctype html>")
+    assert "<style>" in page
+    assert "src=" not in page and "href=" not in page
+
+
+def test_html_report_shows_the_flagged_rows(config):
+    from nfl_usage_props.report import render_html
+
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=10)
+    page = render_html(edges, week=10, season=2026)
+    assert "A Receiver" in page or "00-0000001" in page
+    assert "Flagged" in page
+
+
+def test_html_report_leads_with_suppression_when_nothing_clears(config):
+    """Same contract as the markdown: a week where everything is held back is
+    a pipeline signal, and the page must say why rather than look empty."""
+    from nfl_usage_props.report import render_html
+
+    edges = compute_edges(make_projection(0.51), make_snapshot(), config, week=1)
+    page = render_html(edges, week=1, season=2026)
+    assert "Nothing cleared the filters" in page
+    assert "held back" in page
+    assert "early season" in page
+
+
+def test_html_report_survives_an_empty_slate():
+    from nfl_usage_props.report import render_html
+
+    page = render_html(pl.DataFrame(), week=3, season=2026)
+    assert "nothing to" in page.lower()
+    assert page.rstrip().endswith("</html>")
+
+
+def test_html_report_never_suggests_a_stake(config):
+    from nfl_usage_props.report import render_html
+
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=10)
+    page = render_html(edges, week=10, season=2026).lower()
+    for forbidden in ("units", "stake:", "bet size", "kelly fraction of"):
+        assert forbidden not in page
+
+
+def test_html_report_supports_both_colour_schemes(config):
+    """It gets opened in whatever the browser is set to, and a report that is
+    unreadable half the time is a report nobody opens."""
+    from nfl_usage_props.report import render_html
+
+    edges = compute_edges(make_projection(0.70), make_snapshot(), config, week=10)
+    page = render_html(edges, week=10, season=2026)
+    assert "prefers-color-scheme:dark" in page
+    assert "data-theme=dark" in page
+
+
+# ------------------------------------------------------- settling real bets
+
+
+def settled_frame(sides, points, actuals, prices=-110):
+    return pl.DataFrame(
+        {
+            "gsis_id": [f"p{i}" for i in range(len(sides))],
+            "game_id": ["G1"] * len(sides),
+            "market": ["player_receptions"] * len(sides),
+            "side": sides,
+            "point": points,
+            "offered_price": [prices] * len(sides),
+            "model_probability": [0.6] * len(sides),
+            "actual": actuals,
+        }
+    )
+
+
+def test_settle_grades_both_sides():
+    from nfl_usage_props.edge.clv import settle
+
+    edges = settled_frame(["Over", "Under"], [4.5, 4.5], [0, 0]).drop("actual")
+    panel = pl.DataFrame(
+        {
+            "gsis_id": ["p0", "p1"],
+            "game_id": ["G1", "G1"],
+            "receptions": [6, 6],
+            "carries": [0, 0],
+        }
+    )
+    graded = settle(edges, panel)
+    assert graded.filter(pl.col("side") == "Over")["won"][0]
+    assert not graded.filter(pl.col("side") == "Under")["won"][0]
+
+
+def test_a_push_is_dropped_not_counted_as_a_loss():
+    """A whole-number line landing exactly refunds. Grading it as a loss would
+    understate the model by however many integer lines books happened to post."""
+    from nfl_usage_props.edge.clv import settle
+
+    edges = settled_frame(["Over"], [4.0], [0]).drop("actual")
+    panel = pl.DataFrame({"gsis_id": ["p0"], "game_id": ["G1"], "receptions": [4], "carries": [0]})
+    assert settle(edges, panel).is_empty()
+
+
+def test_break_even_uses_the_price_not_a_coin_flip():
+    """Beating 50% on a -130 line is a losing strategy. A bare win rate hides
+    that, which is the whole reason this reports both."""
+    from nfl_usage_props.edge.clv import grade
+
+    settled = settled_frame(["Over"] * 10, [4.5] * 10, [0] * 10, prices=-130).with_columns(
+        pl.Series("won", [True] * 6 + [False] * 4)
+    )
+    result = grade(settled)
+    assert result["win_rate"] == pytest.approx(0.6)
+    assert result["break_even"] == pytest.approx(130 / 230, abs=1e-6)
+    assert result["edge_realised"] < 0.05
+
+
+def test_grade_reports_honestly_with_nothing_settled():
+    from nfl_usage_props.edge.clv import grade
+
+    assert grade(pl.DataFrame())["n"] == 0
+
+
+def test_reliability_detects_an_inverted_model():
+    """The failure that week 1 actually showed: higher stated confidence, worse
+    realised rate. A bare win rate cannot see it; this can."""
+    from nfl_usage_props.edge.clv import reliability
+
+    settled = pl.DataFrame(
+        {
+            "model_probability": [0.55] * 20 + [0.85] * 20,
+            "won": [True] * 12 + [False] * 8 + [True] * 6 + [False] * 14,
+        }
+    )
+    table = reliability(settled, buckets=5).sort("predicted")
+    assert table["predicted"][0] < table["predicted"][-1]
+    assert table["realised"][0] > table["realised"][-1]

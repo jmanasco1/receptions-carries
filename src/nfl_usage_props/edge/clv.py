@@ -135,3 +135,93 @@ def summarise(scored: pl.DataFrame) -> dict[str, float | int | str]:
         "mean_clv": float(clv.mean()),
         "share_positive": float((clv > 0).mean()),
     }
+
+
+# --------------------------------------------------------------- settled bets
+
+
+def settle(edges: pl.DataFrame, panel: pl.DataFrame) -> pl.DataFrame:
+    """Grade flagged markets against what actually happened.
+
+    Only possible once games are played, and only for the weeks a snapshot
+    covered -- but when it is possible it beats CLV outright. CLV is a proxy
+    for edge; this is the thing itself.
+
+    Pushes are dropped rather than counted as losses. A whole-number line that
+    lands exactly refunds, and scoring it as a loss would understate the model
+    by however many integer lines the books happened to post.
+    """
+    if edges.is_empty() or panel.is_empty():
+        return pl.DataFrame()
+
+    outcomes = panel.select(
+        "gsis_id",
+        "game_id",
+        pl.col("receptions").alias("actual_receptions"),
+        pl.col("carries").alias("actual_carries"),
+    )
+    graded = edges.join(outcomes, on=["gsis_id", "game_id"], how="inner")
+    if graded.is_empty():
+        return graded
+
+    actual = (
+        pl.when(pl.col("market") == "player_receptions")
+        .then(pl.col("actual_receptions"))
+        .otherwise(pl.col("actual_carries"))
+    )
+    return (
+        graded.with_columns(actual.alias("actual"))
+        .filter(pl.col("actual").is_not_null() & (pl.col("actual") != pl.col("point")))
+        .with_columns(
+            pl.when(pl.col("side") == "Over")
+            .then(pl.col("actual") > pl.col("point"))
+            .otherwise(pl.col("actual") < pl.col("point"))
+            .alias("won")
+        )
+    )
+
+
+def grade(settled: pl.DataFrame) -> dict[str, float | int | str]:
+    """Win rate against the break-even the offered price demands.
+
+    Break-even is the vig-inclusive implied probability of the price actually
+    taken, not 50%. Beating a coin flip on a -130 line is a losing strategy,
+    and reporting a bare win rate hides that.
+    """
+    if settled.is_empty():
+        return {"status": "nothing settled yet", "n": 0}
+
+    win_rate = float(settled["won"].mean())
+    break_even = float(
+        sum(american_to_probability(p) for p in settled["offered_price"]) / settled.height
+    )
+    return {
+        "status": "ok",
+        "n": settled.height,
+        "win_rate": win_rate,
+        "break_even": break_even,
+        "edge_realised": win_rate - break_even,
+    }
+
+
+def reliability(settled: pl.DataFrame, buckets: int = 5) -> pl.DataFrame:
+    """Model probability against realised rate, bucketed.
+
+    The diagnostic that matters most. A model can post a respectable overall
+    win rate while being badly wrong about *which* bets it is confident in --
+    and confidence is what decides where money goes. If the realised rate does
+    not rise with the predicted one, the ordering is noise.
+    """
+    if settled.is_empty():
+        return pl.DataFrame()
+    return (
+        settled.with_columns((pl.col("model_probability") * buckets).floor().alias("_bucket"))
+        .group_by("_bucket")
+        .agg(
+            pl.col("model_probability").mean().alias("predicted"),
+            pl.col("won").mean().alias("realised"),
+            pl.len().alias("n"),
+        )
+        .sort("_bucket")
+        .drop("_bucket")
+    )

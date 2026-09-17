@@ -285,7 +285,14 @@ class PlayerShareModel:
         # risk a reorder that silently pairs a player with someone else's draws.
         passthrough = [
             c
-            for c in ("position", "season", "week", "catch_rate_prior", "opponent")
+            for c in (
+                "position",
+                "season",
+                "week",
+                "catch_rate_prior",
+                "opponent",
+                "kickoff_utc",
+            )
             if c in frame.columns
         ]
         return frame.select("game_id", "team", "gsis_id", *passthrough), shares

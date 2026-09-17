@@ -77,13 +77,31 @@ timeout_seconds = 30.0
 close_cutoff_minutes = 25
 # Only snapshot events kicking off within this horizon. Keeps a Wednesday
 # opener from paying for next week's games.
+# An OPENER looks a week ahead; a CLOSER looks only at what is about to kick
+# off. These were one number, and that cost the whole month's credits in two
+# weeks: with a shared 192-hour window, every Sunday close pull also re-bought
+# Monday night and the following Thursday. Six of the first nine snapshots
+# pulled 15-16 events each.
+# Three hours is sized to the schedule, not picked round: NFL Sunday slots sit
+# at 17:00, 20:05 and 00:20 UTC, and the close crons fire at 16:00, 19:30 and
+# 23:30. Three hours reaches each slot with margin while never spilling into
+# the next one, so no game is paid for twice.
 horizon_hours = 192
+close_horizon_hours = 3
 
 # Free-tier budget, 500 credits/month:
-#   opener  ~16 events x 2 markets           = 32
-#   closing  split across Thu/Sun/Mon        ~ 32
-#   game odds (spreads+totals) x 2 pulls     =  4
-#   -> ~68/week, ~292/month. Leaves ~200 for retries and re-polls.
+#   Wed opener   16 events x 2 markets      = 32
+#   Thu close     1 (TNF)                    =  2
+#   Sun 16:00     9 (the 17:00 slot)         = 18
+#   Sun 19:30     4 (the 20:05 slot)         =  8
+#   Sun 23:30     1 (SNF)                    =  2
+#   Mon 23:00     1 (MNF)                    =  2
+#   -> 64/week, ~275/month. Leaves ~225 for retries and re-polls.
+#
+# The first version of this budget assumed the same numbers but shared ONE
+# horizon between opener and closer, so every close pull actually bought the
+# whole 16-event slate. Real spend was roughly 3x this table and the month's
+# credits were gone in two weeks.
 #
 # A blanket third poll would cost another ~138/month and does not fit
 # comfortably. Instead, re-poll ONLY events containing a flagged outlier

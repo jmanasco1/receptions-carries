@@ -204,9 +204,12 @@ def consensus_probability(
     if usable.is_empty():
         return usable
 
-    paired = usable.pivot(
-        on="side", index=[*key, "bookmaker"], values="price", aggregate_function="first"
-    )
+    # commence_time rides along on the index so the edge layer can check that a
+    # price and a projection describe the same game, not merely the same player.
+    index = [*key, "bookmaker"]
+    if "commence_time" in usable.columns:
+        index.append("commence_time")
+    paired = usable.pivot(on="side", index=index, values="price", aggregate_function="first")
     # A snapshot can legitimately contain only one side -- a book pulled the
     # Under, or the pull caught the market mid-update. The pivot then has no
     # column to drop nulls on, so check before assuming both are there.
@@ -243,6 +246,7 @@ def consensus_probability(
             pl.len().alias("n_books"),
             pl.col("Over").mean().alias("mean_over_price"),
             pl.col("Under").mean().alias("mean_under_price"),
+            *([pl.col("commence_time").first()] if "commence_time" in priced.columns else []),
         )
         .with_columns(
             (pl.col("n_books") < min_books).alias("thin_market"),

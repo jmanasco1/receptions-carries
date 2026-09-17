@@ -9,12 +9,15 @@ outcome swings on one broken tackle; a reception outcome swings on whether the
 ball was thrown to the guy. Usage is more predictable than efficiency, and books
 price usage markets less sharply than yardage markets.
 
+> **⚠ Do not bet this yet.** Week 1 2026 was graded against actual results:
+> the flagged plays hit **47.5%** against a **53.8%** break-even — about −6
+> points — and the highest-confidence bets did worst (model 74% → actual 44%).
+> The ordering is currently anti-predictive at the confident end. See
+> [What week 1 actually did](#what-week-1-actually-did).
+>
 > **Status: all 8 stages built.** The pipeline runs end to end — nflverse in,
-> a weekly markdown report of priced disagreements out.
-> **It has never seen a real prop price.** Every stage is tested, and the
-> market side has only ever been exercised against synthesised prices, because
-> historical props are paid-tier and none have been logged yet. Nothing here
-> has an edge until closing lines say so. See
+> a weekly HTML/markdown report of priced disagreements out.
+> It has now priced two real slates. See
 > [Stage 1](#stage-1-status), [Stage 2](#stage-2-status),
 > [Stage 3](#stage-3-status), [Stages 4–5](#stages-45-status) and
 > [Stages 6–8](#stages-68-status).
@@ -107,7 +110,7 @@ Requires [`uv`](https://docs.astral.sh/uv/) and Python ≥ 3.11.
 
 ```bash
 uv sync --extra dev                    # install
-uv run pytest -m "not network"         # 469 tests, offline, ~26s
+uv run pytest -m "not network"         # 483 tests, offline, ~16s
 cp .env.example .env                   # add ODDS_API_KEY when you have one
 
 uv run nfl-props config                # show resolved configuration
@@ -120,8 +123,14 @@ uv run nfl-props features leakage --season 2024 --weeks 1,8,17
 
 uv run nfl-props model fit-volume      # Layers 1-2, held-out calibration
 uv run nfl-props model project         # all four layers -> per-player PMFs
-uv run nfl-props report weekly         # needs logged snapshots; refuses without
+uv run nfl-props report weekly         # -> reports/latest.md AND latest.html
 ```
+
+The weekly report is written three ways, because the useful one depends on
+where you are: `reports/latest.html` is a standalone page (open it straight
+from disk), `reports/latest.md` renders inline on GitHub, and the same content
+is written to the workflow's job summary so it appears on the run's page in the
+**Actions** tab without cloning anything.
 
 Once you have an API key, the time-critical part:
 
@@ -996,6 +1005,57 @@ Wiring the injury report in is the clear next improvement.
 
 ---
 
+## What week 1 actually did
+
+The first slate with real logged prices has been played and graded. This is
+the first time any part of this project has been measured against money rather
+than against held-out history, and it went badly.
+
+| population | n | win rate | break-even | realised |
+|---|---:|---:|---:|---:|
+| every priced market | 202 | 47.5% | 53.8% | **−6.3pp** |
+| edge ≥ 3% | 179 | 48.6% | 53.9% | −5.3pp |
+| edge ≥ 10% | 138 | 46.4% | 53.9% | **−7.5pp** |
+| passed every filter except week 1 | 127 | 47.2% | 55.4% | **−8.1pp** |
+
+Break-even is the vig-inclusive implied probability of the price actually
+taken, not 50%.
+
+**The confident end is inverted:**
+
+| model says | actually won | n |
+|---|---|---:|
+| 45% | 32% | 25 |
+| 56% | 55% | 31 |
+| 65% | 51% | 68 |
+| 74% | **44%** | 54 |
+| 83% | **55%** | 20 |
+
+A model can post a mediocre win rate and still be useful if it knows *which*
+bets are good. This does the opposite — realised rate falls as stated
+confidence rises. Confidence is what decides where money goes, so that is the
+worse of the two failures.
+
+### What this does and does not prove
+
+It is one week, 202 settled props, and **week 1 is the week the model was
+already measured as miscalibrated** (PIT deviation 0.302 against 0.064 for the
+settled season). The suppression window exists precisely to stop this output
+being acted on, and it worked — nothing was flagged as actionable.
+
+What it does not license is assuming weeks 2+ are fine. The out-of-sample
+calibration in Stages 4–5 was measured against *completed games with real
+rosters*. Forward projection builds its roster from a depth chart, and week 1
+used a preseason one. The persistent **Under lean** — 142 of 204 flagged, and
+155 of 161 before the same-game bug was fixed — says projections are still
+running low on exactly the featured players books price.
+
+`edge/clv.py` now grades settled bets (`settle`, `grade`, `reliability`) so
+this check runs every week instead of being a one-off script. The reliability
+table is the one to read.
+
+---
+
 ## Decisions
 
 ### Settled
@@ -1092,7 +1152,7 @@ src/nfl_usage_props/
 data/odds/props/                prop snapshots — the one versioned data dir
 data/derived/                   panel + features, rebuildable from raw
 docs/DATA_DICTIONARY.md         generated — 745 columns
-tests/                          469 offline tests + 73 network-marked
+tests/                          483 offline tests + 73 network-marked
 .github/workflows/ci.yml        lint + offline tests incl. the leakage gate
 .github/workflows/snapshot.yml  scheduled CLV logging, commits results
 ```

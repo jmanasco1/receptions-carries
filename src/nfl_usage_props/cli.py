@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import os
 from typing import Annotated
 
 import typer
@@ -247,7 +248,7 @@ def odds_snapshot(
         selected = events_to_snapshot(
             events,
             now=datetime.now(UTC),
-            horizon_hours=config.odds.snapshots.horizon_hours,
+            horizon_hours=config.odds.snapshots.horizon_for(kind),
             close_cutoff_minutes=config.odds.snapshots.close_cutoff_minutes,
         )
         cost = len(selected) * len(config.odds.prop_markets)
@@ -652,7 +653,7 @@ def report_weekly(
     from nfl_usage_props.model.projection import project_week
     from nfl_usage_props.model.team_volume import TeamVolumeModel, team_game_frame
     from nfl_usage_props.odds.snapshots import load_resolved_snapshots
-    from nfl_usage_props.report import render_markdown
+    from nfl_usage_props.report import render_html, render_markdown
     from nfl_usage_props.storage import ParquetStore
 
     config = load_config()
@@ -742,7 +743,21 @@ def report_weekly(
         draws=draws,
         seed=config.model.random_seed,
     )
-    edges = compute_edges(projection, snapshots, config, week=week)
+    try:
+        edges = compute_edges(projection, snapshots, config, week=week)
+    except ValueError as exc:
+        # Stale prices are the expected failure once the credit budget runs
+        # out mid-season, and they must never be silently compared to a fresh
+        # projection -- that produces a full-looking table of nonsense.
+        console.print(f"[red]{exc}[/]")
+        newest = snapshots["commence_time"].max()
+        console.print(
+            f"\nNewest logged kickoff: [bold]{newest}[/]. "
+            f"Projecting {season} week {week}.\n"
+            "Run `nfl-props odds credits` — an exhausted monthly allowance is "
+            "the usual cause."
+        )
+        raise typer.Exit(code=1) from exc
     if edges.is_empty():
         console.print("[yellow]No snapshot rows matched the projected slate.[/]")
 
@@ -761,10 +776,28 @@ def report_weekly(
             table.add_row(row["reason"].replace("_", " "), str(row["rows"]))
         console.print(table)
 
-    markdown = render_markdown(
-        edges, week=week, season=season, clv=clv, actionable_only=not show_all
-    )
+    shared = {
+        "week": week,
+        "season": season,
+        "clv": clv,
+        "actionable_only": not show_all,
+    }
     path = Path(out)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(markdown)
+    path.write_text(render_markdown(edges, **shared))
     console.print(f"[green]wrote report[/] -> {path}")
+
+    # The HTML is the one a human actually reads; the markdown is what GitHub
+    # renders inline and what diffs cleanly week to week. Both, always, because
+    # writing only one means wanting the other at the worst moment.
+    html_path = path.with_suffix(".html")
+    html_path.write_text(render_html(edges, **shared))
+    console.print(f"[green]wrote report[/] -> {html_path}")
+
+    # GitHub renders this file on the workflow run page, so the report shows up
+    # in the Actions tab without anyone cloning anything.
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as handle:
+            handle.write(render_markdown(edges, **shared))
+        console.print("[dim]report written to the workflow summary[/]")

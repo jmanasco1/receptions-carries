@@ -73,7 +73,12 @@ jobs:
             echo "kind=close" >> "$GITHUB_OUTPUT"
           fi
 
+      # Running out of credits is a budget fact, not a broken pipeline, and it
+      # must not stop the report from being built off what is already on disk.
+      # It still shows in the job summary, so it is visible rather than silent.
       - name: Take snapshot
+        id: snapshot
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: uv run nfl-props odds snapshot --kind "${{ steps.kind.outputs.kind }}"
@@ -93,9 +98,27 @@ jobs:
         continue-on-error: true
         run: uv run nfl-props ingest run
 
+      # The report writes itself into $GITHUB_STEP_SUMMARY, so it renders on
+      # this run's page in the Actions tab -- no clone, no command, no file to
+      # find. reports/latest.html is the same thing as a standalone page.
       - name: Build the weekly report
         continue-on-error: true
         run: uv run nfl-props report weekly --draws 4000 --out reports/latest.md
+
+      - name: Note the snapshot outcome in the summary
+        if: always()
+        run: |
+          {
+            echo ""
+            echo "---"
+            if [ "${{ steps.snapshot.outcome }}" = "success" ]; then
+              echo "Snapshot: **${{ steps.kind.outputs.kind }}** logged."
+            else
+              echo "> **Snapshot did not run.** Usually the monthly credit"
+              echo "> floor. The report above is built from data already on"
+              echo "> disk, so it is still current as of the last logged pull."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Commit snapshot
         run: |

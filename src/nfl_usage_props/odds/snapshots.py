@@ -177,7 +177,10 @@ def take_snapshot(
         selected = events_to_snapshot(
             all_events,
             now=now,
-            horizon_hours=snap_cfg.horizon_hours,
+            # Kind-dependent: an opener wants the week, a closer wants only
+            # the games about to start. One shared horizon made every closing
+            # pull re-buy the whole slate.
+            horizon_hours=snap_cfg.horizon_for(kind),
             close_cutoff_minutes=snap_cfg.close_cutoff_minutes,
         )
 

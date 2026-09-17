@@ -54,12 +54,27 @@ MARKET_TO_QUANTITY = {
 }
 
 
+# A price and a projection must describe the SAME game. Book kickoff times and
+# nflverse kickoff times come from different sources and differ by a few
+# minutes, so they are matched within a window rather than on equality. Six
+# hours is wide enough to absorb that and far narrower than the gap between a
+# player's games in consecutive weeks.
+SAME_GAME_HOURS = 6
+
+
 def model_probabilities(projection, market: str, lines: pl.DataFrame) -> pl.DataFrame:
     """`P(over)` from the projection for each posted (player, line).
 
     Only lines a book actually posted are evaluated -- `output.scope` is
     `posted_line_only`, and projecting a player nobody prices produces a number
     with nothing to compare it to.
+
+    Matched on player AND kickoff. Joining on `gsis_id` alone silently compares
+    last week's posted line to this week's projection: a player appears once
+    per week in both frames, so the join succeeds, produces a full-looking
+    table, and every edge in it is meaningless. That is exactly what happened
+    when a month of credits ran out mid-season and the newest prices on disk
+    were a week older than the slate being projected.
     """
     quantity = MARKET_TO_QUANTITY[market]
     draws = {
@@ -67,8 +82,29 @@ def model_probabilities(projection, market: str, lines: pl.DataFrame) -> pl.Data
         "carries": projection.carries,
     }[quantity]
 
-    index = projection.keys.with_row_index("_row").select("_row", "gsis_id", "game_id")
+    index = projection.keys.with_row_index("_row").select(
+        "_row",
+        "gsis_id",
+        "game_id",
+        *(["kickoff_utc"] if "kickoff_utc" in projection.keys.columns else []),
+    )
     joined = lines.join(index, on="gsis_id", how="inner")
+
+    if "kickoff_utc" in joined.columns and "commence_time" in joined.columns:
+        before = joined.height
+        joined = joined.filter(
+            (pl.col("commence_time") - pl.col("kickoff_utc")).dt.total_hours().abs()
+            <= SAME_GAME_HOURS
+        )
+        if joined.is_empty() and before:
+            # Loud, because the alternative is an empty report that reads like
+            # a quiet week rather than like stale prices.
+            raise ValueError(
+                f"{before} prices matched a player but none matched a kickoff. "
+                "The logged prices are for a different week than the slate being "
+                "projected -- check that a snapshot has run for this slate."
+            )
+
     if joined.is_empty():
         return joined
 

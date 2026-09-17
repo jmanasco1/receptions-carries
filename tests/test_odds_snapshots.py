@@ -342,9 +342,11 @@ def test_take_snapshot_persists_rows(config, monkeypatch):
 def test_take_snapshot_survives_one_bad_event(config):
     """A slate that is 1/2 logged beats a slate that raised on event 1."""
     now = datetime(2024, 9, 4, 12, 0, tzinfo=UTC)
+    # Two hours out, so a CLOSING pull actually selects them -- a closer looks
+    # only at the kickoff slot in front of it.
     events = [
-        {"id": "bad", "commence_time": "2024-09-09T00:20:00Z"},
-        {"id": EVENT_ID, "commence_time": "2024-09-09T00:20:00Z"},
+        {"id": "bad", "commence_time": "2024-09-04T14:00:00Z"},
+        {"id": EVENT_ID, "commence_time": "2024-09-04T14:00:00Z"},
     ]
     responses.get(EVENTS_URL, json=events, headers=credit_headers(last=0))
     responses.get(f"{BASE}/events/bad/odds", status=422, json={"message": "nope"})
@@ -366,7 +368,7 @@ def test_take_snapshot_survives_one_bad_event(config):
 def test_take_snapshot_stops_at_the_credit_floor(config):
     """Floor abort must stop the loop, not spin through every remaining event."""
     now = datetime(2024, 9, 4, 12, 0, tzinfo=UTC)
-    events = [{"id": EVENT_ID, "commence_time": "2024-09-09T00:20:00Z"} for _ in range(5)]
+    events = [{"id": EVENT_ID, "commence_time": "2024-09-04T14:00:00Z"} for _ in range(5)]
     events = [{**e, "id": f"{EVENT_ID}"} for e in events]
     responses.get(EVENTS_URL, json=events, headers=credit_headers(last=0))
     responses.get(
@@ -466,3 +468,88 @@ def test_resolve_snapshot_non_strict_reports_without_raising():
     )
     assert len(unresolved) == 1
     assert resolved.filter(pl.col("gsis_id").is_null()).height == 1
+
+
+# --------------------------------------------------- horizon by snapshot kind
+
+
+def test_an_opener_looks_a_week_ahead_and_a_closer_does_not():
+    """These were one number, and it emptied a month of credits in two weeks:
+    every closing pull re-bought the entire slate instead of the games about
+    to kick off."""
+    from nfl_usage_props.config import SnapshotConfig
+
+    snapshots = SnapshotConfig()
+    assert snapshots.horizon_for("open") > 24
+    assert snapshots.horizon_for("close") <= 6
+    assert snapshots.horizon_for("repoll") == snapshots.horizon_for("close")
+
+
+def test_a_closing_pull_takes_only_the_next_kickoff_slot():
+    """NFL Sunday slots sit at 17:00, 20:05 and 00:20 UTC. A 16:00 close must
+    buy the first slot and leave the second for the 19:30 run."""
+    from datetime import UTC, datetime, timedelta
+
+    from nfl_usage_props.config import SnapshotConfig
+    from nfl_usage_props.odds.snapshots import events_to_snapshot
+
+    snapshots = SnapshotConfig()
+    now = datetime(2026, 9, 20, 16, 0, tzinfo=UTC)
+    events = []
+    for hours, count in ((1.0, 9), (4.1, 4), (8.3, 1)):
+        for index in range(count):
+            events.append(
+                {
+                    "id": f"{hours}-{index}",
+                    "commence_time": (now + timedelta(hours=hours)).isoformat(),
+                }
+            )
+
+    selected = events_to_snapshot(
+        events,
+        now=now,
+        horizon_hours=snapshots.horizon_for("close"),
+        close_cutoff_minutes=snapshots.close_cutoff_minutes,
+    )
+    assert len(selected) == 9
+
+
+def test_a_full_week_of_closes_stays_inside_the_free_tier():
+    """The budget that was wrong. 500 credits a month, 2 per event."""
+    from datetime import UTC, datetime, timedelta
+
+    from nfl_usage_props.config import SnapshotConfig
+    from nfl_usage_props.odds.snapshots import events_to_snapshot
+
+    snapshots = SnapshotConfig()
+    sunday = datetime(2026, 9, 20, tzinfo=UTC)
+    events = []
+    for hours, count in ((17, 9), (20.1, 4), (24.3, 1), (48.25, 1)):
+        for index in range(count):
+            events.append(
+                {
+                    "id": f"{hours}-{index}",
+                    "commence_time": (sunday + timedelta(hours=hours)).isoformat(),
+                }
+            )
+
+    runs = [
+        ("open", datetime(2026, 9, 16, 18, tzinfo=UTC)),
+        ("close", datetime(2026, 9, 20, 16, tzinfo=UTC)),
+        ("close", datetime(2026, 9, 20, 19, 30, tzinfo=UTC)),
+        ("close", datetime(2026, 9, 20, 23, 30, tzinfo=UTC)),
+        ("close", datetime(2026, 9, 21, 23, tzinfo=UTC)),
+    ]
+    credits = sum(
+        2
+        * len(
+            events_to_snapshot(
+                events,
+                now=now,
+                horizon_hours=snapshots.horizon_for(kind),
+                close_cutoff_minutes=snapshots.close_cutoff_minutes,
+            )
+        )
+        for kind, now in runs
+    )
+    assert credits * 4.33 < 400, f"{credits}/week is {credits * 4.33:.0f}/month of 500"

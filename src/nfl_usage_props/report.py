@@ -159,3 +159,165 @@ def _price(value) -> str:
 def fair_line(probability: float) -> float:
     """Exposed for the report and for anyone checking the arithmetic by hand."""
     return probability_to_american(probability)
+
+
+# ---------------------------------------------------------------------- HTML
+
+
+HTML_STYLE = """
+:root{--bg:#fbfaf9;--fg:#1c1b19;--muted:#6b6862;--line:#e4e1dc;--card:#fff;
+--good:#1a7f4b;--warn:#a8630a;--accent:#b4532a}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#171614;
+--fg:#eceae6;--muted:#9a958c;--line:#2e2c28;--card:#201e1b;--good:#54c98a;
+--warn:#e0a355;--accent:#e08050}}
+:root[data-theme=dark]{--bg:#171614;--fg:#eceae6;--muted:#9a958c;--line:#2e2c28;
+--card:#201e1b;--good:#54c98a;--warn:#e0a355;--accent:#e08050}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 ui-sans-serif,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:32px 16px 72px}
+h1{font-size:1.65rem;margin:0 0 4px;letter-spacing:-.02em}
+h2{font-size:1.05rem;margin:34px 0 10px;letter-spacing:-.01em}
+.sub{color:var(--muted);font-size:.85rem;margin-bottom:26px}
+.cards{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:11px 15px;min-width:118px}
+.card .n{font-size:1.4rem;font-weight:650;font-variant-numeric:tabular-nums}
+.card .l{color:var(--muted);font-size:.72rem;text-transform:uppercase;
+letter-spacing:.05em;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:.88rem;
+background:var(--card);border:1px solid var(--line);border-radius:10px;
+overflow:hidden}
+th{text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;
+letter-spacing:.05em;color:var(--muted);padding:9px 12px;
+border-bottom:1px solid var(--line)}
+td{padding:9px 12px;border-bottom:1px solid var(--line);
+font-variant-numeric:tabular-nums}
+tr:last-child td{border-bottom:none}
+th.r,td.r{text-align:right}
+.edge{color:var(--good);font-weight:650}
+.side{font-weight:600}
+.note{color:var(--muted);font-size:.83rem;border-left:2px solid var(--line);
+padding-left:13px;margin:14px 0}
+.empty{background:var(--card);border:1px solid var(--line);border-radius:10px;
+padding:22px;color:var(--muted)}
+@media(max-width:560px){.wrap{padding:20px 16px 48px}table{font-size:.8rem}
+td,th{padding:7px 8px}}
+"""
+
+
+def render_html(
+    edges: pl.DataFrame,
+    *,
+    week: int | None = None,
+    season: int | None = None,
+    clv: dict | None = None,
+    players: pl.DataFrame | None = None,
+    actionable_only: bool = True,
+) -> str:
+    """The same report as a standalone page.
+
+    Markdown renders fine on GitHub, but it is not what anyone wants to read on
+    a Sunday morning. Everything is inline so the file can be opened straight
+    from disk with no server and no assets.
+    """
+    from nfl_usage_props.edge.edges import suppression_reasons
+
+    label = f"{season} · week {week}" if season and week else "unscheduled slate"
+    stamp = datetime.now(UTC).strftime("%a %d %b %Y, %H:%M UTC")
+    out = [
+        "<!doctype html><html lang=en><head><meta charset=utf-8>",
+        '<meta name=viewport content="width=device-width,initial-scale=1">',
+        f"<title>Usage props — {label}</title><style>{HTML_STYLE}</style>",
+        "</head><body><div class=wrap>",
+        f"<h1>Usage props — {label}</h1>",
+        f"<div class=sub>Generated {stamp}. Receptions and rush attempts.</div>",
+    ]
+
+    if edges.is_empty():
+        out += [
+            "<div class=empty>No priced markets in this snapshot — nothing to "
+            "compare a projection against.</div></div></body></html>"
+        ]
+        return "".join(out)
+
+    actionable = int(edges["actionable"].sum())
+    out += [
+        "<div class=cards>",
+        f"<div class=card><div class=n>{edges.height}</div><div class=l>priced</div></div>",
+        f"<div class=card><div class=n>{actionable}</div><div class=l>flagged</div></div>",
+    ]
+    if clv and clv.get("status") == "ok":
+        out.append(
+            f"<div class=card><div class=n>{clv['median_clv']:+.3f}</div>"
+            "<div class=l>median CLV</div></div>"
+        )
+    out.append("</div>")
+
+    report = build_report(edges, players=players, actionable_only=actionable_only)
+    out.append("<h2>Flagged</h2>")
+    if report.is_empty():
+        out.append(
+            "<div class=empty>Nothing cleared the filters. That is a normal "
+            "outcome, not a failure — see what was held back below.</div>"
+        )
+    else:
+        out.append(
+            "<table><tr><th>player</th><th>market</th><th>side</th>"
+            "<th class=r>line</th><th class=r>offered</th><th class=r>fair</th>"
+            "<th class=r>model</th><th class=r>edge</th><th class=r>books</th></tr>"
+        )
+        for row in report.to_dicts():
+            market = str(row.get("market", "")).replace("player_", "")
+            out.append(
+                f"<tr><td>{row.get('player', '?')}</td><td>{market}</td>"
+                f"<td class=side>{row.get('side', '')}</td>"
+                f"<td class=r>{row.get('point', '')}</td>"
+                f"<td class=r>{_price(row.get('offered_price'))}</td>"
+                f"<td class=r>{_price(row.get('model_fair_price'))}</td>"
+                f"<td class=r>{row.get('model_probability', 0):.0%}</td>"
+                f"<td class='r edge'>{row.get('edge', 0):+.1%}</td>"
+                f"<td class=r>{row.get('n_books', '')}</td></tr>"
+            )
+        out.append("</table>")
+
+    out.append("<h2>What was held back</h2>")
+    out.append(
+        "<div class=note>Read this before the table above. If one reason "
+        "accounts for nearly everything, the pipeline is more likely at fault "
+        "than the slate.</div>"
+    )
+    out.append("<table><tr><th>reason</th><th class=r>rows</th></tr>")
+    for row in suppression_reasons(edges).to_dicts():
+        out.append(
+            f"<tr><td>{row['reason'].replace('_', ' ')}</td><td class=r>{row['rows']}</td></tr>"
+        )
+    out.append("</table>")
+
+    out.append("<h2>Closing line value</h2>")
+    if not clv or clv.get("status") != "ok":
+        status = (clv or {}).get("status", "no scored bets yet")
+        out.append(
+            f"<div class=empty><b>{status}.</b><br><br>CLV is the only "
+            "validation available on the free tier and cannot be backfilled — "
+            "historical props are paid-tier. It accumulates from the first "
+            "logged snapshot forward.</div>"
+        )
+    else:
+        out.append(
+            "<div class=cards>"
+            f"<div class=card><div class=n>{clv['n']}</div><div class=l>scored</div></div>"
+            f"<div class=card><div class=n>{clv['median_clv']:+.3f}</div>"
+            "<div class=l>median CLV</div></div>"
+            f"<div class=card><div class=n>{clv['share_positive']:.0%}</div>"
+            "<div class=l>positive</div></div></div>"
+        )
+
+    out.append(
+        "<div class=note>No stake sizes, deliberately. Sizing depends on "
+        "bankroll and risk tolerance, and a Kelly fraction built on an "
+        "unvalidated edge is a precise number resting on an unverified one."
+        "</div>"
+    )
+    out.append("</div></body></html>")
+    return "".join(out)
