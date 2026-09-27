@@ -148,6 +148,31 @@ def test_consensus_averages_across_books(two_books):
     assert result["n_books"][0] == 2
 
 
+def test_mean_price_never_lands_in_the_impossible_range():
+    """American odds have a hole in them, and averaging across it invents a
+    price no book can post.
+
+    -120 and +105 bracket a fair value near 51%, but their arithmetic mean is
+    -7.5, which reads as a 7% implied probability. Twelve percent of week 1's
+    settled markets landed in that dead zone, and every break-even computed
+    from them was nonsense. The average has to be taken in probability space.
+    """
+    frame = snapshot(
+        [
+            {"bookmaker": "alpha", "side": "Over", "price": -120},
+            {"bookmaker": "alpha", "side": "Under", "price": -110},
+            {"bookmaker": "beta", "side": "Over", "price": 105},
+            {"bookmaker": "beta", "side": "Under", "price": -125},
+        ]
+    )
+    result = consensus_probability(frame, min_books=1)
+    mean_over = result["mean_over_price"][0]
+    assert abs(mean_over) >= 100.0
+    # Between the two posted prices once both are read as probabilities.
+    assert american_to_probability(105) < american_to_probability(mean_over)
+    assert american_to_probability(mean_over) < american_to_probability(-120)
+
+
 def test_weights_shift_the_consensus(two_books):
     flat = consensus_probability(two_books, min_books=1)["consensus_over"][0]
     tilted = consensus_probability(two_books, weights={"beta": 10.0}, min_books=1)[

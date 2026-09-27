@@ -230,12 +230,21 @@ def consensus_probability(
         pl.Series("fair_over", fair),
         pl.Series("hold", holds),
         pl.Series("method_spread", spreads),
+        # Averaged in probability space, not in cents. American odds are
+        # discontinuous across +/-100 -- the values between -100 and +100 do not
+        # exist -- so the arithmetic mean of -120 and +105 is -7, a price no book
+        # can post and whose implied probability (6.5%) is nowhere near the 51%
+        # the two real prices bracket. Twelve percent of Week 1's settled markets
+        # landed in that dead zone, which put the same nonsense straight into the
+        # break-even the model was being scored against.
+        pl.Series("over_probability", [american_to_probability(p) for p in paired["Over"]]),
+        pl.Series("under_probability", [american_to_probability(p) for p in paired["Under"]]),
         pl.col("bookmaker")
         .replace_strict(weights, default=default_weight, return_dtype=pl.Float64)
         .alias("weight"),
     )
 
-    return (
+    grouped = (
         priced.group_by(key)
         .agg(
             ((pl.col("fair_over") * pl.col("weight")).sum() / pl.col("weight").sum()).alias(
@@ -244,8 +253,8 @@ def consensus_probability(
             pl.col("hold").mean().alias("mean_hold"),
             pl.col("method_spread").max().alias("max_method_spread"),
             pl.len().alias("n_books"),
-            pl.col("Over").mean().alias("mean_over_price"),
-            pl.col("Under").mean().alias("mean_under_price"),
+            pl.col("over_probability").mean().alias("mean_over_probability"),
+            pl.col("under_probability").mean().alias("mean_under_probability"),
             *([pl.col("commence_time").first()] if "commence_time" in priced.columns else []),
         )
         .with_columns(
@@ -253,4 +262,16 @@ def consensus_probability(
             (1.0 - pl.col("consensus_over")).alias("consensus_under"),
         )
         .sort(key)
+    )
+    return grouped.with_columns(
+        pl.Series(
+            "mean_over_price",
+            [probability_to_american(p) for p in grouped["mean_over_probability"]],
+            dtype=pl.Float64,
+        ),
+        pl.Series(
+            "mean_under_price",
+            [probability_to_american(p) for p in grouped["mean_under_probability"]],
+            dtype=pl.Float64,
+        ),
     )
