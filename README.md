@@ -1046,9 +1046,50 @@ being acted on, and it worked — nothing was flagged as actionable.
 What it does not license is assuming weeks 2+ are fine. The out-of-sample
 calibration in Stages 4–5 was measured against *completed games with real
 rosters*. Forward projection builds its roster from a depth chart, and week 1
-used a preseason one. The persistent **Under lean** — 142 of 204 flagged, and
-155 of 161 before the same-game bug was fixed — says projections are still
-running low on exactly the featured players books price.
+used a preseason one.
+
+### The Under lean, measured
+
+It is not a preseason-depth-chart artifact and it is not a dispersion problem.
+Measured on the 299 settled week 1 bets, forward-only (row population from the
+depth chart, not from who turned out to play):
+
+| | |
+|---|---|
+| bets taking the Under | **265 of 299** (89%) |
+| mean actual − model mean | **+1.30** receptions or carries |
+| mean line − model mean | +0.26 |
+| mean line − actual | −0.19 |
+
+The books were closer to the truth than the model in both directions. The model
+runs low on *every* priced bucket, worst on players it has no history for:
+
+| 2025 role | bets | win | break-even | actual − model |
+|---|---|---|---|---|
+| no 2025 games (rookies) | 16 | 43.8% | 55.2% | **+3.50** |
+| under 2/game | 33 | 42.4% | 50.9% | +0.79 |
+| 2–5/game | 161 | 48.4% | 52.9% | +0.60 |
+| 5+/game | 89 | 52.8% | 53.8% | +2.37 |
+
+The cause is dilution, and it is structural rather than early-season:
+
+| 2026 week | projected per team | recorded a touch | dilution |
+|---|---|---|---|
+| 1 | 12.34 | 9.66 | 22% |
+| 2 | 12.38 | 9.81 | 21% |
+| 3 | 12.38 | 9.50 | 23% |
+
+Layer 3 normalises the simplex across everyone the depth chart lists. About a
+quarter of them are inactive, scratched, or simply never get a touch, and the
+share they are handed comes straight out of the players who do. The cap fix
+(16 → 13) narrowed this; it did not close it, because the remaining gap is not
+about the cap but about *who dresses*, which `injuries` already carries and the
+projection does not read.
+
+The marginal predictive is otherwise sound, which is why this hid for so long —
+on the played-panel population the same model is calibrated (mean PIT 0.50–0.53,
+realised RMSE / model SD 0.88–0.93, so if anything slightly over-dispersed).
+Location and spread are both fine. Only the *population* is wrong.
 
 `edge/clv.py` now grades settled bets (`settle`, `grade`, `reliability`) so
 this check runs every week instead of being a one-off script. The reliability
