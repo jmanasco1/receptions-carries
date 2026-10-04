@@ -1,0 +1,1001 @@
+{
+  "fetched_at": "2026-10-04T18:56:37.636188+00:00",
+  "status_code": 200,
+  "requests_remaining": 498,
+  "requests_used": 2,
+  "cost": 2,
+  "data": {
+    "id": "c327223d76a3b7b0db8c6c104442f44b",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-04T20:05:00Z",
+    "home_team": "Minnesota Vikings",
+    "away_team": "Miami Dolphins",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:56:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -133,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -136,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 131,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -168,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 132,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -168,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 104,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -133,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kevin Coleman Jr.",
+                "price": -127,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kevin Coleman Jr.",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -192,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": 179,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -232,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Miller",
+                "price": -141,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Miller",
+                "price": 110,
+                "point": 0.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-04T18:56:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -111,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -115,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": -112,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -113,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 101,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -128,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -121,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyler Murray",
+                "price": 121,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyler Murray",
+                "price": -155,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:56:12Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -136,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -172,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Miller",
+                "price": -130,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Miller",
+                "price": -102,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 134,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -132,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -136,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": -250,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": 182,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Kevin Coleman Jr.",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kevin Coleman Jr.",
+                "price": -114,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:55:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": -182,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": 138,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 118,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": 171,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -227,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -132,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -143,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kevin Coleman Jr.",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kevin Coleman Jr.",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Miller",
+                "price": -130,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Miller",
+                "price": 100,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -128,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -101,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 146,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -192,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-04T18:55:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyler Murray",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyler Murray",
+                "price": -154,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 100,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -130,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": -101,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -128,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -103,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -125,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:56:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -104,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -117,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": -245,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kevin Coleman Jr.",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": -105,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:56:16Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -135,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": -111,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": 165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -220,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 155,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -210,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": -111,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -165,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-04T18:56:16Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -115,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -115,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": -111,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -120,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-04T18:55:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Wright",
+                "price": 175,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Wright",
+                "price": -240,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kevin Coleman Jr.",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kevin Coleman Jr.",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Miller",
+                "price": -145,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Miller",
+                "price": 110,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -105,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
