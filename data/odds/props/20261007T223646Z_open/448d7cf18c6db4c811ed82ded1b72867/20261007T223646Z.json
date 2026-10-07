@@ -1,0 +1,533 @@
+{
+  "fetched_at": "2026-10-07T22:36:46.883640+00:00",
+  "status_code": 200,
+  "requests_remaining": 479,
+  "requests_used": 21,
+  "cost": 2,
+  "data": {
+    "id": "448d7cf18c6db4c811ed82ded1b72867",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-11T17:00:00Z",
+    "home_team": "Pittsburgh Steelers",
+    "away_team": "Indianapolis Colts",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 107,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -137,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": -151,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Keenan Allen",
+                "price": 134,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Keenan Allen",
+                "price": -171,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Roman Wilson",
+                "price": -157,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Roman Wilson",
+                "price": 123,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": -154,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:36:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -111,
+                "point": 19.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -115,
+                "point": 19.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:09Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -180,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 134,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": -166,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Keenan Allen",
+                "price": -192,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Keenan Allen",
+                "price": 142,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 108,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -144,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": -172,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": 128,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:47Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Roman Wilson",
+                "price": -156,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Roman Wilson",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": 113,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": -147,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -137,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -169,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 129,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": -156,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Keenan Allen",
+                "price": -192,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Keenan Allen",
+                "price": 146,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -167,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Roman Wilson",
+                "price": -150,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -125,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:34:44Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Darnell Washington",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Washington",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -165,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Downs",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Downs",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Keenan Allen",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Keenan Allen",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Pat Freiermuth",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Pat Freiermuth",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Roman Wilson",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Roman Wilson",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -135,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

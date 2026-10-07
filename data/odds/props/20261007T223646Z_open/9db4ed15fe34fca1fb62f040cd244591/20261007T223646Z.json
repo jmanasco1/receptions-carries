@@ -1,0 +1,377 @@
+{
+  "fetched_at": "2026-10-07T22:36:46.733456+00:00",
+  "status_code": 200,
+  "requests_remaining": 482,
+  "requests_used": 18,
+  "cost": 2,
+  "data": {
+    "id": "9db4ed15fe34fca1fb62f040cd244591",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-11T17:00:00Z",
+    "home_team": "New York Jets",
+    "away_team": "Cleveland Browns",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 111,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -142,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 129,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -165,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 131,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -168,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -149,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:35:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Braelon Allen",
+                "price": -103,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Braelon Allen",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": -130,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": 102,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Deshaun Watson",
+                "price": -141,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Deshaun Watson",
+                "price": 111,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:07Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -158,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 116,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -154,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -166,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -149,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -161,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 107,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -139,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -161,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:36:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Deshaun Watson",
+                "price": -143,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Deshaun Watson",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Braelon Allen",
+                "price": -109,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Braelon Allen",
+                "price": -119,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": -122,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": -106,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 108,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 123,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": 130,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -170,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 130,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -170,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

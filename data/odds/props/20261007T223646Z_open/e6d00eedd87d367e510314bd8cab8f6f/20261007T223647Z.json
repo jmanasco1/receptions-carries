@@ -1,0 +1,467 @@
+{
+  "fetched_at": "2026-10-07T22:36:47.619460+00:00",
+  "status_code": 200,
+  "requests_remaining": 463,
+  "requests_used": 37,
+  "cost": 2,
+  "data": {
+    "id": "e6d00eedd87d367e510314bd8cab8f6f",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-13T00:15:00Z",
+    "home_team": "Los Angeles Rams",
+    "away_team": "Buffalo Bills",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -140,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Davante Adams",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -138,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Kincaid",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -164,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 128,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:36:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "James Cook",
+                "price": -102,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "James Cook",
+                "price": -125,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": 100,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -128,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Allen",
+                "price": -121,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Allen",
+                "price": -106,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -160,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 120,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -138,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Kincaid",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Davante Adams",
+                "price": -144,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -158,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 118,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": -101,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Davante Adams",
+                "price": -128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Kincaid",
+                "price": 111,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -161,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 123,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -143,
+                "point": 7.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:36:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Allen",
+                "price": -122,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Allen",
+                "price": -106,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -123,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "James Cook",
+                "price": 100,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "James Cook",
+                "price": -130,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:35:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -157,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -143,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -137,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:36:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Davante Adams",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -150,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -155,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Kincaid",
+                "price": 115,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-07T22:36:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -120,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -111,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "James Cook",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "James Cook",
+                "price": -125,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-07T22:34:45Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Dalton Kincaid",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Kincaid",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Davante Adams",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Davante Adams",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -170,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -145,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
