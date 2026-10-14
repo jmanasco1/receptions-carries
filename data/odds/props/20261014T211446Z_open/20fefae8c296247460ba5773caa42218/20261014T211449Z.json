@@ -1,0 +1,41 @@
+{
+  "fetched_at": "2026-10-14T21:14:49.053109+00:00",
+  "status_code": 200,
+  "requests_remaining": 434,
+  "requests_used": 66,
+  "cost": 1,
+  "data": {
+    "id": "20fefae8c296247460ba5773caa42218",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-18T20:25:00Z",
+    "home_team": "Kansas City Chiefs",
+    "away_team": "Los Angeles Chargers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:14:23Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -120,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -106,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

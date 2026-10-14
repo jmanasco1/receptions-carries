@@ -1,0 +1,107 @@
+{
+  "fetched_at": "2026-10-14T21:14:47.798135+00:00",
+  "status_code": 200,
+  "requests_remaining": 449,
+  "requests_used": 51,
+  "cost": 2,
+  "data": {
+    "id": "e86227938fd3cf008fc5648fb5128344",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-18T17:00:00Z",
+    "home_team": "Cleveland Browns",
+    "away_team": "Baltimore Ravens",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": 114,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:14:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -127,
+                "point": 20.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -101,
+                "point": 20.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": 102,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:13:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": 105,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

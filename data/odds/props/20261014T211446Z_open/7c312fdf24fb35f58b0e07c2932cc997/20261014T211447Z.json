@@ -1,0 +1,749 @@
+{
+  "fetched_at": "2026-10-14T21:14:47.556585+00:00",
+  "status_code": 200,
+  "requests_remaining": 451,
+  "requests_used": 49,
+  "cost": 2,
+  "data": {
+    "id": "7c312fdf24fb35f58b0e07c2932cc997",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-18T17:00:00Z",
+    "home_team": "Atlanta Falcons",
+    "away_team": "Chicago Bears",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 103,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -132,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -101,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -126,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": -178,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": 139,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -171,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": 134,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -188,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 147,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Zachariah Branch",
+                "price": 127,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zachariah Branch",
+                "price": -163,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:14:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -114,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -111,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 162,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -220,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Zachariah Branch",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zachariah Branch",
+                "price": -174,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -146,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": -188,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 124,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -166,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -162,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 122,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 112,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -154,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 107,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -139,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -164,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": 125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Zachariah Branch",
+                "price": 134,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zachariah Branch",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -196,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:14:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -118,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -110,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:14:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -157,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 116,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -104,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -103,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 125,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:13:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -175,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -175,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -155,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:13:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -120,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -110,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-14T21:13:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 105,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -135,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -170,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -165,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": 135,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-14T21:13:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -115,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -115,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
