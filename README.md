@@ -1096,8 +1096,43 @@ against what the teams actually did:
 | 4 | 0.972 | 0.923 |
 | 5 | 0.976 | 0.927 |
 
-Team-level volume is sound. The starters are **3–8% low**, not 22%, and the
-shortfall widens as the season goes on — which is the number worth chasing.
+Team-level volume is sound. The right-hand column, though, is measured wrong:
+"the top 6 the model ranks highest" is self-referential, and it hides a bad
+ranking by scoring the model against the players it already likes.
+
+Asking the question without reference to the model — take the 40 highest
+receivers by their own 2026 per-game average, and look at what week 6 projects
+for them:
+
+| | |
+|---|---|
+| mean 2026 average | 5.56 |
+| mean week 6 projection | 3.63 |
+| ratio | **0.652** |
+
+| player | 2026 avg | projected |
+|---|---|---|
+| Puka Nacua | 10.33 | 5.63 |
+| Trey McBride | 8.40 | 5.65 |
+| Brock Bowers | 8.00 | 4.79 |
+| CeeDee Lamb | 7.80 | 4.47 |
+| Kyren Williams | 5.40 | 1.84 |
+
+The starters are **35% low**, not 3–8%. Team totals are right at the same
+time, which pins what is wrong: the share distribution is far too flat. The
+model hands twelve players about 3.6 receptions each where the real offence
+gives three players eight or nine and the rest one or two. Conserving the
+total while flattening the distribution under-projects exactly the players
+books post lines on, and leaves the deep roster over-projected to pay for it.
+
+That is a Layer 3 problem — the Dirichlet concentration, or the shrinkage of
+the tracker's logit mean toward the position prior, or both — and not a roster
+problem. It explains every symptom at once: the 92% Under lean on priced
+markets, the inverted reliability curve, and why the played-panel calibration
+looked clean (that population is mostly non-stars, who are over-projected in
+the opposite direction).
+
+**This is the open defect. It is not fixed.**
 
 The `+1.30` above is also not a bias estimate. It is the mean error over the
 299 markets *the model chose to bet*, and the model bets exactly where its own
@@ -1129,7 +1164,7 @@ it helps closing pulls much more than opening ones. And most players on the
 simplex who never touch the ball are perfectly healthy, so no injury feed will
 ever remove them.
 
-The 3–8% starter shortfall is still open.
+The 35% starter shortfall above is still open.
 
 #### A week is not played all at once
 
