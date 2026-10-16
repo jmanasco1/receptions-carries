@@ -654,7 +654,7 @@ def report_weekly(
     from nfl_usage_props.model.team_volume import TeamVolumeModel, team_game_frame
     from nfl_usage_props.odds.snapshots import load_resolved_snapshots
     from nfl_usage_props.report import render_html, render_markdown
-    from nfl_usage_props.storage import ParquetStore
+    from nfl_usage_props.storage import SEASONLESS_SENTINEL, ParquetStore
 
     config = load_config()
     season = season or current_nfl_season()
@@ -776,11 +776,20 @@ def report_weekly(
             table.add_row(row["reason"].replace("_", " "), str(row["rows"]))
         console.print(table)
 
+    # Without this the report prints gsis ids. The consensus groups on gsis_id
+    # and drops the book's raw spelling, so by the time edges reach the
+    # renderer the only identifier left is "00-0040667" -- which is correct,
+    # unreadable, and exactly what shipped for six weeks.
     shared = {
         "week": week,
         "season": season,
         "clv": clv,
         "actionable_only": not show_all,
+        "players": (
+            raw.read("players", SEASONLESS_SENTINEL)
+            if raw.exists("players", SEASONLESS_SENTINEL)
+            else None
+        ),
     }
     path = Path(out)
     path.parent.mkdir(parents=True, exist_ok=True)
