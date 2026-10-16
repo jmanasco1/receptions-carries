@@ -289,25 +289,46 @@ def two_game_schedule() -> pl.DataFrame:
     )
 
 
-def test_an_already_played_game_is_not_re_projected():
-    """The week 6 bug: one Thursday game had panel rows, so the week was not
-    empty, so the forward path was skipped and the other thirteen games were
-    silently dropped from the report."""
+def test_an_already_played_game_is_not_re_projected_when_serving():
+    """Serving: a final game cannot be bet, so projecting it only produces
+    edges against prices that have already settled."""
     panel = played_rows("2026_02_BBB_AAA")
-    combined = panel_with_upcoming(panel, two_game_schedule(), depth_chart(), season=2026, week=2)
+    combined = panel_with_upcoming(
+        panel, two_game_schedule(), depth_chart(), season=2026, week=2, skip_played=True
+    )
     upcoming = combined.filter(pl.col("targets").is_null())
     assert upcoming["game_id"].unique().to_list() == ["2026_02_AAA_BBB"]
 
 
 def test_the_unplayed_half_of_the_week_is_still_projected():
+    """The week 6 bug: one Thursday game had panel rows, so the week was not
+    empty, the forward path was skipped wholesale, and the other thirteen
+    games were silently dropped from the report."""
     panel = played_rows("2026_02_BBB_AAA")
-    combined = panel_with_upcoming(panel, two_game_schedule(), depth_chart(), season=2026, week=2)
+    combined = panel_with_upcoming(
+        panel, two_game_schedule(), depth_chart(), season=2026, week=2, skip_played=True
+    )
     assert not combined.filter(
         (pl.col("game_id") == "2026_02_AAA_BBB") & pl.col("targets").is_null()
     ).is_empty()
 
 
+def test_backtesting_still_re_projects_a_week_that_was_played():
+    """The default must keep projecting played weeks: that is the only check
+    that exercises the forward path against known outcomes. Making
+    `skip_played` the default turned that backtest into a silent no-op, which
+    is how this regression was caught."""
+    panel = played_rows("2026_02_BBB_AAA")
+    combined = panel_with_upcoming(panel, two_game_schedule(), depth_chart(), season=2026, week=2)
+    upcoming = combined.filter(pl.col("targets").is_null())
+    assert set(upcoming["game_id"].unique().to_list()) == {
+        "2026_02_BBB_AAA",
+        "2026_02_AAA_BBB",
+    }
+
+
 def test_a_fully_played_week_says_so_rather_than_inventing_rows():
+    """Only reachable from the serving path, which is what passes played ids."""
     with pytest.raises(ValueError, match="nothing left to project"):
         upcoming_panel_rows(
             schedule(),

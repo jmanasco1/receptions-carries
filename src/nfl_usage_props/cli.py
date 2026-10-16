@@ -719,6 +719,7 @@ def report_weekly(
             season=season,
             week=week,
             injuries=injuries,
+            skip_played=True,
         )
         ruled_out = 0
         if injuries is not None and {"season", "week", "report_status"} <= set(injuries.columns):

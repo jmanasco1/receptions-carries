@@ -201,11 +201,18 @@ def test_the_feature_matrix_has_no_constant_columns(real_features):
 # ------------------------------------------------------- market conventions
 
 
-def test_positive_spread_really_does_mean_favoured(real_config):
+def test_positive_spread_really_does_mean_favoured(real_config, store):
     """Pins the sign convention against actual results rather than against a
     memory of what nflverse does. The convention feeds `implied_team_total` and
     Layer 2's game-script coefficient, and getting it backwards inverts both
-    while leaving every unit test green -- which is exactly what happened."""
+    while leaving every unit test green -- which is exactly what happened.
+
+    Takes `store` purely for its skip guard. Without it this was the one test
+    in the file that reached for real data without first checking the data was
+    there, so on a runner with an empty raw store its 71 siblings skipped and
+    it failed -- permanently red in a job that tolerates failure, which is the
+    worst place for a broken test to live.
+    """
     schedules = load_schedules(real_config, SEASONS).filter(pl.col("result").is_not_null())
     correlation = schedules.select(pl.corr("spread_line", "result")).item()
     assert correlation > 0.3, "spread_line should rise with the home team's margin"

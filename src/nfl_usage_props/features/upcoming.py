@@ -229,9 +229,7 @@ def upcoming_panel_rows(
             )
 
     kickoff = slate["kickoff_utc"].max()
-    rosters = expected_rosters(
-        depth_charts, kickoff, limits, injuries, season=season, week=week
-    )
+    rosters = expected_rosters(depth_charts, kickoff, limits, injuries, season=season, week=week)
     if rosters.is_empty():
         raise ValueError(f"no depth chart published before {kickoff}; cannot guess who plays")
 
@@ -289,21 +287,32 @@ def panel_with_upcoming(
     week: int,
     limits: dict[str, int] | None = None,
     injuries: pl.DataFrame | None = None,
+    skip_played: bool = False,
 ) -> pl.DataFrame:
-    """History plus the unplayed part of the slate, ready for `build_features`.
+    """History plus the upcoming slate, ready for `build_features`.
 
     Concatenated rather than handled separately so the upcoming rows go through
     exactly the same feature code as every fitted row. A separate prediction
     path is how training and serving drift apart.
 
-    Games in the target week that already have panel rows are left alone: they
-    have been played, their outcomes are real, and synthesising null-outcome
-    rows over the top of them would project a result that is already known.
+    History is always cut strictly before `week`, so a played target week is
+    discarded and re-projected from the depth chart. That is what makes
+    backtesting the forward path possible: point this at a week that has
+    already happened and it projects it as though it had not.
+
+    `skip_played=True` is for serving rather than backtesting. A week is not
+    played all at once -- Thursday night kicks off four days before Sunday --
+    and once a game is final nobody can bet it, so projecting it produces
+    edges against settled prices. The default stays False: the backtest is the
+    only check that exercises this path end to end, and silently turning it
+    into a no-op would cost more than it saves.
     """
     played = (
         panel.filter((pl.col("season") == season) & (pl.col("week") == week))["game_id"]
         .unique()
         .to_list()
+        if skip_played
+        else []
     )
     upcoming = upcoming_panel_rows(
         schedules,

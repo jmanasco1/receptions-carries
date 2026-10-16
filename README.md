@@ -1188,9 +1188,12 @@ Week 6, before and after:
 | before | 19 | 12 |
 | after | 120 | 61 |
 
-Rows are now synthesised per *game* rather than per week, games that already
-have real panel rows are left alone, and a fully played week raises instead of
-inventing rows over the top of known results.
+Rows are now synthesised per *game* rather than per week. Serving passes
+`skip_played=True` so a final game is not projected against prices that have
+already settled; the default stays False, because projecting a played week is
+exactly what the forward-path backtest in `test_projection_real.py` does, and
+making the skip unconditional turned that check into a silent no-op. Which it
+did, for one commit, until the network suite caught it.
 
 `edge/clv.py` now grades settled bets (`settle`, `grade`, `reliability`) so
 this check runs every week instead of being a one-off script. The reliability
