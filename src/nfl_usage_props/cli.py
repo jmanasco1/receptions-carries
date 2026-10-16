@@ -648,7 +648,7 @@ def report_weekly(
     from nfl_usage_props.edge.edges import compute_edges
     from nfl_usage_props.features.build import build_features
     from nfl_usage_props.features.dataset import load_panel, load_schedules, upcoming_week
-    from nfl_usage_props.features.upcoming import panel_with_upcoming
+    from nfl_usage_props.features.upcoming import RULED_OUT, panel_with_upcoming
     from nfl_usage_props.model.player_share import PlayerShareModel, fit_catch_rate_dispersion
     from nfl_usage_props.model.projection import project_week
     from nfl_usage_props.model.team_volume import TeamVolumeModel, team_game_frame
@@ -690,14 +690,48 @@ def report_weekly(
     # rows and cannot be projected. Synthesise them from the schedule and the
     # depth chart; without this the report is empty for a reason that looks
     # exactly like a quiet week.
-    if week and panel.filter((pl.col("season") == season) & (pl.col("week") == week)).is_empty():
+    # Any game in the slate without panel rows needs synthesising -- not just a
+    # week with none at all. A week is partly played from Thursday night
+    # onward, and the all-or-nothing version of this check reported week 6 off
+    # the one game that had already finished and silently dropped the other 13.
+    scheduled_games = set(
+        schedules.filter((pl.col("season") == season) & (pl.col("week") == week))["game_id"]
+        .unique()
+        .to_list()
+    )
+    played_games = set(
+        panel.filter((pl.col("season") == season) & (pl.col("week") == week))["game_id"]
+        .unique()
+        .to_list()
+    )
+    if week and scheduled_games - played_games:
         if not raw.exists("depth_charts", season):
             console.print(f"[red]No depth charts for {season}[/] — cannot guess who plays.")
             raise typer.Exit(code=1)
+        # The participation report trims players designated Out or Doubtful off
+        # the simplex. It fills in across the week, so a Wednesday opener sees
+        # almost nothing and a Sunday closer sees the real list.
+        injuries = raw.read("injuries", season) if raw.exists("injuries", season) else None
         panel = panel_with_upcoming(
-            panel, schedules, raw.read("depth_charts", season), season=season, week=week
+            panel,
+            schedules,
+            raw.read("depth_charts", season),
+            season=season,
+            week=week,
+            injuries=injuries,
         )
-        console.print(f"[dim]{season} week {week} unplayed — projecting from depth charts.[/]")
+        ruled_out = 0
+        if injuries is not None and {"season", "week", "report_status"} <= set(injuries.columns):
+            ruled_out = injuries.filter(
+                (pl.col("season") == season)
+                & (pl.col("week") == week)
+                & pl.col("report_status").is_in(RULED_OUT)
+            ).height
+        pending = len(scheduled_games - played_games)
+        console.print(
+            f"[dim]{season} week {week}: projecting {pending} of {len(scheduled_games)} "
+            f"games from depth charts ({ruled_out} ruled out).[/]"
+        )
 
     features = build_features(panel, schedules, config).filter(pl.col("season_type") == "REG")
     team_games = team_game_frame(features).filter(pl.col("season_type") == "REG")

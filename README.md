@@ -1071,25 +1071,91 @@ runs low on *every* priced bucket, worst on players it has no history for:
 | 2–5/game | 161 | 48.4% | 52.9% | +0.60 |
 | 5+/game | 89 | 52.8% | 53.8% | +2.37 |
 
-The cause is dilution, and it is structural rather than early-season:
+#### Correction: the dilution figure above was wrong
 
-| 2026 week | projected per team | recorded a touch | dilution |
-|---|---|---|---|
-| 1 | 12.34 | 9.66 | 22% |
-| 2 | 12.38 | 9.81 | 21% |
-| 3 | 12.38 | 9.50 | 23% |
+An earlier version of this section put the cause as roster dilution and sized
+it at 22%, from this comparison:
 
-Layer 3 normalises the simplex across everyone the depth chart lists. About a
-quarter of them are inactive, scratched, or simply never get a touch, and the
-share they are handed comes straight out of the players who do. The cap fix
-(16 → 13) narrowed this; it did not close it, because the remaining gap is not
-about the cap but about *who dresses*, which `injuries` already carries and the
-projection does not read.
+| 2026 week | projected per team | recorded a touch |
+|---|---|---|
+| 1 | 12.34 | 9.66 |
+| 2 | 12.38 | 9.81 |
+| 3 | 12.38 | 9.50 |
 
-The marginal predictive is otherwise sound, which is why this hid for so long —
-on the played-panel population the same model is calibrated (mean PIT 0.50–0.53,
-realised RMSE / model SD 0.88–0.93, so if anything slightly over-dispersed).
-Location and spread are both fine. Only the *population* is wrong.
+That is a count of roster slots, not a measurement of share, and the two are
+not the same number. The players on the simplex who never touch the ball are
+the ones the model already gives almost no share to, so removing them moves
+very little. Measured properly, projecting weeks 1–5 forward and comparing
+against what the teams actually did:
+
+| 2026 week | team receptions proj/actual | top-6 per team proj/actual |
+|---|---|---|
+| 1 | 1.038 | 0.971 |
+| 2 | 1.021 | 0.958 |
+| 3 | 0.967 | 0.963 |
+| 4 | 0.972 | 0.923 |
+| 5 | 0.976 | 0.927 |
+
+Team-level volume is sound. The starters are **3–8% low**, not 22%, and the
+shortfall widens as the season goes on — which is the number worth chasing.
+
+The `+1.30` above is also not a bias estimate. It is the mean error over the
+299 markets *the model chose to bet*, and the model bets exactly where its own
+projection sits furthest below the line. Selecting on that and then measuring
+it is the winner's curse. A model with no bias at all would show a positive
+number there.
+
+The marginal predictive is sound: on the played-panel population the model is
+calibrated (mean PIT 0.50–0.53, realised RMSE / model SD 0.88–0.93, so if
+anything slightly over-dispersed). Location and spread are both fine.
+
+#### What the injury report is worth
+
+`expected_rosters` now drops players designated Out or Doubtful for the week.
+This is correct — a player who will not take a snap should not hold share — but
+it is a small lever, and the section above is why that needs saying plainly:
+
+| 2026 week | roster per team | removed by the report |
+|---|---|---|
+| 1 | 12.34 | 0.19 |
+| 2 | 12.38 | 0.34 |
+| 3 | 12.38 | 0.50 |
+| 4 | 12.38 | 0.56 |
+| 5 | 12.38 | 0.59 |
+
+Two limits. The participation report fills in across the week — a Wednesday
+opening snapshot sees almost nothing, Friday is when the designations land — so
+it helps closing pulls much more than opening ones. And most players on the
+simplex who never touch the ball are perfectly healthy, so no injury feed will
+ever remove them.
+
+The 3–8% starter shortfall is still open.
+
+#### A week is not played all at once
+
+Found while wiring the above in. The weekly report synthesised forward rows
+only when the target week had *no* panel rows at all:
+
+```python
+if week and panel.filter((season == s) & (week == w)).is_empty():
+```
+
+Thursday night kicks off four days before the Sunday slate, so from Friday
+onward a week is neither unplayed nor complete. One finished game made the
+week non-empty, the forward path was skipped, and the other thirteen games
+never got rows — no features, no projection, no prices matched. The failure
+was silent and looked exactly like a thin slate.
+
+Week 6, before and after:
+
+| | priced markets | actionable |
+|---|---|---|
+| before | 19 | 12 |
+| after | 120 | 61 |
+
+Rows are now synthesised per *game* rather than per week, games that already
+have real panel rows are left alone, and a fully played week raises instead of
+inventing rows over the top of known results.
 
 `edge/clv.py` now grades settled bets (`settle`, `grade`, `reliability`) so
 this check runs every week instead of being a one-off script. The reliability

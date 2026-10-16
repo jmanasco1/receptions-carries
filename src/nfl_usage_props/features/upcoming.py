@@ -32,13 +32,25 @@ which is practice-squad deep, against roughly 12 who take a meaningful snap.
 Leaving the tail in would put two dozen near-zero priors on Layer 3's simplex
 and dilute every real share.
 
-This is a roster guess, not an inactives list. Inactives post 90 minutes before
-kickoff and are not in this feed; a player ruled out will still appear here
-with his usual role. Wiring the injury report in is the obvious next
-improvement and is not done.
+This is a roster guess refined by the injury report, not an inactives list.
+True inactives post 90 minutes before kickoff and are not published in any feed
+this project can reach. What `injuries` does carry is the weekly participation
+report, and a player designated Out or Doubtful is dropped from the simplex --
+he is not going to take a target, and leaving him on it hands him share that
+belongs to the players who will.
+
+Two limits worth knowing before trusting it. The report fills in across the
+week: a Wednesday opening snapshot sees a nearly empty report, and the Friday
+designations are what actually matter, so this helps closing pulls far more
+than opening ones. And it is small. Measured over 2026 weeks 1-5 it removes
+0.2-0.6 players per team, against a roster of 12.4 where only about 9.7 record
+a touch. Most of the players on the simplex who never touch the ball are
+healthy -- a WR5, a blocking TE -- and no injury feed will ever remove them.
 """
 
 from __future__ import annotations
+
+from collections.abc import Sequence
 
 import polars as pl
 
@@ -88,14 +100,29 @@ OUTCOME_COLUMNS = (
 )
 
 
+# Participation-report designations that mean the player will not take a snap.
+# Questionable is deliberately absent: those players mostly play, and dropping
+# them would hand their share to a teammate who is not going to get it either.
+RULED_OUT = ("Out", "Doubtful")
+
+
 def expected_rosters(
-    depth_charts: pl.DataFrame, as_of, limits: dict[str, int] | None = None
+    depth_charts: pl.DataFrame,
+    as_of,
+    limits: dict[str, int] | None = None,
+    injuries: pl.DataFrame | None = None,
+    *,
+    season: int | None = None,
+    week: int | None = None,
 ) -> pl.DataFrame:
     """Eligible players per team from the latest depth chart before `as_of`.
 
     Requires the 2025+ feed, which carries a `dt` timestamp. The legacy feed is
     an undated weekly snapshot and cannot be filtered to a kickoff, so this
     refuses it rather than silently using a chart published after the game.
+
+    When `injuries` is supplied along with `season` and `week`, players carrying
+    an Out or Doubtful designation for that week are removed.
     """
     if "dt" not in depth_charts.columns:
         raise ValueError(
@@ -123,7 +150,7 @@ def expected_rosters(
 
     latest = parsed.filter(pl.col("_dt") == parsed["_dt"].max())
     caps = pl.DataFrame({"position": list(limits), "_limit": [limits[p] for p in limits]})
-    return (
+    roster = (
         latest.select(
             normalize_team("team").alias("team"),
             "gsis_id",
@@ -136,6 +163,40 @@ def expected_rosters(
         .drop("_limit")
         .unique(subset=["team", "gsis_id"])
     )
+    return _drop_ruled_out(roster, injuries, season=season, week=week)
+
+
+def _drop_ruled_out(
+    roster: pl.DataFrame,
+    injuries: pl.DataFrame | None,
+    *,
+    season: int | None,
+    week: int | None,
+) -> pl.DataFrame:
+    """Remove players the participation report rules out for this week.
+
+    Scoped to the exact (season, week). An unscoped anti-join would delete a
+    player for every week of the season because he missed one, which is a far
+    worse error than leaving him in.
+    """
+    if injuries is None or injuries.is_empty() or season is None or week is None:
+        return roster
+    required = {"season", "week", "gsis_id", "report_status"}
+    if not required <= set(injuries.columns):
+        return roster
+    ruled_out = (
+        injuries.filter(
+            (pl.col("season") == season)
+            & (pl.col("week") == week)
+            & pl.col("report_status").is_in(RULED_OUT)
+        )
+        .select("gsis_id")
+        .drop_nulls()
+        .unique()
+    )
+    if ruled_out.is_empty():
+        return roster
+    return roster.join(ruled_out, on="gsis_id", how="anti")
 
 
 def upcoming_panel_rows(
@@ -145,14 +206,32 @@ def upcoming_panel_rows(
     season: int,
     week: int,
     limits: dict[str, int] | None = None,
+    injuries: pl.DataFrame | None = None,
+    skip_game_ids: Sequence[str] | None = None,
 ) -> pl.DataFrame:
-    """Panel-shaped rows for one unplayed slate, with null outcomes."""
+    """Panel-shaped rows for one unplayed slate, with null outcomes.
+
+    `skip_game_ids` drops games that already have real panel rows. An NFL week
+    is not played all at once -- Thursday night kicks off four days before the
+    Sunday slate -- so by Friday the week is neither unplayed nor complete.
+    Treating it as all-or-nothing is what produced a week 6 report covering a
+    single game.
+    """
     slate = schedules.filter((pl.col("season") == season) & (pl.col("week") == week))
     if slate.is_empty():
         raise ValueError(f"no scheduled games for {season} week {week}")
+    if skip_game_ids:
+        slate = slate.filter(~pl.col("game_id").is_in(list(skip_game_ids)))
+        if slate.is_empty():
+            raise ValueError(
+                f"every game in {season} week {week} already has panel rows; "
+                "there is nothing left to project"
+            )
 
     kickoff = slate["kickoff_utc"].max()
-    rosters = expected_rosters(depth_charts, kickoff, limits)
+    rosters = expected_rosters(
+        depth_charts, kickoff, limits, injuries, season=season, week=week
+    )
     if rosters.is_empty():
         raise ValueError(f"no depth chart published before {kickoff}; cannot guess who plays")
 
@@ -209,14 +288,32 @@ def panel_with_upcoming(
     season: int,
     week: int,
     limits: dict[str, int] | None = None,
+    injuries: pl.DataFrame | None = None,
 ) -> pl.DataFrame:
-    """History plus the upcoming slate, ready for `build_features`.
+    """History plus the unplayed part of the slate, ready for `build_features`.
 
     Concatenated rather than handled separately so the upcoming rows go through
     exactly the same feature code as every fitted row. A separate prediction
     path is how training and serving drift apart.
+
+    Games in the target week that already have panel rows are left alone: they
+    have been played, their outcomes are real, and synthesising null-outcome
+    rows over the top of them would project a result that is already known.
     """
-    upcoming = upcoming_panel_rows(schedules, depth_charts, season=season, week=week, limits=limits)
+    played = (
+        panel.filter((pl.col("season") == season) & (pl.col("week") == week))["game_id"]
+        .unique()
+        .to_list()
+    )
+    upcoming = upcoming_panel_rows(
+        schedules,
+        depth_charts,
+        season=season,
+        week=week,
+        limits=limits,
+        injuries=injuries,
+        skip_game_ids=played,
+    )
     history = panel.filter(
         (pl.col("season") < season) | ((pl.col("season") == season) & (pl.col("week") < week))
     )

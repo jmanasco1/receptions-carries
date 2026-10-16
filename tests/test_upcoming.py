@@ -159,3 +159,160 @@ def test_upcoming_rows_carry_position_for_the_share_layer():
     rows = upcoming_panel_rows(schedule(), depth_chart(), season=2026, week=2)
     assert rows["position"].null_count() == 0
     assert set(rows["position"].unique()) <= set(DEPTH_LIMITS)
+
+
+# --------------------------------------------------------------- ruled out
+
+
+def injury_report(rows: list[dict]) -> pl.DataFrame:
+    return pl.DataFrame(
+        rows,
+        schema={
+            "season": pl.Int32,
+            "week": pl.Int32,
+            "gsis_id": pl.String,
+            "report_status": pl.String,
+        },
+    )
+
+
+def test_players_ruled_out_leave_the_simplex():
+    """Layer 3 normalises across whoever is on the simplex, so a player who is
+    not going to take a snap is not a harmless extra name -- he is share taken
+    from the teammates who will."""
+    report = injury_report(
+        [{"season": 2026, "week": 2, "gsis_id": "AAA-WR1", "report_status": "Out"}]
+    )
+    kept = expected_rosters(depth_chart(), KICKOFF, None, report, season=2026, week=2)
+    assert "AAA-WR1" not in kept["gsis_id"].to_list()
+    assert "BBB-WR1" in kept["gsis_id"].to_list()
+
+
+def test_doubtful_goes_but_questionable_stays():
+    """Questionable players mostly play. Dropping them would move share to a
+    teammate who is not going to get it either."""
+    report = injury_report(
+        [
+            {"season": 2026, "week": 2, "gsis_id": "AAA-RB1", "report_status": "Doubtful"},
+            {"season": 2026, "week": 2, "gsis_id": "AAA-TE1", "report_status": "Questionable"},
+        ]
+    )
+    kept = expected_rosters(depth_chart(), KICKOFF, None, report, season=2026, week=2)
+    ids = kept["gsis_id"].to_list()
+    assert "AAA-RB1" not in ids
+    assert "AAA-TE1" in ids
+
+
+def test_a_designation_applies_only_to_its_own_week():
+    """The trap: an unscoped anti-join deletes a player from every week of the
+    season because he was out for one of them."""
+    report = injury_report(
+        [{"season": 2026, "week": 1, "gsis_id": "AAA-WR1", "report_status": "Out"}]
+    )
+    kept = expected_rosters(depth_chart(), KICKOFF, None, report, season=2026, week=2)
+    assert "AAA-WR1" in kept["gsis_id"].to_list()
+
+
+def test_a_designation_applies_only_to_its_own_season():
+    report = injury_report(
+        [{"season": 2025, "week": 2, "gsis_id": "AAA-WR1", "report_status": "Out"}]
+    )
+    kept = expected_rosters(depth_chart(), KICKOFF, None, report, season=2026, week=2)
+    assert "AAA-WR1" in kept["gsis_id"].to_list()
+
+
+def test_no_injury_report_is_not_an_error():
+    """A Wednesday opener often has nothing published yet."""
+    plain = expected_rosters(depth_chart(), KICKOFF)
+    with_empty = expected_rosters(
+        depth_chart(), KICKOFF, None, injury_report([]), season=2026, week=2
+    )
+    assert plain.height == with_empty.height
+
+
+def test_rosters_still_pass_the_size_guard_after_trimming():
+    """Trimming must not push a team under the band the guard enforces --
+    that guard is what catches a share denominator going wrong."""
+    report = injury_report(
+        [
+            {"season": 2026, "week": 2, "gsis_id": f"AAA-WR{r}", "report_status": "Out"}
+            for r in (1, 2)
+        ]
+    )
+    rows = upcoming_panel_rows(schedule(), depth_chart(), season=2026, week=2, injuries=report)
+    per_team = rows.group_by("game_id", "team").len()["len"]
+    low, high = EXPECTED_ROSTER_SIZE
+    assert low <= float(per_team.median()) <= high
+    assert "AAA-WR1" not in rows["gsis_id"].to_list()
+
+
+# ------------------------------------------------- partially played weeks
+
+
+def played_rows(game_id: str, team: str = "AAA") -> pl.DataFrame:
+    """Real panel rows for a game that has already finished."""
+    return pl.DataFrame(
+        {
+            "season": [2026],
+            "week": [2],
+            "game_id": [game_id],
+            "team": [team],
+            "opponent": ["BBB"],
+            "gsis_id": [f"{team}-WR1"],
+            "kickoff_utc": [KICKOFF],
+            "season_type": ["REG"],
+            "targets": [7.0],
+            "receptions": [5.0],
+            "carries": [0.0],
+        }
+    )
+
+
+def two_game_schedule() -> pl.DataFrame:
+    """Thursday night plus a Sunday game — a normal NFL week."""
+    return pl.concat(
+        [
+            schedule(),
+            pl.DataFrame(
+                [
+                    {
+                        "season": 2026,
+                        "week": 2,
+                        "game_id": "2026_02_AAA_BBB",
+                        "home_team": "BBB",
+                        "away_team": "AAA",
+                        "kickoff_utc": KICKOFF,
+                    }
+                ]
+            ),
+        ]
+    )
+
+
+def test_an_already_played_game_is_not_re_projected():
+    """The week 6 bug: one Thursday game had panel rows, so the week was not
+    empty, so the forward path was skipped and the other thirteen games were
+    silently dropped from the report."""
+    panel = played_rows("2026_02_BBB_AAA")
+    combined = panel_with_upcoming(panel, two_game_schedule(), depth_chart(), season=2026, week=2)
+    upcoming = combined.filter(pl.col("targets").is_null())
+    assert upcoming["game_id"].unique().to_list() == ["2026_02_AAA_BBB"]
+
+
+def test_the_unplayed_half_of_the_week_is_still_projected():
+    panel = played_rows("2026_02_BBB_AAA")
+    combined = panel_with_upcoming(panel, two_game_schedule(), depth_chart(), season=2026, week=2)
+    assert not combined.filter(
+        (pl.col("game_id") == "2026_02_AAA_BBB") & pl.col("targets").is_null()
+    ).is_empty()
+
+
+def test_a_fully_played_week_says_so_rather_than_inventing_rows():
+    with pytest.raises(ValueError, match="nothing left to project"):
+        upcoming_panel_rows(
+            schedule(),
+            depth_chart(),
+            season=2026,
+            week=2,
+            skip_game_ids=["2026_02_BBB_AAA"],
+        )
