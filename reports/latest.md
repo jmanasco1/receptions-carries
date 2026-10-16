@@ -1,6 +1,6 @@
 # Usage props — 2026 week 6
 
-_Generated 2026-10-16 01:08 UTC._
+_Generated 2026-10-16 16:46 UTC._
 
 ## What was held back
 
@@ -9,90 +9,79 @@ pipeline is more likely at fault than the slate.
 
 | reason | rows |
 | --- | ---: |
-| thin market | 41 |
+| thin market | 38 |
 | devig disagreement | 21 |
-| below threshold | 14 |
+| below threshold | 13 |
 | extreme price | 0 |
 | early season | 0 |
 
-Priced markets: 136. Actionable: 72.
+Priced markets: 120. Actionable: 61.
 
 ## Flagged
 
 | player | market | side | line | offered | fair | model | edge | books |
 | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 00-0040667 | receptions | Under | 4.5 | +116 | -403 | 80.1% | +37.3% | 4 |
-| 00-0038797 | rush_attempts | Under | 18.5 | -114 | -686 | 87.3% | +37.2% | 3 |
-| 00-0037740 | receptions | Under | 6.5 | -120 | -733 | 88.0% | +36.7% | 4 |
-| 00-0037838 | receptions | Under | 5.5 | -153 | -1513 | 93.8% | +36.5% | 3 |
-| 00-0036554 | receptions | Under | 5.5 | +113 | -397 | 79.9% | +36.2% | 5 |
-| 00-0039337 | receptions | Under | 5.5 | +108 | -329 | 76.7% | +31.8% | 4 |
-| 00-0040583 | receptions | Under | 2.5 | -119 | -473 | 82.5% | +31.5% | 5 |
-| 00-0039075 | receptions | Under | 7.5 | +105 | -309 | 75.5% | +30.2% | 5 |
-| 00-0039491 | receptions | Under | 4.5 | +120 | -254 | 71.7% | +29.7% | 3 |
-| 00-0040719 | receptions | Under | 1.5 | -122 | -419 | 80.7% | +29.1% | 5 |
-| 00-0031408 | receptions | Under | 5.5 | -105 | -325 | 76.4% | +28.5% | 4 |
-| 00-0034827 | receptions | Under | 3.5 | +109 | -270 | 73.0% | +28.5% | 3 |
-| 00-0041438 | receptions | Under | 4.5 | -108 | -335 | 77.0% | +28.3% | 4 |
-| 00-0037238 | receptions | Under | 6.5 | -145 | -536 | 84.3% | +28.2% | 5 |
-| 00-0038797 | receptions | Under | 1.5 | -105 | -311 | 75.7% | +27.8% | 4 |
-| 00-0039338 | receptions | Under | 6.5 | -105 | -312 | 75.7% | +27.7% | 4 |
-| 00-0036158 | rush_attempts | Under | 13.5 | -111 | -333 | 76.9% | +27.6% | 3 |
-| 00-0038543 | receptions | Under | 6.5 | +104 | -270 | 73.0% | +27.4% | 4 |
-| 00-0038935 | receptions | Under | 3.5 | +120 | -224 | 69.2% | +27.4% | 5 |
-| 00-0038933 | receptions | Under | 4.5 | -138 | -461 | 82.2% | +27.3% | 4 |
-| 00-0040128 | receptions | Under | 5.5 | -111 | -321 | 76.2% | +27.0% | 4 |
-| 00-0040583 | rush_attempts | Under | 14.5 | -111 | -312 | 75.7% | +26.3% | 3 |
-| 00-0033881 | receptions | Under | 2.5 | +116 | -221 | 68.9% | +26.3% | 4 |
-| 00-0036997 | receptions | Under | 2.5 | +118 | -217 | 68.5% | +25.9% | 3 |
-| 00-0033110 | receptions | Under | 2.5 | +123 | -199 | 66.6% | +25.3% | 5 |
-| 00-0039424 | receptions | Under | 4.5 | -127 | -347 | 77.6% | +24.8% | 4 |
-| 00-0036875 | receptions | Under | 2.5 | +126 | -187 | 65.1% | +24.5% | 4 |
-| 00-0041037 | receptions | Under | 3.5 | +107 | -225 | 69.3% | +24.2% | 3 |
-| 00-0036358 | receptions | Under | 6.5 | -136 | -356 | 78.0% | +23.4% | 4 |
-| 00-0033307 | receptions | Under | 3.5 | -136 | -347 | 77.6% | +23.3% | 4 |
-| 00-0036555 | receptions | Under | 2.5 | +100 | -228 | 69.5% | +22.8% | 3 |
-| 00-0040730 | receptions | Under | 3.5 | -120 | -284 | 73.9% | +22.6% | 4 |
-| 00-0034837 | receptions | Over | 1.5 | +122 | -176 | 63.8% | +22.2% | 4 |
-| 00-0038606 | receptions | Under | 4.5 | -102 | -213 | 68.0% | +21.0% | 5 |
-| 00-0039299 | receptions | Under | 1.5 | +102 | -199 | 66.5% | +20.5% | 4 |
-| 00-0037744 | receptions | Under | 7.5 | -136 | -299 | 74.9% | +20.4% | 4 |
-| 00-0038542 | rush_attempts | Under | 18.5 | -111 | -227 | 69.5% | +20.1% | 4 |
-| 00-0039738 | receptions | Under | 1.5 | -164 | -379 | 79.1% | +19.9% | 3 |
-| 00-0033288 | receptions | Under | 5.5 | -132 | -279 | 73.6% | +19.9% | 4 |
-| 00-0038124 | receptions | Under | 4.5 | +106 | -186 | 65.0% | +19.8% | 4 |
-| 00-0032464 | receptions | Under | 2.5 | -124 | -257 | 72.0% | +19.7% | 4 |
-| 00-0040129 | receptions | Under | 3.5 | +102 | -189 | 65.5% | +19.2% | 3 |
-| 00-0041489 | receptions | Under | 3.5 | +119 | -157 | 61.1% | +18.8% | 3 |
-| 00-0040584 | receptions | Under | 2.5 | -146 | -301 | 75.0% | +18.8% | 4 |
-| 00-0038559 | receptions | Under | 5.5 | -131 | -259 | 72.1% | +18.6% | 4 |
-| 00-0035261 | receptions | Under | 1.5 | -104 | -187 | 65.1% | +17.6% | 4 |
-| 00-0036894 | receptions | Under | 3.5 | -158 | -310 | 75.6% | +17.3% | 3 |
-| 00-0040735 | receptions | Under | 4.5 | -158 | -305 | 75.3% | +17.1% | 4 |
-| 00-0038976 | receptions | Over | 1.5 | +121 | -143 | 58.9% | +16.9% | 3 |
-| 00-0036040 | receptions | Under | 4.5 | -140 | -257 | 72.0% | +16.6% | 4 |
-| 00-0040648 | receptions | Over | 0.5 | -154 | -286 | 74.1% | +16.5% | 3 |
-| 00-0038563 | receptions | Under | 3.5 | -105 | -182 | 64.5% | +16.5% | 4 |
-| 00-0037239 | receptions | Under | 6.5 | -124 | -213 | 68.1% | +15.9% | 4 |
-| 00-0036223 | receptions | Under | 2.5 | +102 | -158 | 61.2% | +15.1% | 4 |
-| 00-0039793 | receptions | Under | 2.5 | -104 | -169 | 62.8% | +15.1% | 4 |
-| 00-0033280 | receptions | Under | 4.5 | +104 | -155 | 60.9% | +15.0% | 4 |
-| 00-0033908 | receptions | Over | 2.5 | +117 | -130 | 56.6% | +13.9% | 4 |
-| 00-0038558 | receptions | Under | 2.5 | -131 | -206 | 67.3% | +13.8% | 3 |
-| 00-0039893 | receptions | Over | 1.5 | -114 | -174 | 63.5% | +13.6% | 5 |
-| 00-0036613 | receptions | Under | 4.5 | -142 | -215 | 68.3% | +12.7% | 4 |
-| 00-0031381 | receptions | Under | 4.5 | -150 | -224 | 69.1% | +12.3% | 5 |
-| 00-0034348 | receptions | Under | 3.5 | -146 | -214 | 68.2% | +12.0% | 3 |
-| 00-0039032 | receptions | Under | 2.5 | -136 | -198 | 66.5% | +11.7% | 4 |
-| 00-0038041 | receptions | Under | 3.5 | -126 | -176 | 63.8% | +11.2% | 4 |
-| 00-0038608 | receptions | Under | 2.5 | -110 | -151 | 60.2% | +10.8% | 4 |
-| 00-0034383 | receptions | Under | 3.5 | -131 | -172 | 63.2% | +9.7% | 5 |
-| 00-0040126 | receptions | Over | 3.5 | +106 | -119 | 54.2% | +9.2% | 5 |
-| 00-0036244 | receptions | Over | 1.5 | -120 | -149 | 59.8% | +8.5% | 3 |
-| 00-0040170 | receptions | Over | 1.5 | +113 | -103 | 50.8% | +7.4% | 4 |
-| 00-0038129 | receptions | Under | 3.5 | -152 | -172 | 63.3% | +6.1% | 3 |
-| 00-0041100 | receptions | Under | 1.5 | -106 | -118 | 54.1% | +5.9% | 5 |
-| 00-0040715 | receptions | Under | 1.5 | +116 | +114 | 46.8% | +3.9% | 4 |
+| Matthew Golden | receptions | Under | 4.5 | +116 | -439 | 81.5% | +38.6% | 4 |
+| Garrett Wilson | receptions | Under | 6.5 | -120 | -843 | 89.4% | +38.1% | 4 |
+| Isaiah Likely | receptions | Under | 5.5 | -153 | -1686 | 94.4% | +37.1% | 3 |
+| Nico Collins | receptions | Under | 5.5 | +113 | -378 | 79.1% | +35.4% | 5 |
+| Malik Nabers | receptions | Under | 5.5 | +108 | -336 | 77.0% | +32.2% | 4 |
+| Woody Marks | receptions | Under | 2.5 | -119 | -466 | 82.3% | +31.3% | 5 |
+| Mike Evans | receptions | Under | 5.5 | -105 | -354 | 78.0% | +30.0% | 4 |
+| Puka Nacua | receptions | Under | 7.5 | +105 | -303 | 75.2% | +29.8% | 5 |
+| DJ Moore | receptions | Under | 3.5 | +109 | -271 | 73.0% | +28.5% | 3 |
+| Bhayshul Tuten | receptions | Under | 1.5 | -122 | -403 | 80.1% | +28.5% | 5 |
+| Brock Bowers | receptions | Under | 6.5 | -105 | -323 | 76.4% | +28.3% | 4 |
+| Drake London | receptions | Under | 6.5 | -145 | -537 | 84.3% | +28.2% | 5 |
+| Jalen Coker | receptions | Under | 4.5 | +120 | -236 | 70.2% | +28.2% | 3 |
+| Carnell Tate | receptions | Under | 4.5 | -108 | -329 | 76.7% | +28.0% | 4 |
+| Dalton Kincaid | receptions | Under | 4.5 | -138 | -471 | 82.5% | +27.6% | 4 |
+| Brenton Strange | receptions | Under | 3.5 | +120 | -226 | 69.3% | +27.5% | 5 |
+| Tyler Warren | receptions | Under | 5.5 | -111 | -323 | 76.4% | +27.1% | 4 |
+| Devaughn Vele | receptions | Under | 4.5 | -127 | -382 | 79.2% | +26.4% | 4 |
+| Woody Marks | rush_attempts | Under | 14.5 | -111 | -310 | 75.6% | +26.2% | 3 |
+| Javonte Williams | receptions | Under | 2.5 | +118 | -206 | 67.3% | +24.8% | 3 |
+| Tyler Higbee | receptions | Under | 2.5 | +123 | -190 | 65.5% | +24.3% | 5 |
+| CeeDee Lamb | receptions | Under | 6.5 | -136 | -371 | 78.8% | +24.1% | 4 |
+| Rhamondre Stevenson | receptions | Under | 2.5 | +126 | -181 | 64.4% | +23.7% | 4 |
+| Denzel Boston | receptions | Under | 3.5 | +107 | -216 | 68.3% | +23.3% | 3 |
+| Kendrick Bourne | receptions | Under | 3.5 | -136 | -341 | 77.3% | +23.0% | 4 |
+| Chuba Hubbard | receptions | Under | 2.5 | +100 | -224 | 69.1% | +22.5% | 3 |
+| Calvin Ridley | receptions | Over | 1.5 | +122 | -172 | 63.3% | +21.8% | 4 |
+| Christian Watson | receptions | Under | 4.5 | +106 | -195 | 66.0% | +20.9% | 4 |
+| Parker Washington | receptions | Under | 4.5 | -102 | -210 | 67.7% | +20.7% | 5 |
+| Trey McBride | receptions | Under | 7.5 | -136 | -303 | 75.2% | +20.6% | 4 |
+| George Kittle | receptions | Under | 5.5 | -132 | -284 | 74.0% | +20.2% | 4 |
+| Bijan Robinson | rush_attempts | Under | 18.5 | -111 | -226 | 69.3% | +20.0% | 4 |
+| Juwan Johnson | receptions | Under | 4.5 | -140 | -305 | 75.3% | +20.0% | 4 |
+| Blake Corum | receptions | Under | 1.5 | -164 | -380 | 79.1% | +20.0% | 3 |
+| Gunnar Helm | receptions | Under | 2.5 | -146 | -319 | 76.2% | +19.9% | 4 |
+| Kalif Raymond | receptions | Under | 2.5 | -124 | -256 | 71.9% | +19.6% | 4 |
+| Germie Bernard | receptions | Under | 3.5 | +119 | -161 | 61.7% | +19.5% | 3 |
+| Emeka Egbuka | receptions | Under | 3.5 | +102 | -191 | 65.6% | +19.4% | 3 |
+| Kyren Williams | rush_attempts | Under | 14.5 | -113 | -222 | 69.0% | +19.2% | 3 |
+| Tony Pollard | receptions | Under | 1.5 | -104 | -194 | 66.0% | +18.4% | 4 |
+| Michael Wilson | receptions | Under | 5.5 | -131 | -249 | 71.3% | +17.8% | 4 |
+| Chris Olave | receptions | Under | 6.5 | -124 | -227 | 69.4% | +17.2% | 4 |
+| Pat Freiermuth | receptions | Under | 3.5 | -158 | -303 | 75.2% | +16.9% | 3 |
+| Luther Burden III | receptions | Under | 4.5 | -158 | -291 | 74.4% | +16.3% | 4 |
+| Jonathan Taylor | receptions | Under | 2.5 | +102 | -152 | 60.4% | +14.3% | 4 |
+| Tre Tucker | receptions | Under | 3.5 | -105 | -163 | 62.0% | +14.0% | 4 |
+| Christian McCaffrey | receptions | Under | 4.5 | +104 | -148 | 59.7% | +13.9% | 4 |
+| Davante Adams | receptions | Under | 4.5 | -150 | -233 | 69.9% | +13.1% | 5 |
+| Brian Thomas Jr. | receptions | Over | 1.5 | -114 | -169 | 62.8% | +12.9% | 5 |
+| Jake Ferguson | receptions | Under | 3.5 | -126 | -188 | 65.3% | +12.7% | 4 |
+| Darnell Washington | receptions | Under | 2.5 | -131 | -188 | 65.3% | +11.8% | 3 |
+| Tyjae Spears | receptions | Under | 2.5 | -136 | -196 | 66.2% | +11.5% | 4 |
+| Kayshon Boutte | receptions | Under | 2.5 | -110 | -151 | 60.2% | +10.8% | 4 |
+| Dalton Schultz | receptions | Under | 3.5 | -131 | -177 | 63.9% | +10.3% | 5 |
+| Colston Loveland | receptions | Over | 3.5 | +106 | -115 | 53.5% | +8.5% | 5 |
+| Colby Parkinson | receptions | Over | 1.5 | -120 | -142 | 58.7% | +7.4% | 3 |
+| Cade Otton | receptions | Under | 3.5 | -152 | -169 | 62.9% | +5.7% | 3 |
+| Elic Ayomanor | receptions | Over | 1.5 | +113 | +104 | 48.9% | +5.6% | 4 |
+| Josh Cameron | receptions | Under | 1.5 | -106 | -115 | 53.5% | +5.3% | 5 |
+| Cam Skattebo | receptions | Under | 1.5 | +116 | +116 | 46.4% | +3.5% | 4 |
+| Keenan Allen | receptions | Under | 3.5 | +109 | +111 | 47.4% | +3.1% | 4 |
 
 ## Closing line value
 
