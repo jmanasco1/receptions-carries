@@ -1,0 +1,1223 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.429752+00:00",
+  "status_code": 200,
+  "requests_remaining": 420,
+  "requests_used": 80,
+  "cost": 2,
+  "data": {
+    "id": "ffebea881c1d7b2dfb85b3e590c35985",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-23T00:15:00Z",
+    "home_team": "Chicago Bears",
+    "away_team": "New England Patriots",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": -101,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "A.J. Brown",
+                "price": -126,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -127,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -165,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": 129,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 119,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": 123,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -157,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -128,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -137,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 116,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -148,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 148,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 161,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -208,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -185,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": 144,
+                "point": 0.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -122,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -104,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 104,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -132,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": 114,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -101,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -126,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Williams",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Williams",
+                "price": -127,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -205,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": 152,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 112,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -148,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 134,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -166,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -148,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": 112,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 178,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -245,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -148,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": -172,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "A.J. Brown",
+                "price": 128,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -103,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -137,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": -167,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "A.J. Brown",
+                "price": 128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 164,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -217,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -200,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": 152,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -156,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 109,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -141,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 134,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -169,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": 129,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -109,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -119,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -112,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Williams",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Williams",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -108,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -101,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": -128,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -132,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 170,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 133,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": -155,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -175,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -111,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "A.J. Brown",
+                "price": -155,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 175,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -235,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -155,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -160,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -115,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -115,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "A.J. Brown",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "A.J. Brown",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Cole Kmet",
+                "price": 160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cole Kmet",
+                "price": -215,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": -145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": 110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 105,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -200,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": 150,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -200,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": 150,
+                "point": 0.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Caleb Williams",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Williams",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -110,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "TreVeyon Henderson",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "TreVeyon Henderson",
+                "price": 100,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

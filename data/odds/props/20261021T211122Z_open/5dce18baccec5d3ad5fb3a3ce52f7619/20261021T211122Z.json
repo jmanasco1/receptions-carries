@@ -1,0 +1,509 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.682000+00:00",
+  "status_code": 200,
+  "requests_remaining": 410,
+  "requests_used": 90,
+  "cost": 2,
+  "data": {
+    "id": "5dce18baccec5d3ad5fb3a3ce52f7619",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T17:00:00Z",
+    "home_team": "Tennessee Titans",
+    "away_team": "Cleveland Browns",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -124,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 128,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -163,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -109,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -117,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": 125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": 133,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elic Ayomanor",
+                "price": -170,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -121,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jerry Jeudy",
+                "price": -205,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jerry Jeudy",
+                "price": 152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -166,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": 158,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elic Ayomanor",
+                "price": -215,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -172,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -156,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -118,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -118,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -110,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": -175,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -220,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": -125,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -160,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -160,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -125,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

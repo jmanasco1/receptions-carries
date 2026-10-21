@@ -1,0 +1,305 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.771824+00:00",
+  "status_code": 200,
+  "requests_remaining": 407,
+  "requests_used": 93,
+  "cost": 2,
+  "data": {
+    "id": "f3992ad4496724baf7dcd1ef58245d6b",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T17:00:00Z",
+    "home_team": "Minnesota Vikings",
+    "away_team": "Indianapolis Colts",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -142,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 111,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 113,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -134,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -103,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -123,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -144,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -132,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -154,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 109,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -141,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -139,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 107,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 109,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -141,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:11:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -105,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -139,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 114,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Addison",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Addison",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 110,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -105,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -125,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

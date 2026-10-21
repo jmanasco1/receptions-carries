@@ -1,0 +1,683 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.725470+00:00",
+  "status_code": 200,
+  "requests_remaining": 409,
+  "requests_used": 91,
+  "cost": 1,
+  "data": {
+    "id": "2bba7fde6f97d0e54403d53676e4ab63",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T17:00:00Z",
+    "home_team": "Houston Texans",
+    "away_team": "New York Giants",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -124,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -103,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -124,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Nico Collins",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Nico Collins",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Schultz",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Schultz",
+                "price": -121,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 136,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -174,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylin Noel",
+                "price": 145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylin Noel",
+                "price": -186,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyrone Tracy Jr.",
+                "price": -118,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyrone Tracy Jr.",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Devin Singletary",
+                "price": 102,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Devin Singletary",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Foster Moreau",
+                "price": 119,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Foster Moreau",
+                "price": -152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kayshon Boutte",
+                "price": 129,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kayshon Boutte",
+                "price": -166,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Hutchinson",
+                "price": 149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Hutchinson",
+                "price": -192,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tank Dell",
+                "price": 168,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tank Dell",
+                "price": -217,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaylin Noel",
+                "price": 148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylin Noel",
+                "price": -200,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kayshon Boutte",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kayshon Boutte",
+                "price": -174,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Devin Singletary",
+                "price": 104,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Devin Singletary",
+                "price": -138,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -194,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Schultz",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Schultz",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -128,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -104,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tank Dell",
+                "price": 154,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tank Dell",
+                "price": -210,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyrone Tracy Jr.",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyrone Tracy Jr.",
+                "price": -122,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Hutchinson",
+                "price": 172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Hutchinson",
+                "price": -235,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Nico Collins",
+                "price": -138,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Nico Collins",
+                "price": 104,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Nico Collins",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Nico Collins",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -128,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -101,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -116,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Schultz",
+                "price": -103,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Schultz",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tank Dell",
+                "price": 164,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Tank Dell",
+                "price": -217,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kayshon Boutte",
+                "price": 136,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kayshon Boutte",
+                "price": -179,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Devin Singletary",
+                "price": 103,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Devin Singletary",
+                "price": -133,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Foster Moreau",
+                "price": 132,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Foster Moreau",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Hutchinson",
+                "price": 158,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Hutchinson",
+                "price": -208,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylin Noel",
+                "price": 141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylin Noel",
+                "price": -185,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaylin Noel",
+                "price": 138,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyrone Tracy Jr.",
+                "price": -104,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Hutchinson",
+                "price": 175,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Foster Moreau",
+                "price": 123,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Schultz",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kayshon Boutte",
+                "price": 160,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Devin Singletary",
+                "price": 104,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -115,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": -117,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tank Dell",
+                "price": 180,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Nico Collins",
+                "price": -157,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kayshon Boutte",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kayshon Boutte",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Harrison Jr.",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Harrison Jr.",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Foster Moreau",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Foster Moreau",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Hutchinson",
+                "price": 165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Hutchinson",
+                "price": -225,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Nico Collins",
+                "price": -155,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Nico Collins",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Dalton Schultz",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dalton Schultz",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylin Noel",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylin Noel",
+                "price": -175,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,905 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.955112+00:00",
+  "status_code": 200,
+  "requests_remaining": 400,
+  "requests_used": 100,
+  "cost": 2,
+  "data": {
+    "id": "f7679cf18454e4d88a8f2b990c3f08ac",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T20:25:00Z",
+    "home_team": "Las Vegas Raiders",
+    "away_team": "Los Angeles Rams",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -145,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 113,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 109,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -139,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": 121,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Higbee",
+                "price": -154,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -129,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": 101,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -121,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Colby Parkinson",
+                "price": -181,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -159,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Konata Mumpfield",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 144,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -185,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": 106,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -135,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": -131,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": 103,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:11:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 144,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -194,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 104,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -138,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -136,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -138,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 116,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -154,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Colby Parkinson",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Konata Mumpfield",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Higbee",
+                "price": -154,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 112,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Higbee",
+                "price": 118,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -127,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 126,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Colby Parkinson",
+                "price": -164,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -196,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -141,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 108,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -167,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Konata Mumpfield",
+                "price": 127,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -123,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 109,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -141,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": -135,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": 104,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -118,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -106,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -122,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -162,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 165,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -152,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": -167,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 125,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -111,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Konata Mumpfield",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -140,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Colby Parkinson",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Higbee",
+                "price": 120,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -135,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 100,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": -105,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -125,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Colby Parkinson",
+                "price": 140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Colby Parkinson",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Konata Mumpfield",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Konata Mumpfield",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -150,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 115,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Higbee",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Higbee",
+                "price": -160,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -120,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": -135,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": 105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -135,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

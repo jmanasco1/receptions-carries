@@ -1,0 +1,329 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.817145+00:00",
+  "status_code": 200,
+  "requests_remaining": 405,
+  "requests_used": 95,
+  "cost": 2,
+  "data": {
+    "id": "be5dd120ca08b43d647b6caa8953500a",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T17:00:00Z",
+    "home_team": "New York Jets",
+    "away_team": "Miami Dolphins",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -147,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": -170,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": 133,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": 107,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 119,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenyon Sadiq",
+                "price": 138,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenyon Sadiq",
+                "price": -178,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -131,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": 103,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -128,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": -134,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": 105,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Willis",
+                "price": -109,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Willis",
+                "price": -117,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Caleb Douglas",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ollie Gordon II",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Washington",
+                "price": -166,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Greg Dulcich",
+                "price": -166,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Garrett Wilson",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Mason Taylor",
+                "price": -166,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenyon Sadiq",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenyon Sadiq",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -122,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Bell",
+                "price": -106,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenyon Sadiq",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Caleb Douglas",
+                "price": 123,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mason Taylor",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Greg Dulcich",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Braelon Allen",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ollie Gordon II",
+                "price": -122,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Garrett Wilson",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Washington",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Bell",
+                "price": -148,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

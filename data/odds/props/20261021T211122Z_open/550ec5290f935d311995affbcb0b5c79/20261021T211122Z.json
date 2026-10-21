@@ -1,0 +1,359 @@
+{
+  "fetched_at": "2026-10-21T21:11:22.589248+00:00",
+  "status_code": 200,
+  "requests_remaining": 414,
+  "requests_used": 86,
+  "cost": 2,
+  "data": {
+    "id": "550ec5290f935d311995affbcb0b5c79",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-10-25T17:00:00Z",
+    "home_team": "Baltimore Ravens",
+    "away_team": "Cincinnati Bengals",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": 106,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -135,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -103,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -127,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -101,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -101,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -127,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": 140,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -188,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Samaje Perine",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Samaje Perine",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -172,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": 128,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Dohnte Meyers",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Dohnte Meyers",
+                "price": -114,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -161,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": 123,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:10:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -128,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": -101,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -105,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -123,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -143,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -148,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:10:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": 115,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -155,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 105,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-21T21:09:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -135,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -105,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-21T21:09:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": 100,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -130,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Derrick Henry",
+                "price": -130,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Derrick Henry",
+                "price": 100,
+                "point": 18.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
