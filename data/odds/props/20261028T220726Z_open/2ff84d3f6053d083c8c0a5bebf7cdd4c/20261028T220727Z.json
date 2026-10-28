@@ -1,0 +1,161 @@
+{
+  "fetched_at": "2026-10-28T22:07:27.592272+00:00",
+  "status_code": 200,
+  "requests_remaining": 371,
+  "requests_used": 129,
+  "cost": 2,
+  "data": {
+    "id": "2ff84d3f6053d083c8c0a5bebf7cdd4c",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-01T21:05:00Z",
+    "home_team": "Los Angeles Rams",
+    "away_team": "Los Angeles Chargers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-28T22:06:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -123,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -104,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:06:38Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -125,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -106,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -114,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:06:56Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -129,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -127,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:06:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -112,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -115,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Ladd McConkey",
+                "price": -123,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ladd McConkey",
+                "price": -105,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-28T22:04:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -125,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

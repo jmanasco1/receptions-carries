@@ -1,0 +1,113 @@
+{
+  "fetched_at": "2026-10-28T22:07:26.817969+00:00",
+  "status_code": 200,
+  "requests_remaining": 385,
+  "requests_used": 115,
+  "cost": 1,
+  "data": {
+    "id": "9255ca8f32aea590d00aa57de79f6bb6",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-01T18:00:00Z",
+    "home_team": "Dallas Cowboys",
+    "away_team": "Arizona Cardinals",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:06:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 110,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -140,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -114,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -112,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -138,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 108,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:05:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 110,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -145,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

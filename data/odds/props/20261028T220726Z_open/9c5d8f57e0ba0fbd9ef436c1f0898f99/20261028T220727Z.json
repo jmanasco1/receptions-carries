@@ -1,0 +1,353 @@
+{
+  "fetched_at": "2026-10-28T22:07:27.107824+00:00",
+  "status_code": 200,
+  "requests_remaining": 379,
+  "requests_used": 121,
+  "cost": 2,
+  "data": {
+    "id": "9c5d8f57e0ba0fbd9ef436c1f0898f99",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-01T18:00:00Z",
+    "home_team": "Cincinnati Bengals",
+    "away_team": "Tennessee Titans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:07:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -123,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -103,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -144,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 113,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -121,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-28T22:07:19Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": 100,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -128,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -106,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -120,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": 128,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -172,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 104,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -138,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -138,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": 104,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Wan'Dale Robinson",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Wan'Dale Robinson",
+                "price": -136,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:07:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -132,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -157,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": -103,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -128,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -101,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -179,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 137,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": -149,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -130,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-28T22:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -118,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -110,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-10-28T22:05:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -125,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 110,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-10-28T22:05:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": 100,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -130,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
