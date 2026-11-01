@@ -1,0 +1,1085 @@
+{
+  "fetched_at": "2026-11-01T20:03:52.071608+00:00",
+  "status_code": 200,
+  "requests_remaining": 496,
+  "requests_used": 4,
+  "cost": 2,
+  "data": {
+    "id": "f2a036d5edf483a277880014861e78ad",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-01T21:25:00Z",
+    "home_team": "Denver Broncos",
+    "away_team": "Kansas City Chiefs",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:03:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": 113,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -147,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -149,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -158,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -146,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -118,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 131,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -167,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": -112,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -114,
+                "point": 0.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-01T20:03:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -101,
+                "point": 19.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -126,
+                "point": 19.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -112,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -114,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "J.K. Dobbins",
+                "price": -139,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "J.K. Dobbins",
+                "price": 109,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": -101,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -126,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Patrick Mahomes",
+                "price": -163,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Patrick Mahomes",
+                "price": 127,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:03:33Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": 106,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": -106,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -172,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": 140,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -188,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -112,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -118,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -174,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -162,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 122,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -144,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": 104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -138,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": -108,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -122,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -108,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:03:30Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -162,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": -127,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 112,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:03:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": 134,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -175,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -143,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -103,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 118,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -167,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -156,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": -114,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -114,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -156,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -147,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": 113,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-01T20:03:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -110,
+                "point": 19.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -118,
+                "point": 19.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -112,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -115,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -143,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "J.K. Dobbins",
+                "price": -123,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "J.K. Dobbins",
+                "price": -104,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:03:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": -200,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": 145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -105,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -165,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -175,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -120,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-01T20:03:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -105,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -125,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-01T20:02:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": -115,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -115,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -170,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -150,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-01T20:02:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "J.K. Dobbins",
+                "price": -145,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "J.K. Dobbins",
+                "price": 110,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -115,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -115,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": 100,
+                "point": 19.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -130,
+                "point": 19.5
+              },
+              {
+                "name": "Over",
+                "description": "Patrick Mahomes",
+                "price": -165,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Patrick Mahomes",
+                "price": 125,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
