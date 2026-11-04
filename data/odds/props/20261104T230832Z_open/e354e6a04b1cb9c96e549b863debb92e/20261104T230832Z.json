@@ -1,0 +1,365 @@
+{
+  "fetched_at": "2026-11-04T23:08:32.929598+00:00",
+  "status_code": 200,
+  "requests_remaining": 478,
+  "requests_used": 22,
+  "cost": 2,
+  "data": {
+    "id": "e354e6a04b1cb9c96e549b863debb92e",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "Kansas City Chiefs",
+    "away_team": "New York Jets",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -138,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -138,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -111,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 139,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -178,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": 121,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -155,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": 139,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -178,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -127,
+                "point": 19.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": 100,
+                "point": 19.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": 154,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -210,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": 116,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -154,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -154,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": 124,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Noah Gray",
+                "price": -166,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -194,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 109,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Xavier Worthy",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": 146,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Cyrus Allen",
+                "price": -192,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Kelce",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenneth Walker III",
+                "price": -111,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 141,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Emmett Johnson",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": -101,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Rashee Rice",
+                "price": -128,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Emmett Johnson",
+                "price": 145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Xavier Worthy",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Noah Gray",
+                "price": 118,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Kelce",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Cyrus Allen",
+                "price": 155,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenneth Walker III",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rashee Rice",
+                "price": 105,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

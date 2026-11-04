@@ -1,0 +1,365 @@
+{
+  "fetched_at": "2026-11-04T23:08:33.117511+00:00",
+  "status_code": 200,
+  "requests_remaining": 470,
+  "requests_used": 30,
+  "cost": 2,
+  "data": {
+    "id": "ac9d38a18d5c92814233a31aa9a48d78",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T21:05:00Z",
+    "home_team": "San Francisco 49ers",
+    "away_team": "Las Vegas Raiders",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -120,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -106,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -134,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -127,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -131,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 103,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -132,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": 104,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -108,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -117,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -136,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -114,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -114,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -130,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:25Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -118,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -110,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -127,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": -104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -112,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -120,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -110,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -125,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": -120,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -110,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -130,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -120,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -135,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 105,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -134,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

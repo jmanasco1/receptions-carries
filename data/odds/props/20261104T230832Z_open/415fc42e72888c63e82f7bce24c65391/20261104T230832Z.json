@@ -1,0 +1,425 @@
+{
+  "fetched_at": "2026-11-04T23:08:32.822805+00:00",
+  "status_code": 200,
+  "requests_remaining": 482,
+  "requests_used": 18,
+  "cost": 2,
+  "data": {
+    "id": "415fc42e72888c63e82f7bce24c65391",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "Indianapolis Colts",
+    "away_team": "Dallas Cowboys",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 108,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -137,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -103,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -124,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 111,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -107,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -128,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 100,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -116,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:29Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -102,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -130,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -138,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 104,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -130,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:31Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -103,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -104,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": 103,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -133,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -102,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -127,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:25Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -106,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": 105,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:02Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:06:10Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 110,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -130,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 100,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": -125,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:06:10Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -120,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

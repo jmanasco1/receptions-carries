@@ -1,0 +1,239 @@
+{
+  "fetched_at": "2026-11-04T23:08:33.172016+00:00",
+  "status_code": 200,
+  "requests_remaining": 469,
+  "requests_used": 31,
+  "cost": 1,
+  "data": {
+    "id": "240e23b02b1e3fef655d04a286b5a623",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T21:25:00Z",
+    "home_team": "Seattle Seahawks",
+    "away_team": "Arizona Cardinals",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T22:59:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": -147,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Elijah Higgins",
+                "price": -149,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elijah Higgins",
+                "price": 117,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 112,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -148,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Elijah Higgins",
+                "price": -158,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elijah Higgins",
+                "price": 118,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Elijah Higgins",
+                "price": -154,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elijah Higgins",
+                "price": 119,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 113,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": -147,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Elijah Higgins",
+                "price": -162,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": 112,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:00:23Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Elijah Higgins",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Elijah Higgins",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Wilson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Wilson",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Trey McBride",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Trey McBride",
+                "price": 115,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

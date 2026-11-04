@@ -1,0 +1,221 @@
+{
+  "fetched_at": "2026-11-04T23:08:32.780145+00:00",
+  "status_code": 200,
+  "requests_remaining": 484,
+  "requests_used": 16,
+  "cost": 2,
+  "data": {
+    "id": "e571bab6736f9338130a78a4f75c3231",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "New Orleans Saints",
+    "away_team": "Cleveland Browns",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 102,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 126,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -161,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Quinshon Judkins",
+                "price": -113,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Quinshon Judkins",
+                "price": -113,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Denzel Boston",
+                "price": 154,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Denzel Boston",
+                "price": -210,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -138,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 104,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:27Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -139,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 107,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Harold Fannin Jr.",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Harold Fannin Jr.",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "KC Concepcion",
+                "price": -123,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:23Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "KC Concepcion",
+                "price": -112,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,755 @@
+{
+  "fetched_at": "2026-11-04T23:08:32.723316+00:00",
+  "status_code": 200,
+  "requests_remaining": 486,
+  "requests_used": 14,
+  "cost": 2,
+  "data": {
+    "id": "014282b888c741b7d70c857c09f40aa7",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "Carolina Panthers",
+    "away_team": "Denver Broncos",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:06:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 107,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -137,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -121,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -136,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 103,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -132,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 107,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": 137,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tommy Tremble",
+                "price": -176,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -174,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": 136,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -151,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 119,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -138,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": 147,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -189,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:06:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -104,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -122,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:31Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": 154,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tommy Tremble",
+                "price": -210,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": 148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -200,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -152,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -158,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -144,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -130,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:15Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 103,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -133,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 103,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -133,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": 152,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 111,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": 146,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -192,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": 144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tommy Tremble",
+                "price": -189,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -164,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 125,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:15Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -123,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -136,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -124,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": -205,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -159,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": -120,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tommy Tremble",
+                "price": -185,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -190,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Marvin Mims Jr.",
+                "price": -145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Marvin Mims Jr.",
+                "price": 110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tommy Tremble",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tommy Tremble",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Troy Franklin",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Troy Franklin",
+                "price": -190,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -125,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

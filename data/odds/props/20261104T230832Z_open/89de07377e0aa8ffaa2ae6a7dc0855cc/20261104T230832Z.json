@@ -1,0 +1,689 @@
+{
+  "fetched_at": "2026-11-04T23:08:32.991396+00:00",
+  "status_code": 200,
+  "requests_remaining": 476,
+  "requests_used": 24,
+  "cost": 2,
+  "data": {
+    "id": "89de07377e0aa8ffaa2ae6a7dc0855cc",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "Washington Commanders",
+    "away_team": "Los Angeles Rams",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 108,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -138,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Antonio Williams",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": -147,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 132,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -169,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Treylon Burks",
+                "price": -158,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -104,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -123,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 100,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -127,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 100,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -127,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Jayden Daniels",
+                "price": 114,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jayden Daniels",
+                "price": -145,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:31Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -136,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -146,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Antonio Williams",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 106,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -140,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -166,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": 122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": -162,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Treylon Burks",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": 102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": -136,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:25Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": 107,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": -139,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -103,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 103,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -133,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -167,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Treylon Burks",
+                "price": -167,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -139,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Antonio Williams",
+                "price": 107,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 118,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:25Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": -105,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -123,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Jayden Daniels",
+                "price": 113,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jayden Daniels",
+                "price": -147,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -123,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": -101,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -128,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -167,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": -165,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -148,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 123,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:22Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Antonio Williams",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Treylon Burks",
+                "price": -140,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -155,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": -150,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Antonio Williams",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Antonio Williams",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chig Okonkwo",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chig Okonkwo",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Puka Nacua",
+                "price": 110,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Puka Nacua",
+                "price": -145,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -170,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Stefon Diggs",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Stefon Diggs",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Treylon Burks",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Treylon Burks",
+                "price": -160,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:28Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Blake Corum",
+                "price": 100,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Blake Corum",
+                "price": -130,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Jayden Daniels",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Jayden Daniels",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyren Williams",
+                "price": -105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyren Williams",
+                "price": -125,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Rachaad White",
+                "price": 100,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Rachaad White",
+                "price": -130,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

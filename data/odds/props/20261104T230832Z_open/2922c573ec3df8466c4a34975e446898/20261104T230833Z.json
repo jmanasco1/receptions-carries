@@ -1,0 +1,521 @@
+{
+  "fetched_at": "2026-11-04T23:08:33.228308+00:00",
+  "status_code": 200,
+  "requests_remaining": 467,
+  "requests_used": 33,
+  "cost": 2,
+  "data": {
+    "id": "2922c573ec3df8466c4a34975e446898",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T21:25:00Z",
+    "home_team": "New England Patriots",
+    "away_team": "Green Bay Packers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -147,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": 103,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": -132,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -103,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -124,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -125,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -102,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -101,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -126,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:10Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -128,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -148,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": 112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -152,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:38Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 117,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -152,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": 109,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": -141,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -112,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -161,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:38Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -135,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -114,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -114,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": 102,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -132,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -134,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -132,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": -167,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -111,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -125,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -115,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -115,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -120,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -125,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -105,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -125,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

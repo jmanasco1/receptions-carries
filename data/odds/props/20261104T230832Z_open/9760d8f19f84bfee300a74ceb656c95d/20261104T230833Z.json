@@ -1,0 +1,461 @@
+{
+  "fetched_at": "2026-11-04T23:08:33.290451+00:00",
+  "status_code": 200,
+  "requests_remaining": 465,
+  "requests_used": 35,
+  "cost": 2,
+  "data": {
+    "id": "9760d8f19f84bfee300a74ceb656c95d",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-09T01:20:00Z",
+    "home_team": "Chicago Bears",
+    "away_team": "Tampa Bay Buccaneers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:06:45Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 109,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -139,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 119,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -152,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Emeka Egbuka",
+                "price": -156,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Emeka Egbuka",
+                "price": 122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -134,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:06:45Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bucky Irving",
+                "price": -115,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Bucky Irving",
+                "price": -110,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:06Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -140,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Kenny Gainwell",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kenny Gainwell",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Bucky Irving",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bucky Irving",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "D'Andre Swift",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "D'Andre Swift",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 116,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -154,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Emeka Egbuka",
+                "price": -172,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Emeka Egbuka",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kalif Raymond",
+                "price": -188,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kalif Raymond",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -166,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:09Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 109,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -141,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Emeka Egbuka",
+                "price": -167,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Emeka Egbuka",
+                "price": 128,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -154,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 122,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -159,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:09Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bucky Irving",
+                "price": -116,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Bucky Irving",
+                "price": -111,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Emeka Egbuka",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 102,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 112,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": -185,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": 135,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:08:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bucky Irving",
+                "price": -120,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Bucky Irving",
+                "price": -111,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:06:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Colston Loveland",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Colston Loveland",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Emeka Egbuka",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Emeka Egbuka",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Luther Burden III",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Luther Burden III",
+                "price": -160,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Rome Odunze",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rome Odunze",
+                "price": -160,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:06:08Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bucky Irving",
+                "price": -115,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Bucky Irving",
+                "price": -115,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

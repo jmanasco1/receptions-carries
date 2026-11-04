@@ -1,0 +1,329 @@
+{
+  "fetched_at": "2026-11-04T23:08:33.032381+00:00",
+  "status_code": 200,
+  "requests_remaining": 474,
+  "requests_used": 26,
+  "cost": 2,
+  "data": {
+    "id": "fe93e6ab1e553c0169936a0a983c324f",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T18:00:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "New York Giants",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:06:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -116,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -140,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": 182,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -236,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:06:43Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -117,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -109,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:10Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -122,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -106,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": 154,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -210,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:31Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 117,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -122,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -106,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": 174,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -233,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:08:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": 165,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -121,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 118,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": 180,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -245,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -120,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-04T23:07:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -120,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -110,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
