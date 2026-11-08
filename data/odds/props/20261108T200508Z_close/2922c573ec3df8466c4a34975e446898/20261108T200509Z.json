@@ -1,0 +1,959 @@
+{
+  "fetched_at": "2026-11-08T20:05:09.561258+00:00",
+  "status_code": 200,
+  "requests_remaining": 457,
+  "requests_used": 43,
+  "cost": 2,
+  "data": {
+    "id": "2922c573ec3df8466c4a34975e446898",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-08T21:25:00Z",
+    "home_team": "New England Patriots",
+    "away_team": "Green Bay Packers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:03:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -113,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -113,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -111,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -111,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -133,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -166,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mack Hollins",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": -143,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 118,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -151,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -178,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": 139,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 151,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -194,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-08T20:03:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -121,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -107,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -119,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": 117,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:04:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 144,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -194,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": 128,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -152,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mack Hollins",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -130,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:05:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 109,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -141,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -164,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -196,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": -156,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -161,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mack Hollins",
+                "price": 124,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-08T20:05:03Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -135,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -108,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -120,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:04:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -117,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -113,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -136,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -127,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -195,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 123,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": 116,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:04:11Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -155,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mack Hollins",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -200,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-08T19:53:15Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -150,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": 110,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-08T20:03:30Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian Watson",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian Watson",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DeMario Douglas",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DeMario Douglas",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Efton Chism III",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Efton Chism III",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Eli Raridon",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Eli Raridon",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Hunter Henry",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Hunter Henry",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Williams",
+                "price": 150,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Williams",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Mack Hollins",
+                "price": -170,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mack Hollins",
+                "price": 130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Matthew Golden",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Matthew Golden",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Savion Williams",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Savion Williams",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tucker Kraft",
+                "price": -115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tucker Kraft",
+                "price": -115,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-08T20:03:30Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Drake Maye",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake Maye",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Jacobs",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Jacobs",
+                "price": -125,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Rhamondre Stevenson",
+                "price": -110,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Rhamondre Stevenson",
+                "price": -120,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
