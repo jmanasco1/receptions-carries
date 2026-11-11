@@ -1,0 +1,383 @@
+{
+  "fetched_at": "2026-11-11T23:59:02.386103+00:00",
+  "status_code": 200,
+  "requests_remaining": 432,
+  "requests_used": 68,
+  "cost": 2,
+  "data": {
+    "id": "7627192fd89b05120ab6c712aa23fd81",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-15T21:25:00Z",
+    "home_team": "Dallas Cowboys",
+    "away_team": "San Francisco 49ers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:54Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -101,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -127,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 108,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -138,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 113,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:54Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -128,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 101,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -112,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -114,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:24Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -106,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -125,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -158,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Deebo Samuel",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Deebo Samuel",
+                "price": -102,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:59:02Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -143,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 106,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -137,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": 104,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -135,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:59:02Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -101,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -128,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -108,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -157,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 116,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -107,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:57:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": 100,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -130,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 110,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:57:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -115,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -130,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": 100,
+                "point": 16.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

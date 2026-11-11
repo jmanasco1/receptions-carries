@@ -1,0 +1,623 @@
+{
+  "fetched_at": "2026-11-11T23:59:01.709300+00:00",
+  "status_code": 200,
+  "requests_remaining": 443,
+  "requests_used": 57,
+  "cost": 2,
+  "data": {
+    "id": "e5aa20e1364dd639f042af1c2281bbe2",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-15T18:00:00Z",
+    "home_team": "New Orleans Saints",
+    "away_team": "Carolina Panthers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 117,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -141,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -121,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -146,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Juwan Johnson",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Juwan Johnson",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -113,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": -112,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:13Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -114,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -111,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Shough",
+                "price": -128,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Shough",
+                "price": 101,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Bryce Young",
+                "price": -112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bryce Young",
+                "price": -114,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:26Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 116,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -154,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -172,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 128,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -114,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": -112,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -118,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Juwan Johnson",
+                "price": -144,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Juwan Johnson",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -154,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 113,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -147,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -156,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -137,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Juwan Johnson",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Juwan Johnson",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -161,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -123,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:17Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -123,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -105,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": -182,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Juwan Johnson",
+                "price": -132,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": 128,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:57:31Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -155,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": -155,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Darren Waller",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Darren Waller",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Juwan Johnson",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Juwan Johnson",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 135,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -185,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -135,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Coker",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Coker",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tetairoa McMillan",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Tetairoa McMillan",
+                "price": -145,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chuba Hubbard",
+                "price": -115,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Chuba Hubbard",
+                "price": -115,
+                "point": 17.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

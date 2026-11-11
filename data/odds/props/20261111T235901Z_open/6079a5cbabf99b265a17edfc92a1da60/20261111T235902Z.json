@@ -1,0 +1,863 @@
+{
+  "fetched_at": "2026-11-11T23:59:02.254764+00:00",
+  "status_code": 200,
+  "requests_remaining": 434,
+  "requests_used": 66,
+  "cost": 2,
+  "data": {
+    "id": "6079a5cbabf99b265a17edfc92a1da60",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-15T21:05:00Z",
+    "home_team": "Las Vegas Raiders",
+    "away_team": "Seattle Seahawks",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:16Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 104,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxon Smith-Njigba",
+                "price": -133,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 104,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -132,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -149,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "AJ Barner",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -103,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -134,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 119,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cooper Kupp",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -173,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -169,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": 132,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 117,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -149,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:16Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -106,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": -120,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -122,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": -104,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -111,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -114,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": -112,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:18Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -140,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -132,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "AJ Barner",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -158,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -188,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -144,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -174,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -146,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 106,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxon Smith-Njigba",
+                "price": -140,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cooper Kupp",
+                "price": -166,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:56:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -182,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": 138,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -172,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": 131,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "AJ Barner",
+                "price": 106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 104,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 107,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxon Smith-Njigba",
+                "price": -139,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 117,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cooper Kupp",
+                "price": -161,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 118,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -154,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:56:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -111,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -116,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -118,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": -110,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -149,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": 115,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -139,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": 107,
+                "point": 9.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -159,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 128,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 106,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 130,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -140,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "AJ Barner",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxon Smith-Njigba",
+                "price": -145,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cooper Kupp",
+                "price": -165,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-11T23:58:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "AJ Barner",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "AJ Barner",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Brock Bowers",
+                "price": 105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Brock Bowers",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Cooper Kupp",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cooper Kupp",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -180,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": 135,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jalen Nailor",
+                "price": 115,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jalen Nailor",
+                "price": -150,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaxon Smith-Njigba",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaxon Smith-Njigba",
+                "price": -135,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Michael Mayer",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Michael Mayer",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tre Tucker",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tre Tucker",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -170,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": 130,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-11T23:58:21Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -120,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Jadarian Price",
+                "price": -125,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Jadarian Price",
+                "price": -105,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Zach Charbonnet",
+                "price": -110,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Zach Charbonnet",
+                "price": -120,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
