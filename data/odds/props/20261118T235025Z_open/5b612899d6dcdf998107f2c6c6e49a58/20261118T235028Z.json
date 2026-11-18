@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-11-18T23:50:28.364384+00:00",
+  "status_code": 200,
+  "requests_remaining": 400,
+  "requests_used": 100,
+  "cost": 0,
+  "data": {
+    "id": "5b612899d6dcdf998107f2c6c6e49a58",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-26T01:00:00Z",
+    "home_team": "Los Angeles Rams",
+    "away_team": "Green Bay Packers",
+    "bookmakers": []
+  }
+}

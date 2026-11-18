@@ -1,0 +1,539 @@
+{
+  "fetched_at": "2026-11-18T23:50:27.030254+00:00",
+  "status_code": 200,
+  "requests_remaining": 408,
+  "requests_used": 92,
+  "cost": 2,
+  "data": {
+    "id": "cbe45bafcc2615fc1d96cbc12840377a",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-22T18:00:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "Pittsburgh Steelers",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": -139,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -137,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": -132,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -149,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -181,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": 141,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 125,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -113,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -113,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": 102,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -131,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -110,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": -116,
+                "point": 9.5
+              },
+              {
+                "name": "Over",
+                "description": "Joe Milton",
+                "price": -149,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Joe Milton",
+                "price": 117,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -182,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": 136,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -192,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 142,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -136,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 102,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": -133,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": 103,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": -118,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": 104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -179,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 137,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -169,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": 130,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:50:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Joe Milton",
+                "price": -154,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Joe Milton",
+                "price": 119,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -109,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": -119,
+                "point": 9.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -114,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -114,
+                "point": 15.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": 100,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -130,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:09Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -200,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -159,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -182,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:48:42Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Dallas Goedert",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Dallas Goedert",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "DeVonta Smith",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "DeVonta Smith",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "DK Metcalf",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "DK Metcalf",
+                "price": -135,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": 140,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:48:42Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jaylen Warren",
+                "price": 100,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Warren",
+                "price": -130,
+                "point": 14.5
+              },
+              {
+                "name": "Over",
+                "description": "Joe Milton",
+                "price": -150,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Joe Milton",
+                "price": 115,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Rico Dowdle",
+                "price": -110,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Rico Dowdle",
+                "price": -120,
+                "point": 9.5
+              },
+              {
+                "name": "Over",
+                "description": "Saquon Barkley",
+                "price": -115,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Saquon Barkley",
+                "price": -115,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

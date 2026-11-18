@@ -1,0 +1,515 @@
+{
+  "fetched_at": "2026-11-18T23:50:27.419534+00:00",
+  "status_code": 200,
+  "requests_remaining": 406,
+  "requests_used": 94,
+  "cost": 2,
+  "data": {
+    "id": "1940706a79cbcbafacdcbf231069716b",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-22T21:25:00Z",
+    "home_team": "Denver Broncos",
+    "away_team": "Las Vegas Raiders",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 111,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -122,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -104,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -137,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -116,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:57Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -101,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -126,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -116,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -126,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": -101,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Fernando Mendoza",
+                "price": -119,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Fernando Mendoza",
+                "price": -107,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -127,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -123,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -143,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 109,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -141,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:50:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Fernando Mendoza",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Fernando Mendoza",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -130,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": 100,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": -102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -127,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -119,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -109,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -114,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -114,
+                "point": 9.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:07Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -124,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 104,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -155,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -115,
+                "point": 10.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Courtland Sutton",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Courtland Sutton",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Evan Engram",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Evan Engram",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jaylen Waddle",
+                "price": -110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jaylen Waddle",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -105,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:50:01Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ashton Jeanty",
+                "price": -120,
+                "point": 10.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Jeanty",
+                "price": -110,
+                "point": 10.5
+              },
+              {
+                "name": "Over",
+                "description": "Bo Nix",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Bo Nix",
+                "price": -130,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Fernando Mendoza",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Fernando Mendoza",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonah Coleman",
+                "price": 100,
+                "point": 16.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonah Coleman",
+                "price": -130,
+                "point": 16.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Washington Jr.",
+                "price": -130,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Washington Jr.",
+                "price": 100,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

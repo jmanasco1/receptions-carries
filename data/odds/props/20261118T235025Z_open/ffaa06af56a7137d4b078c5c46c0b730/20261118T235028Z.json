@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-11-18T23:50:28.744184+00:00",
+  "status_code": 200,
+  "requests_remaining": 400,
+  "requests_used": 100,
+  "cost": 0,
+  "data": {
+    "id": "ffaa06af56a7137d4b078c5c46c0b730",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-26T21:30:00Z",
+    "home_team": "Dallas Cowboys",
+    "away_team": "Philadelphia Eagles",
+    "bookmakers": []
+  }
+}

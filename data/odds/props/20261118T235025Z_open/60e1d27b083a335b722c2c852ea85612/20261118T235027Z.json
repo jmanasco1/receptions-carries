@@ -1,0 +1,539 @@
+{
+  "fetched_at": "2026-11-18T23:50:27.811451+00:00",
+  "status_code": 200,
+  "requests_remaining": 402,
+  "requests_used": 98,
+  "cost": 2,
+  "data": {
+    "id": "60e1d27b083a335b722c2c852ea85612",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-23T01:20:00Z",
+    "home_team": "San Francisco 49ers",
+    "away_team": "Minnesota Vikings",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:56Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -141,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 111,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 117,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -142,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 111,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -159,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 125,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:56Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -111,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -115,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -105,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": -121,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -126,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -101,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Kaelon Black",
+                "price": -113,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Kaelon Black",
+                "price": -112,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:59Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 124,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -166,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -158,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 118,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -132,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 100,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:48:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -155,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -160,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": 110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": -150,
+                "point": 7.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:48:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kaelon Black",
+                "price": -120,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Kaelon Black",
+                "price": -110,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -111,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -118,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -140,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 105,
+                "point": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:02Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -137,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 106,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -156,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 120,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 113,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -147,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -147,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 114,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:50:02Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -108,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -120,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Kaelon Black",
+                "price": -103,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Kaelon Black",
+                "price": -125,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -110,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": -118,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -114,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -114,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:04Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": 117,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": -162,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -139,
+                "point": 3.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:48:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "George Kittle",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Kittle",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -145,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 110,
+                "point": 6.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:48:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -130,
+                "point": 8.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": 100,
+                "point": 8.5
+              },
+              {
+                "name": "Over",
+                "description": "Christian McCaffrey",
+                "price": -110,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Christian McCaffrey",
+                "price": -120,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -105,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": -125,
+                "point": 12.5
+              },
+              {
+                "name": "Over",
+                "description": "Kaelon Black",
+                "price": 105,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Kaelon Black",
+                "price": -135,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

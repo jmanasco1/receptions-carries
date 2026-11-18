@@ -1,0 +1,635 @@
+{
+  "fetched_at": "2026-11-18T23:50:26.639196+00:00",
+  "status_code": 200,
+  "requests_remaining": 412,
+  "requests_used": 88,
+  "cost": 2,
+  "data": {
+    "id": "5e63079b678f8c13419adc169fff02d3",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-22T18:00:00Z",
+    "home_team": "Dallas Cowboys",
+    "away_team": "Tennessee Titans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -130,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": 102,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -142,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 114,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -146,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -121,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": -104,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brevyn Spann-Ford",
+                "price": -123,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 139,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -178,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -115,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -121,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:00Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 134,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -146,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -102,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -132,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": 100,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brevyn Spann-Ford",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 116,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -154,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:49:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brevyn Spann-Ford",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 107,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -139,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 113,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -147,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -130,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": 100,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": 101,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 139,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -182,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -123,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -104,
+                "point": 7.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:49:58Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -114,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -114,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -123,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 118,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -120,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -107,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -118,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": 102,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -186,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:48:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -200,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brevyn Spann-Ford",
+                "price": -111,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": -115,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": -105,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -125,
+                "point": 5.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:48:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -115,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -115,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -125,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-18T23:50:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brevyn Spann-Ford",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brevyn Spann-Ford",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": 115,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -150,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "CeeDee Lamb",
+                "price": -130,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "CeeDee Lamb",
+                "price": 100,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "George Pickens",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "George Pickens",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -180,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ryan Flournoy",
+                "price": -125,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Ryan Flournoy",
+                "price": -105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": 100,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-18T23:50:05Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Javonte Williams",
+                "price": -120,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Javonte Williams",
+                "price": -110,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 15.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -125,
+                "point": 15.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

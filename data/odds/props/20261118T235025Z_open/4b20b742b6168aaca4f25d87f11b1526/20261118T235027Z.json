@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-11-18T23:50:27.141508+00:00",
+  "status_code": 200,
+  "requests_remaining": 408,
+  "requests_used": 92,
+  "cost": 0,
+  "data": {
+    "id": "4b20b742b6168aaca4f25d87f11b1526",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-22T21:05:00Z",
+    "home_team": "Los Angeles Chargers",
+    "away_team": "New York Jets",
+    "bookmakers": []
+  }
+}
