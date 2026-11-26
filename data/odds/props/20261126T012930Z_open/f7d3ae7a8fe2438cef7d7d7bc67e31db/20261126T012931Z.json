@@ -1,0 +1,731 @@
+{
+  "fetched_at": "2026-11-26T01:29:31.525930+00:00",
+  "status_code": 200,
+  "requests_remaining": 384,
+  "requests_used": 116,
+  "cost": 2,
+  "data": {
+    "id": "f7d3ae7a8fe2438cef7d7d7bc67e31db",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Cincinnati Bengals",
+    "away_team": "New Orleans Saints",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -106,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -120,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -118,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": -108,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -137,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 107,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": 103,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -131,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 113,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -145,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 117,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -149,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -146,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -156,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:28:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": -129,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": 101,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -109,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -117,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Samaje Perine",
+                "price": -107,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Samaje Perine",
+                "price": -119,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:55Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -166,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -166,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -120,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -110,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -160,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 120,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -130,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": -102,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": -103,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -121,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 114,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -105,
+                "point": 7.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 126,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -164,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -152,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 116,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -132,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 117,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -149,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -116,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -111,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -156,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -125,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": -103,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:47Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -155,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -125,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -105,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 110,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -150,
+                "point": 4.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:28:47Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -105,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -125,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Samaje Perine",
+                "price": -115,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Samaje Perine",
+                "price": -115,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": -105,
+                "point": 12.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -130,
+                "point": 12.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:27:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chris Olave",
+                "price": -120,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Chris Olave",
+                "price": -110,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Devaughn Vele",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Devaughn Vele",
+                "price": -150,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Ja'Marr Chase",
+                "price": -110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Ja'Marr Chase",
+                "price": -120,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordyn Tyson",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordyn Tyson",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Mike Gesicki",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Mike Gesicki",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tee Higgins",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Tee Higgins",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": -160,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:27:35Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chase Brown",
+                "price": -110,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Chase Brown",
+                "price": -120,
+                "point": 11.5
+              },
+              {
+                "name": "Over",
+                "description": "Samaje Perine",
+                "price": -110,
+                "point": 7.5
+              },
+              {
+                "name": "Under",
+                "description": "Samaje Perine",
+                "price": -120,
+                "point": 7.5
+              },
+              {
+                "name": "Over",
+                "description": "Travis Etienne Jr.",
+                "price": -130,
+                "point": 11.5
+              },
+              {
+                "name": "Under",
+                "description": "Travis Etienne Jr.",
+                "price": 100,
+                "point": 11.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

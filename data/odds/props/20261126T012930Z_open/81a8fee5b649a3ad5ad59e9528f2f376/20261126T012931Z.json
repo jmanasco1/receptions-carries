@@ -1,0 +1,431 @@
+{
+  "fetched_at": "2026-11-26T01:29:31.750505+00:00",
+  "status_code": 200,
+  "requests_remaining": 380,
+  "requests_used": 120,
+  "cost": 2,
+  "data": {
+    "id": "81a8fee5b649a3ad5ad59e9528f2f376",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Jacksonville Jaguars",
+    "away_team": "Tennessee Titans",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:27:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": -131,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": 102,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -124,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -103,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -111,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -115,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": 124,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": -158,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Chimere Dike",
+                "price": -173,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chimere Dike",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -171,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 134,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -121,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Elic Ayomanor",
+                "price": -133,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Cameron",
+                "price": 150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Cameron",
+                "price": -193,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -151,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 118,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:27:37Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -105,
+                "point": 14.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -121,
+                "point": 14.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Brenton Strange",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Josh Cameron",
+                "price": 158,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Josh Cameron",
+                "price": -215,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -172,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 128,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Parker Washington",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Jakobi Meyers",
+                "price": -114,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -158,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Brian Thomas Jr",
+                "price": 118,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tony Pollard",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -122,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": -108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Chimere Dike",
+                "price": -178,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Chimere Dike",
+                "price": 132,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": 116,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Elic Ayomanor",
+                "price": -154,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Josh Cameron",
+                "price": -265,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -106,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Brenton Strange",
+                "price": -186,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Chimere Dike",
+                "price": -195,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Brian Thomas Jr",
+                "price": -167,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Parker Washington",
+                "price": -141,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jakobi Meyers",
+                "price": -141,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Tony Pollard",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": -127,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -167,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:47Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Chimere Dike",
+                "price": 120,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Chimere Dike",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Gunnar Helm",
+                "price": -165,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Gunnar Helm",
+                "price": 125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Carnell Tate",
+                "price": -135,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Carnell Tate",
+                "price": 100,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Elic Ayomanor",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Elic Ayomanor",
+                "price": -140,
+                "point": 2.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

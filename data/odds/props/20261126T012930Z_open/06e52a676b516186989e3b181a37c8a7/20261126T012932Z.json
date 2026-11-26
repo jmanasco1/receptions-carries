@@ -1,0 +1,16 @@
+{
+  "fetched_at": "2026-11-26T01:29:32.343611+00:00",
+  "status_code": 200,
+  "requests_remaining": 369,
+  "requests_used": 131,
+  "cost": 0,
+  "data": {
+    "id": "06e52a676b516186989e3b181a37c8a7",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-12-04T01:15:00Z",
+    "home_team": "Los Angeles Rams",
+    "away_team": "Kansas City Chiefs",
+    "bookmakers": []
+  }
+}

@@ -1,0 +1,905 @@
+{
+  "fetched_at": "2026-11-26T01:29:31.686391+00:00",
+  "status_code": 200,
+  "requests_remaining": 382,
+  "requests_used": 118,
+  "cost": 2,
+  "data": {
+    "id": "e9da808e36e1b7475698a57465ad4519",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Indianapolis Colts",
+    "away_team": "New York Giants",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -143,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": 112,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -146,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 119,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -116,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -138,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -154,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": 148,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Anthony Gould",
+                "price": -190,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Laquon Treadwell",
+                "price": 144,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -119,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -107,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -112,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Deion Burks",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Dulin",
+                "price": 108,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Dulin",
+                "price": -138,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Theo Johnson",
+                "price": -164,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Theo Johnson",
+                "price": 128,
+                "point": 0.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": -106,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -121,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "J.J. McCarthy",
+                "price": 117,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "J.J. McCarthy",
+                "price": -149,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:52Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": -205,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Anthony Gould",
+                "price": 152,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Dulin",
+                "price": 102,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Dulin",
+                "price": -136,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Deion Burks",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 122,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -162,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -122,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -144,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -148,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -125,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -106,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -188,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Laquon Treadwell",
+                "price": 140,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -144,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": 108,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Theo Johnson",
+                "price": -162,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Theo Johnson",
+                "price": 122,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -114,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -114,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:50Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 117,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -152,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 118,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": -230,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -205,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -121,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -118,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -124,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:51Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -109,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -119,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Dulin",
+                "price": 106,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Dulin",
+                "price": -137,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -182,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Laquon Treadwell",
+                "price": 138,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -143,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -127,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": -102,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -149,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Theo Johnson",
+                "price": -172,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Theo Johnson",
+                "price": 131,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -111,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Deion Burks",
+                "price": -116,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -137,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": 106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 112,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -123,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -105,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": -185,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Anthony Gould",
+                "price": 142,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:48Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -140,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": 105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -105,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -135,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": 100,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -125,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -140,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 105,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -175,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Laquon Treadwell",
+                "price": 130,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Deion Burks",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Anthony Gould",
+                "price": 140,
+                "point": 1.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:27:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Anthony Gould",
+                "price": 145,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Anthony Gould",
+                "price": -190,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Ashton Dulin",
+                "price": 110,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Ashton Dulin",
+                "price": -145,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Darnell Mooney",
+                "price": -120,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Darnell Mooney",
+                "price": -110,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Deion Burks",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Deion Burks",
+                "price": -115,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Isaiah Likely",
+                "price": -150,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "Isaiah Likely",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Jonathan Taylor",
+                "price": -110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jonathan Taylor",
+                "price": -120,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Laquon Treadwell",
+                "price": -190,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Laquon Treadwell",
+                "price": 145,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Malachi Fields",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Malachi Fields",
+                "price": -160,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Malik Nabers",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Malik Nabers",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Theo Johnson",
+                "price": -170,
+                "point": 0.5
+              },
+              {
+                "name": "Under",
+                "description": "Theo Johnson",
+                "price": 130,
+                "point": 0.5
+              },
+              {
+                "name": "Over",
+                "description": "Tyler Warren",
+                "price": -160,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Tyler Warren",
+                "price": 120,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:27:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Cam Skattebo",
+                "price": -105,
+                "point": 17.5
+              },
+              {
+                "name": "Under",
+                "description": "Cam Skattebo",
+                "price": -125,
+                "point": 17.5
+              },
+              {
+                "name": "Over",
+                "description": "J.J. McCarthy",
+                "price": 115,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "J.J. McCarthy",
+                "price": -150,
+                "point": 4.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

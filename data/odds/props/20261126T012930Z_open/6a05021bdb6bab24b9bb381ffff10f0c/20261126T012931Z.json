@@ -1,0 +1,689 @@
+{
+  "fetched_at": "2026-11-26T01:29:31.029126+00:00",
+  "status_code": 200,
+  "requests_remaining": 388,
+  "requests_used": 112,
+  "cost": 2,
+  "data": {
+    "id": "6a05021bdb6bab24b9bb381ffff10f0c",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2026-11-29T18:00:00Z",
+    "home_team": "Minnesota Vikings",
+    "away_team": "Atlanta Falcons",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -121,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 111,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -142,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 108,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -138,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": 117,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 108,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -137,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": 123,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -157,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -159,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 124,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -103,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -124,
+                "point": 1.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:28:46Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -118,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -108,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -134,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": 105,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -119,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -107,
+                "point": 9.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -108,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -122,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -130,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -166,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": 124,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -166,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 124,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": 112,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -148,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -136,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": 102,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -125,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -106,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 134,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -180,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -160,
+                "point": 5.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:53Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": -103,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -155,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -152,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": 135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -112,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": 104,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 120,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -132,
+                "point": 6.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:28:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -119,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": -109,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -156,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": 121,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -123,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -105,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -156,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 105,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -135,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -161,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 124,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -102,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -127,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 113,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -147,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 115,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -149,
+                "point": 3.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:28:49Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -114,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -114,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -133,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": 103,
+                "point": 13.5
+              },
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -115,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -112,
+                "point": 9.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "markets": [
+          {
+            "key": "player_receptions",
+            "last_update": "2026-11-26T01:27:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -105,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -150,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": 115,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Drake London",
+                "price": 110,
+                "point": 5.5
+              },
+              {
+                "name": "Under",
+                "description": "Drake London",
+                "price": -145,
+                "point": 5.5
+              },
+              {
+                "name": "Over",
+                "description": "Jahan Dotson",
+                "price": -165,
+                "point": 1.5
+              },
+              {
+                "name": "Under",
+                "description": "Jahan Dotson",
+                "price": 125,
+                "point": 1.5
+              },
+              {
+                "name": "Over",
+                "description": "Jauan Jennings",
+                "price": 110,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Jauan Jennings",
+                "price": -145,
+                "point": 2.5
+              },
+              {
+                "name": "Over",
+                "description": "Justin Jefferson",
+                "price": -125,
+                "point": 6.5
+              },
+              {
+                "name": "Under",
+                "description": "Justin Jefferson",
+                "price": -105,
+                "point": 6.5
+              },
+              {
+                "name": "Over",
+                "description": "Kyle Pitts",
+                "price": 110,
+                "point": 3.5
+              },
+              {
+                "name": "Under",
+                "description": "Kyle Pitts",
+                "price": -145,
+                "point": 3.5
+              },
+              {
+                "name": "Over",
+                "description": "T.J. Hockenson",
+                "price": -120,
+                "point": 4.5
+              },
+              {
+                "name": "Under",
+                "description": "T.J. Hockenson",
+                "price": -110,
+                "point": 4.5
+              },
+              {
+                "name": "Over",
+                "description": "Tai Felton",
+                "price": 120,
+                "point": 2.5
+              },
+              {
+                "name": "Under",
+                "description": "Tai Felton",
+                "price": -160,
+                "point": 2.5
+              }
+            ]
+          },
+          {
+            "key": "player_rush_attempts",
+            "last_update": "2026-11-26T01:27:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "description": "Aaron Jones",
+                "price": -120,
+                "point": 9.5
+              },
+              {
+                "name": "Under",
+                "description": "Aaron Jones",
+                "price": -110,
+                "point": 9.5
+              },
+              {
+                "name": "Over",
+                "description": "Bijan Robinson",
+                "price": -120,
+                "point": 18.5
+              },
+              {
+                "name": "Under",
+                "description": "Bijan Robinson",
+                "price": -110,
+                "point": 18.5
+              },
+              {
+                "name": "Over",
+                "description": "Jordan Mason",
+                "price": -135,
+                "point": 13.5
+              },
+              {
+                "name": "Under",
+                "description": "Jordan Mason",
+                "price": 105,
+                "point": 13.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
